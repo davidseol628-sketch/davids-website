@@ -31,9 +31,12 @@ function makeFrom() {
 }
 
 let from
+// SectionRoster calls supabase.rpc('section_roster', ...); return an empty
+// roster so the dashboard renders without error.
+const rpc = vi.fn(() => Promise.resolve({ data: [], error: null }))
 vi.mock('../lib/supabase', () => ({
   get supabase() {
-    return { from }
+    return { from, rpc }
   },
 }))
 

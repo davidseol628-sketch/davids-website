@@ -22,24 +22,38 @@ export default function SectionRoster({ section }) {
         return
       }
       setLoading(true)
+
+      // Preferred path: the section_roster RPC returns students joined to
+      // parent contact in one call. It's SECURITY DEFINER so it can read
+      // parents (which tutors can't SELECT directly under RLS) but only for a
+      // section the calling tutor owns.
+      const { data: roster, error: rpcErr } = await supabase.rpc('section_roster', {
+        p_section_id: section.id,
+      })
+      if (!active) return
+      if (!rpcErr && roster) {
+        setRows(
+          roster.map((r) => ({
+            id: r.student_id,
+            full_name: r.student_name,
+            grade: r.grade,
+            parent: r.parent_name
+              ? { full_name: r.parent_name, email: r.email, phone: r.phone }
+              : null,
+          })),
+        )
+        setLoading(false)
+        return
+      }
+
+      // Fallback (e.g. before the RPC migration is applied): read students
+      // directly. Parent contact stays blank because RLS blocks parents reads.
       const { data: students } = await supabase
         .from('students')
         .select('id, full_name, grade, parent_id')
         .in('id', ids)
-
-      const parentIds = [...new Set((students || []).map((s) => s.parent_id).filter(Boolean))]
-      let parentsById = {}
-      if (parentIds.length > 0) {
-        const { data: parents } = await supabase
-          .from('parents')
-          .select('id, full_name, email, phone')
-          .in('id', parentIds)
-        for (const p of parents || []) parentsById[p.id] = p
-      }
       if (!active) return
-      setRows(
-        (students || []).map((s) => ({ ...s, parent: parentsById[s.parent_id] })),
-      )
+      setRows((students || []).map((s) => ({ ...s, parent: null })))
       setLoading(false)
     }
     run()
