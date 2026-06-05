@@ -17,13 +17,6 @@ dist-ssr
 .env.local
 .env.*.local
 
-# Local tooling (Claude Code / MCP)
-.claude/
-.mcp.json
-
-# Dev/test screenshots (root-level only)
-/*.png
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
