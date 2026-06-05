@@ -14,6 +14,23 @@ function homeForRole(role) {
   return '/'
 }
 
+/**
+ * Is `path` reachable by `role`? Role-specific areas are guarded by RequireAuth,
+ * so honoring a `from` that points into another role's area would just bounce the
+ * user to "/". Shared/public paths (catalog, forms, home) are open to any role.
+ */
+function pathAllowsRole(path, role) {
+  if (path === '/admin' || path.startsWith('/admin/')) return role === 'admin'
+  if (path === '/tutor' || path.startsWith('/tutor/')) return role === 'tutor'
+  if (path === '/dashboard' || path.startsWith('/dashboard/')) return role === 'parent'
+  return true
+}
+
+/** Post-login destination: the intended `from` if the role can reach it, else home. */
+function destForRole(from, role) {
+  return from && pathAllowsRole(from, role) ? from : homeForRole(role)
+}
+
 export default function Login() {
   const { user, role, loading, refreshProfile } = useAuth()
   const navigate = useNavigate()
@@ -28,13 +45,13 @@ export default function Login() {
   // Once a session resolves to a role, leave the login page.
   useEffect(() => {
     if (!loading && user && role) {
-      navigate(from || homeForRole(role), { replace: true })
+      navigate(destForRole(from, role), { replace: true })
     }
   }, [loading, user, role, from, navigate])
 
   // Already logged in with a known role: bounce immediately.
   if (!loading && user && role) {
-    return <Navigate to={from || homeForRole(role)} replace />
+    return <Navigate to={destForRole(from, role)} replace />
   }
 
   async function onSubmit(e) {
@@ -59,7 +76,7 @@ export default function Login() {
       // above redirects as soon as `role` lands, so we never bounce to "/".
       const { role: resolved } = await refreshProfile()
       if (resolved) {
-        navigate(from || homeForRole(resolved), { replace: true })
+        navigate(destForRole(from, resolved), { replace: true })
       }
     } catch (err) {
       setError(err.message || 'Login failed.')
