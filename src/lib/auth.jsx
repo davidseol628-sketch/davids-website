@@ -63,12 +63,15 @@ export function AuthProvider({ children }) {
   // If Supabase isn't configured we have nothing to resolve, so start ready.
   const [loading, setLoading] = useState(() => Boolean(supabase))
 
-  // Re-fetch the current user's role/profile. Exposed so callers can refresh
-  // after, e.g., a signup inserts the matching parents/tutors row.
-  const refreshProfile = useCallback(async () => {
-    // Read the freshest uid: the `session` state may lag right after a
-    // sign-in (onAuthStateChange is async), so fall back to getSession().
-    let uid = session?.user?.id
+  // Re-fetch a user's role/profile. Exposed so callers can refresh after, e.g.,
+  // a signup inserts the matching parents/tutors row, or right after a login.
+  // Pass `explicitUid` to resolve a specific user (e.g. the one just returned by
+  // signInWithPassword) without depending on possibly-stale session state.
+  const refreshProfile = useCallback(async (explicitUid) => {
+    // Prefer the caller-supplied uid; otherwise read the freshest one we can.
+    // The `session` state may lag right after a sign-in (onAuthStateChange is
+    // async), so fall back to getSession().
+    let uid = explicitUid || session?.user?.id
     if (!uid && supabase) {
       const { data } = await supabase.auth.getSession()
       uid = data?.session?.user?.id
@@ -88,14 +91,19 @@ export function AuthProvider({ children }) {
     if (!supabase) return
 
     let active = true
+    // The uid whose role/profile is currently authoritative. Async resolutions
+    // that finish after the session has moved on (e.g. an overlapping/stale
+    // session) are ignored so they can't clobber the current user's role.
+    let currentUid = null
 
     supabase.auth.getSession().then(async ({ data }) => {
       if (!active) return
       const next = data?.session ?? null
+      currentUid = next?.user?.id ?? null
       setSession(next)
       if (next?.user?.id) {
         const { role: r, profile: p } = await resolveRole(next.user.id)
-        if (!active) return
+        if (!active || currentUid !== next.user.id) return
         setRole(r)
         setProfile(p)
       }
@@ -104,10 +112,11 @@ export function AuthProvider({ children }) {
 
     const { data: sub } = supabase.auth.onAuthStateChange(async (_event, next) => {
       if (!active) return
+      currentUid = next?.user?.id ?? null
       setSession(next ?? null)
       if (next?.user?.id) {
         const { role: r, profile: p } = await resolveRole(next.user.id)
-        if (!active) return
+        if (!active || currentUid !== next.user.id) return
         setRole(r)
         setProfile(p)
       } else {

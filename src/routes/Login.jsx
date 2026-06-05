@@ -63,7 +63,7 @@ export default function Login() {
     }
     setSubmitting(true)
     try {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email: email.trim(),
         password,
       })
@@ -71,13 +71,13 @@ export default function Login() {
         setError(signInError.message)
         return
       }
-      // Resolve the role now and route immediately if we got it. If the role
-      // hasn't resolved yet (auth state can lag a beat), stay put — the effect
-      // above redirects as soon as `role` lands, so we never bounce to "/".
-      const { role: resolved } = await refreshProfile()
-      if (resolved) {
-        navigate(destForRole(from, resolved), { replace: true })
-      }
+      // Sign-in succeeded, so always leave the login page. Resolve the role
+      // straight from the just-authenticated user (not getSession, which can
+      // read a stale/overlapping session), then route to its destination. If
+      // no role resolves (no matching parents/tutors/admins row), fall back to
+      // home rather than stranding the user on /login.
+      const { role: resolved } = await refreshProfile(data?.user?.id)
+      navigate(destForRole(from, resolved), { replace: true })
     } catch (err) {
       setError(err.message || 'Login failed.')
     } finally {
