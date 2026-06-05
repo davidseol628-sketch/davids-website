@@ -183,7 +183,7 @@ Each form follows the same pattern: zod schema → `react-hook-form` → Supabas
 - [ ] Loading + error states on every async call
 - [ ] Toasts / success screens for submissions
 - [ ] Mobile-responsive pass
-- [ ] Deploy gcloud
+- [x] Deploy — **GitHub Pages via GitHub Actions** (changed from gcloud; see Progress Log 2026-06-05)
 - [ ] README with setup instructions
 
 ## Files to Create
@@ -279,3 +279,34 @@ src/
 - All 5 form types validate, submit, persist to DB, and show a success screen
 - Admin can log in, approve/reject pending tutor signups, moderate tutor-posted sections, and view all form submissions
 - `npm run lint` and `npm run build` pass; site is mobile-responsive and deployed to gcloud
+
+---
+
+## Progress Log
+
+### 2026-06-05 — Deployment + post-login redirect fix + tutor roster RPC
+
+**Repo / hosting**
+- Git remote: `github.com/akarik3873/davids-website` (branch `main`, the deploy trigger).
+- The initial commit only contained the README — the entire app (src, public, supabase, `package-lock.json`) was uncommitted. Committed the full app so CI could install and build.
+- Live site: **https://akarik3873.github.io/davids-website/**
+
+**Deploy — GitHub Pages via GitHub Actions (replaces the gcloud plan)**
+- `.github/workflows/deploy.yml`: on push to `main` (or manual `workflow_dispatch`) → `npm ci` → `npm test` → `npm run build` (with Supabase secrets) → copy `dist/index.html` to `dist/404.html` (SPA deep-link fallback) → publish to GitHub Pages via OIDC. **A failing test blocks the deploy.**
+- `vite.config.js`: `base: '/davids-website/'` for production builds only (project-page sub-path); dev stays at `/`.
+- `src/main.jsx`: `<BrowserRouter basename={import.meta.env.BASE_URL}>` so routes resolve under the sub-path.
+- GitHub Pages source set to "GitHub Actions". Repo secrets set: `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` (the client uses `VITE_SUPABASE_PUBLISHABLE_KEY`, not `ANON_KEY`). `SUPABASE_SECRET_KEY` is intentionally NOT exposed to the client build.
+- `.gitignore`: `.env*` stay ignored; `.playwright-mcp/` artifacts ignored.
+- **Follow-up**: add the Pages URL to Supabase Auth → URL Configuration (redirect URLs) or email-confirmation / OAuth redirects break in production. The Actions still run on Node 20 (deprecated June 2026) — bump action versions eventually.
+
+**Bug fix — login succeeded but didn't reliably reroute** (`src/lib/auth.jsx`, `src/routes/Login.jsx`)
+- Symptom: after a successful login the page sometimes stayed on `/login` or dumped the user on `/` instead of their dashboard — non-deterministic.
+- Root cause: the login path resolved the role via `getSession()` (which could read a stale/overlapping session), and concurrent `resolveRole()` results could clobber the correct role with `null`.
+- Fix: resolve the role straight from the user returned by `signInWithPassword`; guard `AuthProvider` so a late resolution for a previous session can't overwrite the current role; always navigate on successful sign-in (fall back to home if no role); and only honor a guard-saved `from` location when the resolved role can actually reach it (a parent bounced from `/admin` now lands on `/dashboard`, not `/`).
+- Added `src/routes/Login.test.jsx` (5 cases). Verified live with Playwright: parent → `/dashboard`, admin → `/admin`.
+
+**Feature — parent contact on the tutor roster** (`supabase/migrations/0001_section_roster_rpc.sql`, `src/tutor/SectionRoster.jsx`)
+- `section_roster(p_section_id)` `SECURITY DEFINER` RPC returns each enrolled student joined to parent contact info, scoped to sections the calling tutor owns (`s.tutor_id = auth.uid()`) — needed because `parents` is self-SELECT-only under RLS, which left the roster's Parent/Contact columns blank.
+- ⚠️ **Migration not yet confirmed applied to the live database.** Deploying the frontend does NOT run migrations. Until `section_roster` exists on the Supabase project (`ojvoapwgtqzbdoghxzvd`), the roster's Parent/Contact columns stay blank in production.
+
+**Status**: all 113 tests pass; `npm run build` clean. Frontend deployed and live.

@@ -124,4 +124,28 @@ Total: **about 1–2 weeks** for a real, working MVP.
 
 - **Tutor resume**: just a URL/link for MVP, not a file upload. (Supabase file uploads is a follow-up.)
 - **Email notifications**: none in MVP. Admin uses the dashboard to see what's pending.
-- **Hosting**: gcloud (matches what's already in the plan).
+- **Hosting**: ~~gcloud~~ → **GitHub Pages** (free, auto-deploys every time we push). See "What's been done so far" below.
+
+---
+
+## What's been done so far (plain English)
+
+_Updated 2026-06-05._
+
+### The site is online
+- It's live at **https://akarik3873.github.io/davids-website/** — free hosting from GitHub.
+- **Every time we save changes to the project, the site rebuilds and updates itself automatically.** No manual "publish" step. (Behind the scenes: a GitHub "Action" runs the tests, builds the site, and puts it online. If a test is broken, it refuses to publish — a safety net.)
+- The login keys for the backend (Supabase) are stored securely in GitHub, not in the code. The most sensitive key (the "master" backend key) is deliberately kept out of the website so it can never leak to visitors.
+
+### We fixed the "login doesn't go anywhere" problem
+- The complaint: you'd log in successfully, but the page would just sit there or bounce you to the home page instead of taking you to your dashboard.
+- The cause: right after logging in, the app sometimes grabbed the *wrong* (leftover) sign-in info and couldn't figure out whether you were a parent, tutor, or admin — so it didn't know where to send you.
+- The fix: the app now reads your identity directly from the fresh login and ignores any stale leftovers, so it reliably sends you to the right place (parents → their dashboard, tutors → their sessions, admins → the admin area). Tested and confirmed working.
+
+### Tutor roster now shows parent contact info
+- When a tutor looks at who's in their class, they can now see each kid's parent's name, email, and phone (it used to show blank).
+- ⚠️ **One thing still pending:** this part needs a small database update applied to the live backend. Putting the website online does NOT do that automatically. Until that database update is applied, the Parent/Contact columns will still look blank on the live site. (We were about to check whether it's already applied.)
+
+### Still on the to-do list (from the plan above)
+- Add the live site address into Supabase's settings so password-reset / sign-up confirmation emails point to the right place.
+- The usual polish: loading spinners, success messages, a mobile-friendly pass, and a setup README.
