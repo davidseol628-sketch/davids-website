@@ -1,0 +1,51 @@
+.scale {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.options {
+  display: flex;
+  gap: 8px;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.option:hover {
+  border-color: var(--accent-border);
+}
+
+.selected {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.number {
+  font-size: 15px;
+}
+
+.endLabel {
+  font-size: 13px;
+  color: var(--text);
+}

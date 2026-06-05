@@ -1,0 +1,194 @@
+/* Shared layout primitives used across signup, auth, dashboards, catalog,
+   forms, and admin pages. Keeps the visual language consistent. */
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+  width: 100%;
+}
+
+.narrow {
+  max-width: 520px;
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: var(--text);
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btnDanger {
+  border-color: #d92d20;
+  background: transparent;
+  color: #d92d20;
+}
+
+.btnSmall {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.error {
+  color: #d92d20;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.success {
+  color: #15803d;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.muted {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.empty {
+  padding: 32px;
+  text-align: center;
+  color: var(--text);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.table th {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.cardTitle {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+/* Modal / confirmation dialog */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}

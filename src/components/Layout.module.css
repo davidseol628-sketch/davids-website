@@ -1,0 +1,27 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  text-align: left;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+}

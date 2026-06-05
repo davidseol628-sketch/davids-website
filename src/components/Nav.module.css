@@ -1,0 +1,114 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  text-decoration: none;
+  letter-spacing: -0.4px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.link:hover {
+  color: var(--text-h);
+}
+
+/* Active route — highlighted via NavLink's isActive */
+.active {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin-top: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.signup {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.signup:hover {
+  opacity: 0.9;
+}
+
+.signout {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+/* Forms dropdown */
+.dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.dropdown .link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  padding: 0;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 220px;
+  background: var(--bg, #fff);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.menuItem:hover {
+  background: var(--border);
+  color: var(--text-h);
+}
