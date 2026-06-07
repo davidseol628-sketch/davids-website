@@ -1,15 +1,25 @@
 .page {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* ---------- Hero ---------- */
 .hero {
   text-align: center;
-  padding: 72px 0 48px;
+  padding: 72px 0 56px;
 }
 
 .heroTitle {
+  margin: 0 0 12px;
+}
+
+/* Italic serif tagline — echoes the SKEC "Through Education..." lockup. */
+.tagline {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--brand);
   margin: 0 0 16px;
 }
 
@@ -27,43 +37,186 @@
 }
 
 .primaryBtn {
-  padding: 12px 24px;
-  background: var(--accent);
+  padding: 13px 26px;
+  background: var(--ink);
   color: #fff;
-  border-radius: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
   text-decoration: none;
   font-weight: 600;
 }
 
 .secondaryBtn {
-  padding: 12px 24px;
-  border: 1px solid var(--green-border);
-  background: var(--green-bg);
-  color: var(--green);
-  border-radius: 8px;
+  padding: 13px 26px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 0;
   text-decoration: none;
   font-weight: 600;
 }
 
+/* ---------- Sections ---------- */
 .section {
-  padding: 40px 0;
+  padding: 56px 0;
   border-top: 1px solid var(--border);
+  text-align: center;
 }
 
+/* Alternating light-gray panels, full-bleed within the page gutters. */
+.section:nth-of-type(even) {
+  border-top: none;
+  background: var(--panel);
+  padding: 56px 24px;
+  margin: 0 -24px;
+}
+
+.lead {
+  color: var(--text);
+  margin: -4px 0 24px;
+}
+
+/* ---------- Image + text split (Find Best Tutors / Our Network) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.splitReverse {
+  direction: rtl;
+}
+.splitReverse > * {
+  direction: ltr;
+}
+
+.split h2 {
+  text-align: left;
+}
+
+.splitImg {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.splitText p {
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .splitImg {
+    height: 240px;
+  }
+}
+
+/* ---------- Generic card grid ---------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+  text-align: left;
 }
 
-.card {
+/* ---------- Service cards (photo + divider + price + Book Now) ---------- */
+.serviceCard {
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 2px;
+  background: var(--bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.card h3 {
-  margin: 0 0 8px;
+.serviceImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.serviceBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.serviceBody h3 {
+  margin: 0 0 12px;
   color: var(--text-h);
+  font-size: 20px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 0 12px;
+}
+
+.price {
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.bookBtn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 9px 18px;
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ---------- Program cards (gray header strip over photo) ---------- */
+.programCard {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.programHeader {
+  background: var(--panel);
+  text-align: center;
+  padding: 22px 16px;
+}
+
+.programHeader h3 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 20px;
+}
+
+.programImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.programCaption {
+  padding: 16px 18px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* ---------- Contact ---------- */
+.contact p {
+  margin-bottom: 6px;
+  color: var(--text);
 }

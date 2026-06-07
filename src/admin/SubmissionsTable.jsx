@@ -10,6 +10,41 @@ const TABLES = [
   { key: 'parent_assessments', label: 'Parent assessments' },
 ]
 
+/** Turn a response key (e.g. "parent_name", "q1") into a readable label. */
+function formatKey(key) {
+  const spaced = String(key).replace(/[_-]+/g, ' ').trim()
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1)
+}
+
+/** Render a response value in plain language rather than raw JSON. */
+function formatValue(value) {
+  if (value === null || value === undefined || value === '') return '—'
+  if (typeof value === 'boolean') return value ? 'Yes' : 'No'
+  if (Array.isArray(value)) return value.map(formatValue).join(', ')
+  if (typeof value === 'object') {
+    return Object.entries(value)
+      .map(([k, v]) => `${formatKey(k)}: ${formatValue(v)}`)
+      .join('; ')
+  }
+  return String(value)
+}
+
+/** A submission's responses shown as a readable label/value list. */
+function Responses({ responses }) {
+  const entries = Object.entries(responses || {})
+  if (entries.length === 0) return <span className={shared.muted}>—</span>
+  return (
+    <dl className={shared.kv}>
+      {entries.map(([key, value]) => (
+        <div key={key} className={shared.kvRow}>
+          <dt>{formatKey(key)}</dt>
+          <dd>{formatValue(value)}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
 /** Admin: read every form submission (admin-only SELECT RLS) per table. */
 export default function SubmissionsTable() {
   const [active, setActive] = useState('surveys')
@@ -75,9 +110,7 @@ export default function SubmissionsTable() {
                 <tr key={r.id}>
                   <td>{new Date(r.created_at).toLocaleString()}</td>
                   <td>
-                    <pre style={{ margin: 0, whiteSpace: 'pre-wrap', fontSize: 13 }}>
-                      {JSON.stringify(r.responses, null, 2)}
-                    </pre>
+                    <Responses responses={r.responses} />
                   </td>
                 </tr>
               ))}

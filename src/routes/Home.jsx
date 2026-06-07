@@ -1,21 +1,29 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
+import heroCountry from '../assets/skec/hero-country.jpg'
+import smartKids from '../assets/skec/smart-kids.jpg'
+import softPlay from '../assets/skec/soft-play.jpg'
+import preschoolTour from '../assets/skec/preschool-tour.jpg'
+import extendedDay from '../assets/skec/extended-day.jpg'
+import outdoorPlay from '../assets/skec/outdoor-play.jpg'
+import artLessons from '../assets/skec/art-lessons.jpg'
+import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 
 /**
  * Public landing page. The header (logo top-left, Log in / Sign up top-right)
- * comes from the shared Layout/Nav. The body below is filler marketing copy
- * marked with [Filler] so David can find and edit it quickly.
+ * comes from the shared Layout/Nav. Copy and imagery below are pulled from the
+ * Smart Kids Enrichment Center site as starting content — David can edit it.
  */
 export default function Home() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>
-          [Filler] Helping every student reach their potential
+          Discover Smart Kids Enrichment Center
         </h1>
+        <p className={styles.tagline}>Where Great Minds Are Born</p>
         <p className={styles.heroSub}>
-          [Filler] A short, punchy subheadline about the enrichment center and
-          what makes it special. Replace this copy with your own message.
+          Through Education, There is a Brighter Future.
         </p>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
@@ -28,44 +36,180 @@ export default function Home() {
       </section>
 
       <section className={styles.section}>
-        <h2>[Filler] About us</h2>
-        <p>
-          [Filler] A paragraph about the history, mission, and people behind the
-          enrichment center. Talk about who you are and why parents trust you.
-        </p>
+        <div className={styles.split}>
+          <div className={styles.splitText}>
+            <h2>Find Best Tutors Anywhere</h2>
+            <p>
+              Finding a tutor has never been easier! With our SKEC service, you
+              can discover a qualified tutor anywhere you are. Whether you need
+              help with academics, music, languages, or any other subject, our
+              platform connects you with experienced tutors who can provide
+              personalized guidance and support. Simply specify your location and
+              the subject you need assistance with, and we’ll match you with a
+              tutor who meets your requirements. Choose from in-person sessions or
+              convenient online options to fit your schedule and preferences.
+            </p>
+            <Link to="/signup" className={styles.secondaryBtn}>
+              Get In Touch
+            </Link>
+          </div>
+          <img
+            className={styles.splitImg}
+            src={heroCountry}
+            alt="A teacher reading to children at Smart Kids Enrichment Center"
+          />
+        </div>
       </section>
 
       <section className={styles.section}>
-        <h2>[Filler] What we offer</h2>
+        <h2>Our Services</h2>
         <div className={styles.cards}>
-          <div className={styles.card}>
-            <h3>[Filler] Tutoring</h3>
-            <p>[Filler] Short description of your tutoring programs.</p>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={softPlay} alt="Soft play" />
+            <div className={styles.serviceBody}>
+              <h3>1 Hour Soft Play</h3>
+              <div className={styles.divider} />
+              <p className={styles.price}>$25</p>
+              <Link to="/catalog" className={styles.bookBtn}>
+                Book Now
+              </Link>
+            </div>
           </div>
-          <div className={styles.card}>
-            <h3>[Filler] Enrichment classes</h3>
-            <p>[Filler] Short description of enrichment offerings.</p>
+          <div className={styles.serviceCard}>
+            <img
+              className={styles.serviceImg}
+              src={preschoolTour}
+              alt="Preschool tour"
+            />
+            <div className={styles.serviceBody}>
+              <h3>Preschool Tour</h3>
+              <div className={styles.divider} />
+              <p className={styles.price}>1 hr · Free</p>
+              <Link to="/catalog" className={styles.bookBtn}>
+                Book Now
+              </Link>
+            </div>
           </div>
-          <div className={styles.card}>
-            <h3>[Filler] Test prep</h3>
-            <p>[Filler] Short description of test prep programs.</p>
+          <div className={styles.serviceCard}>
+            <img
+              className={styles.serviceImg}
+              src={extendedDay}
+              alt="Extended day"
+            />
+            <div className={styles.serviceBody}>
+              <h3>Extended Day</h3>
+              <div className={styles.divider} />
+              <p className={styles.price}>1 hr · $25</p>
+              <Link to="/catalog" className={styles.bookBtn}>
+                Book Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2>[Filler] Our approach</h2>
-        <p>
-          [Filler] Describe your teaching philosophy and what sets your approach
-          apart. Mention small class sizes, personalized plans, etc.
+        <div className={`${styles.split} ${styles.splitReverse}`}>
+          <img
+            className={styles.splitImg}
+            src={smartKids}
+            alt="Smart Kids Enrichment Center"
+          />
+          <div className={styles.splitText}>
+            <h2>Our Network</h2>
+            <p>
+              Discover the power of a vast educational network with SKEC! Our
+              organization boasts a large network of expert tutors and educators
+              ready to provide top-notch academic support. Whether you need help
+              with test preparation, subject tutoring, or college admissions
+              guidance, our expansive network ensures that we can connect you
+              with the perfect tutor for your needs.
+            </p>
+            <Link to="/signup" className={styles.secondaryBtn}>
+              Get In Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Our Roots</h2>
+        <p className={styles.lead}>
+          Young children who go to Smart Kids Enrichment Center get the tools and
+          support they need for their healthy development. All activities are
+          carefully designed to adequately nurture the emotional, intellectual
+          and physical growth of our kids. Through stimulating situations and
+          hands-on learning opportunities, children are free to develop into
+          bright young minds.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2>[Filler] Contact us</h2>
-        <p>[Filler] Address line, city, state ZIP</p>
-        <p>[Filler] Phone: (000) 000-0000</p>
-        <p>[Filler] Email: hello@example.com</p>
+        <h2>Our Educational Programs</h2>
+        <p className={styles.lead}>The Best Early Childhood Education Center</p>
+        <div className={styles.cards}>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>Outdoor Play</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={outdoorPlay}
+              alt="Children playing outdoors"
+            />
+            <p className={styles.programCaption}>
+              Active, social play in the fresh air to build confidence and
+              healthy bodies.
+            </p>
+          </div>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>Art Lessons</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={artLessons}
+              alt="Children drawing with markers"
+            />
+            <p className={styles.programCaption}>
+              Hands-on creative projects that nurture imagination and fine motor
+              skills.
+            </p>
+          </div>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>Imaginative Play</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={imaginativePlay}
+              alt="Children blowing bubbles"
+            />
+            <p className={styles.programCaption}>
+              Guided, open-ended play that grows curiosity and problem-solving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>After-school Program</h2>
+        <p className={styles.lead}>
+          Our after-school programs provide a positive educational experience for
+          students, pre-k through high school. Our classes meet the needs of both
+          at-risk and successful students, as we offer homework help and
+          enrichment courses. If you don’t see what you’re looking for, we would
+          be happy to customize sessions to suit your interests and needs. Please
+          call our office at (478) 241-0365. We look forward to hearing from you!
+        </p>
+      </section>
+
+      <section className={`${styles.section} ${styles.contact}`}>
+        <h2>Get In Touch</h2>
+        <p>9066 Baltimore Ave Unit A, College Park, MD 20740, USA</p>
+        <p>Phone: (478) 241-0365</p>
+        <p>Email: skagrovers@gmail.com</p>
+        <p>Opening Hours: Mon–Fri 9am–6pm · Sat 10am–2pm · Sun Closed</p>
       </section>
     </div>
   )

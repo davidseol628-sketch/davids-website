@@ -19,7 +19,7 @@
 
 .card {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 20px 22px;
   background: var(--bg);
   box-shadow: var(--shadow);
@@ -61,13 +61,13 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
+  padding: 11px 20px;
+  border-radius: 0;
+  border: 1px solid var(--ink);
+  background: var(--ink);
   color: #fff;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
 }
@@ -79,7 +79,7 @@
 
 .btnSecondary {
   background: transparent;
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .btnDanger {
@@ -156,6 +156,31 @@
   font-size: 18px;
   color: var(--text-h);
   font-weight: 600;
+}
+
+/* Readable key/value list — used to render form submission responses
+   instead of a raw JSON dump. */
+.kv {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+  max-width: 560px;
+}
+
+.kvRow {
+  display: grid;
+  grid-template-columns: minmax(140px, 40%) 1fr;
+  gap: 12px;
+}
+
+.kvRow dt {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.kvRow dd {
+  margin: 0;
+  color: var(--text);
 }
 
 /* Modal / confirmation dialog */

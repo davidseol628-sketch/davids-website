@@ -20,7 +20,7 @@ describe('SubmissionsTable', () => {
     vi.clearAllMocks()
   })
 
-  it('renders survey submissions by default with serialized responses', async () => {
+  it('renders survey submissions by default as a readable label/value list', async () => {
     setupTables({
       surveys: [
         { id: 'r1', created_at: '2026-01-01T00:00:00Z', responses: { q1: 'yes', rating: 5 } },
@@ -29,8 +29,12 @@ describe('SubmissionsTable', () => {
 
     render(<SubmissionsTable />)
 
-    expect(await screen.findByText(/"q1": "yes"/)).toBeInTheDocument()
-    expect(screen.getByText(/"rating": 5/)).toBeInTheDocument()
+    // Keys become readable labels and values render in plain language (no JSON).
+    expect(await screen.findByText('Q1')).toBeInTheDocument()
+    expect(screen.getByText('yes')).toBeInTheDocument()
+    expect(screen.getByText('Rating')).toBeInTheDocument()
+    expect(screen.getByText('5')).toBeInTheDocument()
+    expect(screen.queryByText(/"q1"/)).not.toBeInTheDocument()
     expect(supabase.from).toHaveBeenCalledWith('surveys')
   })
 
@@ -58,7 +62,8 @@ describe('SubmissionsTable', () => {
     await user.click(screen.getByRole('button', { name: 'Tutor evaluations' }))
 
     await waitFor(() => expect(supabase.from).toHaveBeenCalledWith('tutor_evaluations'))
-    expect(await screen.findByText(/"score": 9/)).toBeInTheDocument()
+    expect(await screen.findByText('Score')).toBeInTheDocument()
+    expect(screen.getByText('9')).toBeInTheDocument()
   })
 
   it('renders all five table tabs', () => {
