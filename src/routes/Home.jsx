@@ -145,12 +145,11 @@ export default function Home() {
       </section>
 
       <section className={styles.section}>
-        <h2>Our Educational Programs</h2>
-        <p className={styles.lead}>The Best Early Childhood Education Center</p>
+        <h2>Educational Offerings</h2>
         <div className={styles.cards}>
           <div className={styles.programCard}>
             <div className={styles.programHeader}>
-              <h3>Outdoor Play</h3>
+              <h3>STEM-focused Day Program</h3>
             </div>
             <img
               className={styles.programImg}
@@ -164,7 +163,7 @@ export default function Home() {
           </div>
           <div className={styles.programCard}>
             <div className={styles.programHeader}>
-              <h3>Art Lessons</h3>
+              <h3>1-on-1 Tutoring</h3>
             </div>
             <img
               className={styles.programImg}
@@ -178,7 +177,7 @@ export default function Home() {
           </div>
           <div className={styles.programCard}>
             <div className={styles.programHeader}>
-              <h3>Imaginative Play</h3>
+              <h3>Career Mentoring</h3>
             </div>
             <img
               className={styles.programImg}
