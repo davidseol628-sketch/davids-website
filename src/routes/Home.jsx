@@ -19,7 +19,7 @@ export default function Home() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>
-          Discover Smart Kids Enrichment Center
+          Discover Praxis Enrichment Center
         </h1>
         <p className={styles.tagline}>Where Great Minds Are Born</p>
         <p className={styles.heroSub}>
