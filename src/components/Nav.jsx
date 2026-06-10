@@ -16,17 +16,23 @@ import styles from './Nav.module.css'
 // Primary page links per role. Each entry is [to, label, end?]; `end` forces
 // exact-match active styling (used for index-style routes like /admin).
 const LINKS_BY_ROLE = {
-  guest: [['/catalog', 'Catalog']],
+  guest: [
+    ['/catalog', 'Catalog'],
+    ['/tutors', 'Tutors'],
+  ],
   parent: [
     ['/catalog', 'Catalog'],
+    ['/tutors', 'Tutors'],
     ['/dashboard', 'My Dashboard'],
   ],
   tutor: [
     ['/catalog', 'Catalog'],
+    ['/tutors', 'Tutors'],
     ['/tutor', 'My Sessions'],
   ],
   admin: [
     ['/catalog', 'Catalog'],
+    ['/tutors', 'Tutors'],
     ['/admin', 'Admin', true],
     ['/admin/sections', 'Sections'],
     ['/admin/signups', 'Signups'],

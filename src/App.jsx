@@ -18,6 +18,9 @@ import TutorSignupForm from './signup/TutorSignupForm'
 import CatalogPage from './catalog/CatalogPage'
 import SectionDetail from './catalog/SectionDetail'
 
+// Tutors
+import Tutors from './routes/Tutors'
+
 // Dashboards
 import ParentDashboard from './dashboard/ParentDashboard'
 import TutorDashboard from './tutor/TutorDashboard'
@@ -59,6 +62,7 @@ export default function App() {
 
         {/* Catalog (public) */}
         <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/tutors" element={<Tutors />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
 
         {/* Parent area */}
