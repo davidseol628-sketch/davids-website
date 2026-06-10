@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       <section className={styles.section}>
-        <h2>Our Services</h2>
+        <h2>Our Classes</h2>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={softPlay} alt="Soft play" />
