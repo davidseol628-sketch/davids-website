@@ -84,7 +84,7 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>Environmental Science</h3>
               <div className={styles.divider} />
-              <p className={styles.price}>1 hr · Free</p>
+              <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
               </Link>
@@ -99,7 +99,7 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>Computer Aided Design</h3>
               <div className={styles.divider} />
-              <p className={styles.price}>1 hr · $25</p>
+              <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
               </Link>
