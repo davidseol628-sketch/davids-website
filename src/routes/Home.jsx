@@ -157,8 +157,8 @@ export default function Home() {
               alt="Children playing outdoors"
             />
             <p className={styles.programCaption}>
-              Active, social play in the fresh air to build confidence and
-              healthy bodies.
+              Instructors guide a classroom full of students to enable them to
+              apply STEM knowledge beyond academics.
             </p>
           </div>
           <div className={styles.programCard}>
