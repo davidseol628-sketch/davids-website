@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import { displaySectionTitle } from './sectionUtils'
 import shared from '../components/shared.module.css'
 
 /** Public catalog: all published sections with seats remaining. */
@@ -53,13 +54,9 @@ export default function CatalogPage() {
             return (
               <div key={s.id} className={shared.card}>
                 <div className={shared.spread}>
-                  <h2 className={shared.cardTitle}>{s.title}</h2>
+                  <h2 className={shared.cardTitle}>{displaySectionTitle(s.title)}</h2>
                   {full && <span className={shared.badge}>Full</span>}
                 </div>
-                <p className={shared.muted}>{s.subject || 'General'}</p>
-                {s.grade_range && (
-                  <p className={shared.muted}>Grades: {s.grade_range}</p>
-                )}
                 <p className={shared.muted} style={{ marginTop: 8 }}>
                   {full ? 'No seats available' : `${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
                 </p>

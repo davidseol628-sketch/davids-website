@@ -67,7 +67,7 @@ export default function Home() {
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={softPlay} alt="Soft play" />
             <div className={styles.serviceBody}>
-              <h3>1 Hour Soft Play</h3>
+              <h3>3-D Printing</h3>
               <div className={styles.divider} />
               <p className={styles.price}>$25</p>
               <Link to="/catalog" className={styles.bookBtn}>
@@ -82,7 +82,7 @@ export default function Home() {
               alt="Preschool tour"
             />
             <div className={styles.serviceBody}>
-              <h3>Preschool Tour</h3>
+              <h3>Environmental Science</h3>
               <div className={styles.divider} />
               <p className={styles.price}>1 hr · Free</p>
               <Link to="/catalog" className={styles.bookBtn}>
@@ -97,7 +97,7 @@ export default function Home() {
               alt="Extended day"
             />
             <div className={styles.serviceBody}>
-              <h3>Extended Day</h3>
+              <h3>Computer Aided Design</h3>
               <div className={styles.divider} />
               <p className={styles.price}>1 hr · $25</p>
               <Link to="/catalog" className={styles.bookBtn}>

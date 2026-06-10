@@ -69,8 +69,8 @@ describe('CatalogPage', () => {
     renderPage()
 
     expect(await screen.findByText('Algebra I')).toBeInTheDocument()
-    expect(screen.getByText('Math')).toBeInTheDocument()
-    expect(screen.getByText('Grades: 6-8')).toBeInTheDocument()
+    expect(screen.queryByText('Math')).not.toBeInTheDocument()
+    expect(screen.queryByText('Grades: 6-8')).not.toBeInTheDocument()
     // capacity 5 - 2 enrolled = 3 seats left
     expect(screen.getByText('3 seats left')).toBeInTheDocument()
 
@@ -78,6 +78,28 @@ describe('CatalogPage', () => {
     expect(link).toHaveAttribute('href', '/sections/sec-1')
     // not full -> no Full badge
     expect(screen.queryByText('Full')).not.toBeInTheDocument()
+  })
+
+  it('renames Geometry Lab to 3-D Printing and hides subject/grade details', async () => {
+    sectionsResult = {
+      data: [
+        {
+          id: 'geo-1',
+          title: 'Geometry Lab',
+          subject: 'Math',
+          grade_range: '6-8',
+          capacity: 4,
+          student_ids: ['a'],
+        },
+      ],
+      error: null,
+    }
+    renderPage()
+
+    expect(await screen.findByText('3-D Printing')).toBeInTheDocument()
+    expect(screen.queryByText('Geometry Lab')).not.toBeInTheDocument()
+    expect(screen.queryByText('Math')).not.toBeInTheDocument()
+    expect(screen.queryByText('Grades: 6-8')).not.toBeInTheDocument()
   })
 
   it('marks a section Full and singularizes the seat label', async () => {

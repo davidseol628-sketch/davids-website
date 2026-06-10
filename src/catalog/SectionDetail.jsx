@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../lib/auth'
 import { rpcErrorMessage } from '../lib/rpcErrors'
+import { displaySectionTitle } from './sectionUtils'
 import shared from '../components/shared.module.css'
 
 /**
@@ -132,12 +133,10 @@ export default function SectionDetail() {
       <p className={shared.muted}>
         <Link to="/catalog">← Back to catalog</Link>
       </p>
-      <h1>{section.title}</h1>
-      <p className={shared.lead}>{section.subject || 'General'}</p>
+      <h1>{displaySectionTitle(section.title)}</h1>
 
       <div className={shared.card}>
         {section.description && <p style={{ marginBottom: 12 }}>{section.description}</p>}
-        {section.grade_range && <p className={shared.muted}>Grades: {section.grade_range}</p>}
         {tutorName && <p className={shared.muted}>Tutor: {tutorName}</p>}
         {section.location && <p className={shared.muted}>Location: {section.location}</p>}
         <p className={shared.muted} style={{ marginTop: 8 }}>
