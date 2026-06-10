@@ -10,6 +10,23 @@ export default function CatalogPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
+  const displaySections = (() => {
+    const hasResearch = sections.some(
+      (s) => s.title?.trim().toLowerCase() === 'research',
+    )
+    return hasResearch
+      ? sections
+      : [
+          ...sections,
+          {
+            id: 'static-research',
+            title: 'Research',
+            capacity: 10,
+            student_ids: [],
+          },
+        ]
+  })()
+
   useEffect(() => {
     let active = true
     async function run() {
@@ -43,11 +60,9 @@ export default function CatalogPage() {
 
       {loading ? (
         <p className={shared.muted}>Loading…</p>
-      ) : sections.length === 0 ? (
-        <div className={shared.empty}>No published classes yet. Check back soon.</div>
       ) : (
         <div className={shared.grid}>
-          {sections.map((s) => {
+          {displaySections.map((s) => {
             const enrolled = (s.student_ids || []).length
             const seatsLeft = Math.max(0, (s.capacity || 0) - enrolled)
             const full = seatsLeft === 0
