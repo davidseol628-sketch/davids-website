@@ -120,7 +120,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.brand}>
-        Enrichment Center
+        Praxis Enrichment Center
       </Link>
 
       <div className={styles.links}>
