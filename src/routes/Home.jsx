@@ -21,13 +21,9 @@ export default function Home() {
         <h1 className={styles.heroTitle}>
           Discover Praxis Enrichment Center
         </h1>
-        <p className={styles.tagline}>Where Great Minds Are Born</p>
         <p className={styles.heroSub}>
           Praxis means learning by doing, with purpose, so every student can grow
           and thrive.
-        </p>
-        <p className={styles.heroSub}>
-          Through Education, There is a Brighter Future.
         </p>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
