@@ -23,6 +23,10 @@ export default function Home() {
         </h1>
         <p className={styles.tagline}>Where Great Minds Are Born</p>
         <p className={styles.heroSub}>
+          Praxis means learning by doing, with purpose, so every student can grow
+          and thrive.
+        </p>
+        <p className={styles.heroSub}>
           Through Education, There is a Brighter Future.
         </p>
         <div className={styles.heroActions}>
