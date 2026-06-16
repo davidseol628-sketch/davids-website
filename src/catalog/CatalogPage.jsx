@@ -17,19 +17,44 @@ export default function CatalogPage() {
     'Research Methods & Discovery',
   ]
 
-  const displaySections = displayTitles.map((title, index) => {
-    const section = sections.find(
-      (s) => s.title?.trim().toLowerCase() === title.toLowerCase(),
+  const displaySections = (() => {
+    const hasResearch = sections.some(
+      (s) => s.title?.trim().toLowerCase() === 'research',
     )
-    return (
-      section || {
-        id: `static-${index}`,
-        title,
-        capacity: 10,
-        student_ids: [],
-      }
-    )
-  })
+
+    const baseSections = hasResearch
+      ? sections
+      : [
+          ...sections,
+          {
+            id: 'static-research',
+            title: 'Research',
+            capacity: 10,
+            student_ids: [],
+          },
+        ]
+
+    return sections.length > 0
+      ? [
+          ...baseSections,
+          ...displayTitles
+            .filter(
+              (title) =>
+                !baseSections.some(
+                  (s) =>
+                    displaySectionTitle(s.title).trim().toLowerCase() ===
+                    title.toLowerCase(),
+                ),
+            )
+            .map((title, index) => ({
+              id: `static-home-${index}`,
+              title,
+              capacity: 10,
+              student_ids: [],
+            })),
+        ]
+      : baseSections
+  })()
 
   useEffect(() => {
     let active = true
