@@ -168,32 +168,32 @@ export default function Home() {
             alt="Smart Kids Enrichment Center"
           />
           <div className={styles.splitText}>
-            <h2>Our Network</h2>
+            <h2>Explore the Lab</h2>
             <p>
-              Discover the power of a vast educational network with SKEC! Our
-              organization boasts a large network of expert tutors and educators
-              ready to provide top-notch academic support. Whether you need help
-              with test preparation, subject tutoring, or college admissions
-              guidance, our expansive network ensures that we can connect you
-              with the perfect tutor for your needs.
+              Our learning lab is equipped with modern technology designed to make
+              every lesson interactive and exploratory.
             </p>
+            <ul className={styles.offerList}>
+              <li>
+                <strong>Touchscreen Smart Board</strong> — a dynamic display for
+                collaborative lessons, digital drawing, and real-time problem
+                solving.
+              </li>
+              <li>
+                <strong>Interactive Whiteboard</strong> — a hands-on surface where
+                students can write, annotate, and engage directly with lesson
+                content.
+              </li>
+              <li>
+                <strong>3-D Printer</strong> — a creative maker tool for turning
+                student ideas into tangible models and engineering prototypes.
+              </li>
+            </ul>
             <Link to="/signup" className={styles.secondaryBtn}>
-              Get In Touch
+              Learn More
             </Link>
           </div>
         </div>
-      </section>
-
-      <section className={styles.section}>
-        <h2>Our Roots</h2>
-        <p className={styles.lead}>
-          Young children who go to Smart Kids Enrichment Center get the tools and
-          support they need for their healthy development. All activities are
-          carefully designed to adequately nurture the emotional, intellectual
-          and physical growth of our kids. Through stimulating situations and
-          hands-on learning opportunities, children are free to develop into
-          bright young minds.
-        </p>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
