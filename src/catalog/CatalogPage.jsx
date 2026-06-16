@@ -37,6 +37,20 @@ export default function CatalogPage() {
       ]
     : []
 
+  function getClassDescription(title) {
+    const normalized = title?.trim().toLowerCase()
+    if (normalized.includes('environmental science')) {
+      return 'Explore ecosystems, sustainability, and the science behind our changing world.'
+    }
+    if (normalized.includes('artificial intelligence') || normalized.includes('ai')) {
+      return 'Learn the basics of intelligent systems, pattern recognition, and problem solving.'
+    }
+    if (normalized.includes('research methods') || normalized.includes('research')) {
+      return 'Build curiosity through inquiry, experimentation, and evidence-based discovery.'
+    }
+    return 'A hands-on class designed to inspire curiosity and practical learning.'
+  }
+
   useEffect(() => {
     let active = true
     async function run() {
@@ -84,6 +98,9 @@ export default function CatalogPage() {
                   <h2 className={shared.cardTitle}>{displaySectionTitle(s.title)}</h2>
                   {full && <span className={shared.badge}>Full</span>}
                 </div>
+                <p className={shared.muted} style={{ marginTop: 8 }}>
+                  {getClassDescription(displaySectionTitle(s.title))}
+                </p>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
                   {full ? 'No seats available' : `${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
                 </p>
