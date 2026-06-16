@@ -24,49 +24,6 @@ export default function Home() {
         <p className={styles.heroSub}>
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
-        <section className={styles.missionInline}>
-          <div className={styles.missionPane}>
-            <h2>Our Mission</h2>
-            <p className={styles.lead}>
-              At Praxis Enrichment Center, we believe that knowledge and learning
-              should be accessible to everyone. Our mission is to empower students
-              through hands-on, engaging educational experiences that transform
-              ideas into real-world skills outside of the classroom. By combining
-              creativity, innovation, and practical application through our
-              courses, we help young students build confidence, curiosity, and a
-              passion for discovery.
-            </p>
-          </div>
-
-          <div className={styles.goalsPane}>
-            <h3>Our Goals</h3>
-            <ul className={styles.goalsList}>
-              <li>
-                <strong>Make</strong> STEM education accessible to students from all backgrounds.
-              </li>
-              <li>
-                <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
-              </li>
-              <li>
-                <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
-              </li>
-              <li>
-                <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.offerPane}>
-            <h3>What We Offer</h3>
-            <ul className={styles.offerList}>
-              <li>3D Printing and Design</li>
-              <li>Artificial Intelligence (AI) Fundamentals</li>
-              <li>Environmental Science and Sustainability</li>
-              <li>Engineering and Technology Experimentation</li>
-              <li>Academic Research and Exploration</li>
-            </ul>
-          </div>
-        </section>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
             Log In/Sign Up
@@ -75,6 +32,48 @@ export default function Home() {
             Browse classes
           </Link>
         </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h2>Our Mission</h2>
+        <p className={styles.lead}>
+          At Praxis Enrichment Center, we believe that knowledge and learning
+          should be accessible to everyone. Our mission is to empower students
+          through hands-on, engaging educational experiences that transform
+          ideas into real-world skills outside of the classroom. By combining
+          creativity, innovation, and practical application through our
+          courses, we help young students build confidence, curiosity, and a
+          passion for discovery.
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Our Goals</h2>
+        <ul className={styles.goalsList}>
+          <li>
+            <strong>Make</strong> STEM education accessible to students from all backgrounds.
+          </li>
+          <li>
+            <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
+          </li>
+          <li>
+            <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
+          </li>
+          <li>
+            <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
+          </li>
+        </ul>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h2>What We Offer</h2>
+        <ul className={styles.offerList}>
+          <li>3D Printing and Design</li>
+          <li>Artificial Intelligence (AI) Fundamentals</li>
+          <li>Environmental Science and Sustainability</li>
+          <li>Engineering and Technology Experimentation</li>
+          <li>Academic Research and Exploration</li>
+        </ul>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>

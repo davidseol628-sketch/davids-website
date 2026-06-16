@@ -7,8 +7,7 @@
 /* ---------- Hero ---------- */
 .hero {
   text-align: center;
-  padding: 72px 0 64px;
-  background: linear-gradient(180deg, rgba(31, 45, 82, 0.08), transparent 80%);
+  padding: 72px 0 56px;
 }
 
 .heroTitle {
@@ -65,17 +64,23 @@
   text-align: center;
 }
 
-/* Alternating light-gray panels, full-bleed within the page gutters. */
-.section:nth-of-type(even) {
-  border-top: none;
-  background: var(--panel);
-  padding: 56px 24px;
-  margin: 0 -24px;
-}
-
 .lead {
   color: var(--text);
   margin: -4px 0 24px;
+}
+
+.goalsList,
+.offerList {
+  list-style: disc inside;
+  padding: 0 16px;
+  margin: 12px auto 0;
+  max-width: 720px;
+  text-align: left;
+}
+
+.goalsList li,
+.offerList li {
+  margin: 12px 0;
 }
 
 /* ---------- Image + text split (Find Best Tutors / Our Network) ---------- */
@@ -119,9 +124,6 @@
   }
   .splitImg {
     height: 240px;
-  }
-  .missionInline {
-    gap: 20px;
   }
 }
 
@@ -232,41 +234,11 @@
   color: var(--text);
 }
 
-.missionInline {
-  display: grid;
-  gap: 24px;
-  margin: 24px auto 0;
-  max-width: 820px;
-  text-align: left;
-}
-
-.missionPane,
-.goalsPane,
-.offerPane {
-  padding: 32px 28px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-}
-
-.missionPane {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), #f8fbff);
-  border: 1px solid rgba(219, 227, 238, 0.9);
-}
-
-.goalsPane {
-  background: linear-gradient(180deg, rgba(246, 248, 255, 0.98), #eef4ff);
-  border: 1px solid rgba(144, 166, 255, 0.48);
-}
-
-.offerPane {
-  background: linear-gradient(180deg, rgba(248, 255, 247, 0.98), #eef9f0);
-  border: 1px solid rgba(147, 201, 165, 0.48);
-}
 
 .goalsList,
 .offerList {
   list-style: disc inside;
-  padding: 0 16px;
+  padding: 0 20px;
   margin: 16px auto 0;
   max-width: 720px;
   text-align: left;

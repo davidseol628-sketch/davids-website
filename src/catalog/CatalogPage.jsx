@@ -10,22 +10,26 @@ export default function CatalogPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  const displaySections = (() => {
-    const hasResearch = sections.some(
-      (s) => s.title?.trim().toLowerCase() === 'research',
+  const displayTitles = [
+    '3D Printing and Design',
+    'Environmental Science',
+    'Introduction to Artificial Intelligence',
+    'Research Methods & Discovery',
+  ]
+
+  const displaySections = displayTitles.map((title, index) => {
+    const section = sections.find(
+      (s) => s.title?.trim().toLowerCase() === title.toLowerCase(),
     )
-    return hasResearch
-      ? sections
-      : [
-          ...sections,
-          {
-            id: 'static-research',
-            title: 'Research',
-            capacity: 10,
-            student_ids: [],
-          },
-        ]
-  })()
+    return (
+      section || {
+        id: `static-${index}`,
+        title,
+        capacity: 10,
+        student_ids: [],
+      }
+    )
+  })
 
   useEffect(() => {
     let active = true
