@@ -33,18 +33,17 @@ describe('CatalogPage', () => {
     vi.clearAllMocks()
   })
 
-  it('shows a loading state, then renders the static Research card when there are no sections', async () => {
+  it('shows a loading state, then renders a no-classes fallback when there are no sections', async () => {
     sectionsResult = { data: [], error: null }
     renderPage()
 
     expect(screen.getByText('Loading…')).toBeInTheDocument()
-    expect(await screen.findByText('Research')).toBeInTheDocument()
-    expect(screen.getByText('10 seats left')).toBeInTheDocument()
+    expect(await screen.findByText('No classes are available at the moment.')).toBeInTheDocument()
   })
 
   it('queries only published sections, newest first', async () => {
     renderPage()
-    await screen.findByText('Research')
+    expect(await screen.findByText('No classes are available at the moment.')).toBeInTheDocument()
 
     expect(from).toHaveBeenCalledWith('sections')
     expect(eq).toHaveBeenCalledWith('status', 'published')
