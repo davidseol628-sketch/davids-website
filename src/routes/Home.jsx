@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2>What We Offer</h2>
+        <h2>What We Offer:</h2>
         <ul className={styles.offerList}>
           <li>3D Printing and Design</li>
           <li>Artificial Intelligence (AI) Fundamentals</li>
