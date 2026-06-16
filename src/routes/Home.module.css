@@ -125,6 +125,12 @@
   }
 }
 
+.sectionAlt {
+  background: var(--panel);
+  padding: 56px 24px;
+  margin: 0 -24px;
+}
+
 /* ---------- Generic card grid ---------- */
 .cards {
   display: grid;

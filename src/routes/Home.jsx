@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.split}>
           <div className={styles.splitText}>
             <h2>Find Best Tutors Anywhere</h2>
@@ -165,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={`${styles.split} ${styles.splitReverse}`}>
           <img
             className={styles.splitImg}
@@ -201,7 +201,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2>Educational Offerings</h2>
         <div className={styles.cards}>
           <div className={styles.programCard}>
