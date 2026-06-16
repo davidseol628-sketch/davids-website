@@ -33,19 +33,18 @@ describe('CatalogPage', () => {
     vi.clearAllMocks()
   })
 
-  it('shows a loading state, then the empty state when there are no sections', async () => {
+  it('shows a loading state, then renders the static Research card when there are no sections', async () => {
     sectionsResult = { data: [], error: null }
     renderPage()
 
     expect(screen.getByText('Loading…')).toBeInTheDocument()
-    expect(
-      await screen.findByText('No published classes yet. Check back soon.'),
-    ).toBeInTheDocument()
+    expect(await screen.findByText('Research')).toBeInTheDocument()
+    expect(screen.getByText('10 seats left')).toBeInTheDocument()
   })
 
   it('queries only published sections, newest first', async () => {
     renderPage()
-    await screen.findByText('No published classes yet. Check back soon.')
+    await screen.findByText('Research')
 
     expect(from).toHaveBeenCalledWith('sections')
     expect(eq).toHaveBeenCalledWith('status', 'published')
@@ -74,8 +73,10 @@ describe('CatalogPage', () => {
     // capacity 5 - 2 enrolled = 3 seats left
     expect(screen.getByText('3 seats left')).toBeInTheDocument()
 
-    const link = screen.getByRole('link', { name: /View & enroll/i })
-    expect(link).toHaveAttribute('href', '/sections/sec-1')
+    // Multiple "View & enroll" links now exist (Research card + Algebra I), so check all
+    const links = screen.getAllByRole('link', { name: /View & enroll/i })
+    expect(links.length).toBeGreaterThanOrEqual(2) // Algebra I + Research
+    expect(links.some((link) => link.getAttribute('href') === '/sections/sec-1')).toBe(true)
     // not full -> no Full badge
     expect(screen.queryByText('Full')).not.toBeInTheDocument()
   })
