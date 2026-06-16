@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
-            Get started
+            Log In/Sign Up
           </Link>
           <Link to="/catalog" className={styles.secondaryBtn}>
             Browse classes
@@ -191,6 +191,41 @@ export default function Home() {
       </section>
 
       {/* After-school Program section removed per request */}
+
+      <section className={styles.section}>
+        <h2>Our Mission</h2>
+        <p className={styles.lead}>
+          At Praxis Enrichment Center, we believe that knowledge and learning
+          should be accessible to everyone. Our mission is to empower students
+          through hands-on, engaging educational experiences that transform
+          ideas into real-world skills outside of the classroom. By combining
+          creativity, innovation, and practical application through our
+          courses, we help young students build confidence, curiosity, and a
+          passion for discovery.
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Our Goals</h2>
+        <ul className={styles.goalsList}>
+          <li>
+            <strong>Make STEM education accessible</strong> to students from all
+            backgrounds.
+          </li>
+          <li>
+            <strong>Help students bridge the gap between theory and practice</strong>
+            through experimental learning.
+          </li>
+          <li>
+            <strong>Prepare students for the future</strong> by developing
+            critical thinking, collaboration, and technical skills.
+          </li>
+          <li>
+            <strong>Empower learners</strong> to investigate environmental issues
+            and develop innovative solutions.
+          </li>
+        </ul>
+      </section>
 
       <section className={`${styles.section} ${styles.contact}`}>
         <h2>Get In Touch</h2>
