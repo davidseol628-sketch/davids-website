@@ -220,3 +220,16 @@
   margin-bottom: 6px;
   color: var(--text);
 }
+
+/* Goals list: keep text immediately after the bullet and add spacing */
+.goalsList {
+  list-style: disc inside;
+  padding: 0 16px;
+  margin: 12px auto 0;
+  max-width: 720px;
+  text-align: left;
+}
+
+.goalsList li {
+  margin: 12px 0;
+}

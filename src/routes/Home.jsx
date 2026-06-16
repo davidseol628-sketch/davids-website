@@ -24,6 +24,34 @@ export default function Home() {
         <p className={styles.heroSub}>
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
+        <section className={styles.missionInline}>
+          <h2>Our Mission</h2>
+          <p className={styles.lead}>
+            At Praxis Enrichment Center, we believe that knowledge and learning
+            should be accessible to everyone. Our mission is to empower students
+            through hands-on, engaging educational experiences that transform
+            ideas into real-world skills outside of the classroom. By combining
+            creativity, innovation, and practical application through our
+            courses, we help young students build confidence, curiosity, and a
+            passion for discovery.
+          </p>
+
+          <h3>Our Goals</h3>
+          <ul className={styles.goalsList}>
+            <li>
+              <strong>Make</strong> STEM education accessible to students from all backgrounds.
+            </li>
+            <li>
+              <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
+            </li>
+            <li>
+              <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
+            </li>
+            <li>
+              <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
+            </li>
+          </ul>
+        </section>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
             Log In/Sign Up
@@ -190,42 +218,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* After-school Program section removed per request */}
-
-      <section className={styles.section}>
-        <h2>Our Mission</h2>
-        <p className={styles.lead}>
-          At Praxis Enrichment Center, we believe that knowledge and learning
-          should be accessible to everyone. Our mission is to empower students
-          through hands-on, engaging educational experiences that transform
-          ideas into real-world skills outside of the classroom. By combining
-          creativity, innovation, and practical application through our
-          courses, we help young students build confidence, curiosity, and a
-          passion for discovery.
-        </p>
-      </section>
-
-      <section className={styles.section}>
-        <h2>Our Goals</h2>
-        <ul className={styles.goalsList}>
-          <li>
-            <strong>Make STEM education accessible</strong> to students from all
-            backgrounds.
-          </li>
-          <li>
-            <strong>Help students bridge the gap between theory and practice</strong>
-            through experimental learning.
-          </li>
-          <li>
-            <strong>Prepare students for the future</strong> by developing
-            critical thinking, collaboration, and technical skills.
-          </li>
-          <li>
-            <strong>Empower learners</strong> to investigate environmental issues
-            and develop innovative solutions.
-          </li>
-        </ul>
-      </section>
+      {/* Mission and Goals moved to hero area */}
 
       <section className={`${styles.section} ${styles.contact}`}>
         <h2>Get In Touch</h2>
