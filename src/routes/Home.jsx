@@ -25,32 +25,47 @@ export default function Home() {
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
         <section className={styles.missionInline}>
-          <h2>Our Mission</h2>
-          <p className={styles.lead}>
-            At Praxis Enrichment Center, we believe that knowledge and learning
-            should be accessible to everyone. Our mission is to empower students
-            through hands-on, engaging educational experiences that transform
-            ideas into real-world skills outside of the classroom. By combining
-            creativity, innovation, and practical application through our
-            courses, we help young students build confidence, curiosity, and a
-            passion for discovery.
-          </p>
+          <div className={styles.missionPane}>
+            <h2>Our Mission</h2>
+            <p className={styles.lead}>
+              At Praxis Enrichment Center, we believe that knowledge and learning
+              should be accessible to everyone. Our mission is to empower students
+              through hands-on, engaging educational experiences that transform
+              ideas into real-world skills outside of the classroom. By combining
+              creativity, innovation, and practical application through our
+              courses, we help young students build confidence, curiosity, and a
+              passion for discovery.
+            </p>
+          </div>
 
-          <h3>Our Goals</h3>
-          <ul className={styles.goalsList}>
-            <li>
-              <strong>Make</strong> STEM education accessible to students from all backgrounds.
-            </li>
-            <li>
-              <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
-            </li>
-            <li>
-              <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
-            </li>
-            <li>
-              <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
-            </li>
-          </ul>
+          <div className={styles.goalsPane}>
+            <h3>Our Goals</h3>
+            <ul className={styles.goalsList}>
+              <li>
+                <strong>Make</strong> STEM education accessible to students from all backgrounds.
+              </li>
+              <li>
+                <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
+              </li>
+              <li>
+                <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
+              </li>
+              <li>
+                <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.offerPane}>
+            <h3>What We Offer</h3>
+            <ul className={styles.offerList}>
+              <li>3D Printing and Design</li>
+              <li>Artificial Intelligence (AI) Fundamentals</li>
+              <li>Environmental Science and Sustainability</li>
+              <li>Engineering and Technology Experimentation</li>
+              <li>Academic Research and Exploration</li>
+            </ul>
+          </div>
         </section>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
@@ -92,9 +107,9 @@ export default function Home() {
         <h2>Our Classes</h2>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={softPlay} alt="Soft play" />
+            <img className={styles.serviceImg} src={softPlay} alt="3D printing lab" />
             <div className={styles.serviceBody}>
-              <h3>3-D Printing</h3>
+              <h3>3D Printing and Design</h3>
               <div className={styles.divider} />
               <p className={styles.price}>$25</p>
               <Link to="/catalog" className={styles.bookBtn}>
@@ -106,7 +121,7 @@ export default function Home() {
             <img
               className={styles.serviceImg}
               src={preschoolTour}
-              alt="Preschool tour"
+              alt="Environmental science"
             />
             <div className={styles.serviceBody}>
               <h3>Environmental Science</h3>
@@ -121,10 +136,10 @@ export default function Home() {
             <img
               className={styles.serviceImg}
               src={extendedDay}
-              alt="Extended day"
+              alt="Artificial intelligence"
             />
             <div className={styles.serviceBody}>
-              <h3>Computer Aided Design</h3>
+              <h3>Introduction to Artificial Intelligence</h3>
               <div className={styles.divider} />
               <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>

@@ -222,7 +222,38 @@
 }
 
 /* Goals list: keep text immediately after the bullet and add spacing */
-.goalsList {
+.missionInline {
+  display: grid;
+  gap: 24px;
+  margin: 24px auto 0;
+  max-width: 820px;
+  text-align: left;
+}
+
+.missionPane,
+.goalsPane,
+.offerPane {
+  padding: 26px 24px;
+  border-radius: 6px;
+}
+
+.missionPane {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.goalsPane {
+  background: rgba(244, 244, 255, 0.95);
+  border: 1px solid rgba(110, 96, 255, 0.16);
+}
+
+.offerPane {
+  background: rgba(240, 255, 244, 0.95);
+  border: 1px solid rgba(50, 150, 80, 0.16);
+}
+
+.goalsList,
+.offerList {
   list-style: disc inside;
   padding: 0 16px;
   margin: 12px auto 0;
@@ -230,6 +261,7 @@
   text-align: left;
 }
 
-.goalsList li {
+.goalsList li,
+.offerList li {
   margin: 12px 0;
 }
