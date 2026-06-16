@@ -22,8 +22,7 @@ export default function Home() {
           Discover Praxis Enrichment Center
         </h1>
         <p className={styles.heroSub}>
-          Praxis means learning by doing, with purpose, so every student can grow
-          and thrive.
+          <strong>Pra/xis:</strong> the process of putting a theory, lesson, or abstract idea into practical action
         </p>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
