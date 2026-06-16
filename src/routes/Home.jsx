@@ -79,19 +79,15 @@ export default function Home() {
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.split}>
           <div className={styles.splitText}>
-            <h2>Find Best Tutors Anywhere</h2>
+            <h2>Looking for a personalized tutor for your child?</h2>
             <p>
-              Finding a tutor has never been easier! With our SKEC service, you
-              can discover a qualified tutor anywhere you are. Whether you need
-              help with academics, music, languages, or any other subject, our
-              platform connects you with experienced tutors who can provide
-              personalized guidance and support. Simply specify your location and
-              the subject you need assistance with, and we’ll match you with a
-              tutor who meets your requirements. Choose from in-person sessions or
-              convenient online options to fit your schedule and preferences.
+              We have a wide range of academic majors that can help out, from
+              STEM and language support to advanced research and writing coaching.
+              Our platform connects you with experienced tutors who provide
+              personalized guidance based on your child’s needs.
             </p>
-            <Link to="/signup" className={styles.secondaryBtn}>
-              Get In Touch
+            <Link to="/tutors" className={styles.secondaryBtn}>
+              View Tutors
             </Link>
           </div>
           <img

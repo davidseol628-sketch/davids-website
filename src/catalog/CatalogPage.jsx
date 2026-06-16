@@ -11,50 +11,31 @@ export default function CatalogPage() {
   const [error, setError] = useState('')
 
   const displayTitles = [
-    '3D Printing and Design',
     'Environmental Science',
     'Introduction to Artificial Intelligence',
     'Research Methods & Discovery',
   ]
 
-  const displaySections = (() => {
-    const hasResearch = sections.some(
-      (s) => s.title?.trim().toLowerCase() === 'research',
-    )
-
-    const baseSections = hasResearch
-      ? sections
-      : [
-          ...sections,
-          {
-            id: 'static-research',
-            title: 'Research',
+  const displaySections = sections.length > 0
+    ? [
+        ...sections,
+        ...displayTitles
+          .filter(
+            (title) =>
+              !sections.some(
+                (s) =>
+                  displaySectionTitle(s.title).trim().toLowerCase() ===
+                  title.toLowerCase(),
+              ),
+          )
+          .map((title, index) => ({
+            id: `static-home-${index}`,
+            title,
             capacity: 10,
             student_ids: [],
-          },
-        ]
-
-    return sections.length > 0
-      ? [
-          ...baseSections,
-          ...displayTitles
-            .filter(
-              (title) =>
-                !baseSections.some(
-                  (s) =>
-                    displaySectionTitle(s.title).trim().toLowerCase() ===
-                    title.toLowerCase(),
-                ),
-            )
-            .map((title, index) => ({
-              id: `static-home-${index}`,
-              title,
-              capacity: 10,
-              student_ids: [],
-            })),
-        ]
-      : baseSections
-  })()
+          })),
+      ]
+    : []
 
   useEffect(() => {
     let active = true
@@ -89,6 +70,8 @@ export default function CatalogPage() {
 
       {loading ? (
         <p className={shared.muted}>Loading…</p>
+      ) : displaySections.length === 0 ? (
+        <p className={shared.muted}>No classes are available at the moment.</p>
       ) : (
         <div className={shared.grid}>
           {displaySections.map((s) => {
