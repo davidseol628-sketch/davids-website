@@ -190,17 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <h2>After-school Program</h2>
-        <p className={styles.lead}>
-          Our after-school programs provide a positive educational experience for
-          students, pre-k through high school. Our classes meet the needs of both
-          at-risk and successful students, as we offer homework help and
-          enrichment courses. If you don’t see what you’re looking for, we would
-          be happy to customize sessions to suit your interests and needs. Please
-          call our office at (478) 241-0365. We look forward to hearing from you!
-        </p>
-      </section>
+      {/* After-school Program section removed per request */}
 
       <section className={`${styles.section} ${styles.contact}`}>
         <h2>Get In Touch</h2>
