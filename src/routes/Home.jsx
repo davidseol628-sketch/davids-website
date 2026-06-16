@@ -81,10 +81,7 @@ export default function Home() {
           <div className={styles.splitText}>
             <h2>Looking for a personalized tutor for your child?</h2>
             <p>
-              We have a wide range of academic majors that can help out, from
-              STEM and language support to advanced research and writing coaching.
-              Our platform connects you with experienced tutors who provide
-              personalized guidance based on your child’s needs.
+              Give your child the advantage of learning from a tutor who is actively studying at the <strong>University of Maryland</strong>, one of the nation's leading public research universities. More than just academic support, our tutors serve as relatable role models who can inspire confidence, curiosity, and a love of learning!
             </p>
             <Link to="/tutors" className={styles.secondaryBtn}>
               View Tutors
