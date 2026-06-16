@@ -22,7 +22,7 @@ export default function Home() {
           Discover Praxis Enrichment Center
         </h1>
         <p className={styles.heroSub}>
-          <strong>Pra/xis:</strong> the process of putting a theory, lesson, or abstract idea into practical action
+          <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
         <div className={styles.heroActions}>
           <Link to="/signup" className={styles.primaryBtn}>
