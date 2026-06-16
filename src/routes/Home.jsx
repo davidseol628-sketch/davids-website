@@ -147,6 +147,21 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div className={styles.serviceCard}>
+            <img
+              className={styles.serviceImg}
+              src={artLessons}
+              alt="Research methods and discovery"
+            />
+            <div className={styles.serviceBody}>
+              <h3>Research Methods & Discovery</h3>
+              <div className={styles.divider} />
+              <p className={styles.price}>&nbsp;</p>
+              <Link to="/catalog" className={styles.bookBtn}>
+                Book Now
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
