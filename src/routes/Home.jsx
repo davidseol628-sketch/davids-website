@@ -66,14 +66,50 @@ export default function Home() {
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2>What We Offer:</h2>
-        <ul className={styles.offerList}>
-          <li>3D Printing and Design</li>
-          <li>Artificial Intelligence (AI) Fundamentals</li>
-          <li>Environmental Science and Sustainability</li>
-          <li>Engineering and Technology Experimentation</li>
-          <li>Academic Research and Exploration</li>
-        </ul>
+        <h2>Educational Offerings</h2>
+        <div className={styles.cards}>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>STEM-focused Day Program</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={outdoorPlay}
+              alt="Children playing outdoors"
+            />
+            <p className={styles.programCaption}>
+              Instructors guide a classroom full of students to enable them to
+              apply STEM knowledge beyond academics.
+            </p>
+          </div>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>1-on-1 Tutoring</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={artLessons}
+              alt="Children drawing with markers"
+            />
+            <p className={styles.programCaption}>
+              Hands-on creative projects that nurture imagination and fine motor
+              skills.
+            </p>
+          </div>
+          <div className={styles.programCard}>
+            <div className={styles.programHeader}>
+              <h3>Career Mentoring</h3>
+            </div>
+            <img
+              className={styles.programImg}
+              src={imaginativePlay}
+              alt="Children blowing bubbles"
+            />
+            <p className={styles.programCaption}>
+              Guided, open-ended play that grows curiosity and problem-solving.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
@@ -189,53 +225,6 @@ export default function Home() {
             <Link to="/signup" className={styles.secondaryBtn}>
               Learn More
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2>Educational Offerings</h2>
-        <div className={styles.cards}>
-          <div className={styles.programCard}>
-            <div className={styles.programHeader}>
-              <h3>STEM-focused Day Program</h3>
-            </div>
-            <img
-              className={styles.programImg}
-              src={outdoorPlay}
-              alt="Children playing outdoors"
-            />
-            <p className={styles.programCaption}>
-              Instructors guide a classroom full of students to enable them to
-              apply STEM knowledge beyond academics.
-            </p>
-          </div>
-          <div className={styles.programCard}>
-            <div className={styles.programHeader}>
-              <h3>1-on-1 Tutoring</h3>
-            </div>
-            <img
-              className={styles.programImg}
-              src={artLessons}
-              alt="Children drawing with markers"
-            />
-            <p className={styles.programCaption}>
-              Hands-on creative projects that nurture imagination and fine motor
-              skills.
-            </p>
-          </div>
-          <div className={styles.programCard}>
-            <div className={styles.programHeader}>
-              <h3>Career Mentoring</h3>
-            </div>
-            <img
-              className={styles.programImg}
-              src={imaginativePlay}
-              alt="Children blowing bubbles"
-            />
-            <p className={styles.programCaption}>
-              Guided, open-ended play that grows curiosity and problem-solving.
-            </p>
           </div>
         </div>
       </section>
