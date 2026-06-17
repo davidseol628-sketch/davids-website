@@ -88,8 +88,8 @@ export default function Home() {
               alt="Tutoring banner"
             />
             <p className={styles.programCaption}>
-              Hands-on creative projects that nurture imagination and fine motor
-              skills.
+              Personalized tutoring sessions designed to support learning goals,
+              improve confidence, and build academic skills one student at a time.
             </p>
           </div>
           <div className={styles.programCard}>
@@ -102,7 +102,8 @@ export default function Home() {
               alt="Career mentoring"
             />
             <p className={styles.programCaption}>
-              Guided, open-ended play that grows curiosity and problem-solving.
+              Career mentoring paired with a tutor to help students explore
+              meaningful career paths and build long-term goals.
             </p>
           </div>
         </div>
@@ -121,8 +122,8 @@ export default function Home() {
           </div>
           <img
             className={styles.splitImg}
-            src={tutorPhoto}
-            alt="Personalized tutoring"
+            src={require('../assets/istockphoto-1498506722-612x612.jpg')}
+            alt="Explore the lab"
           />
         </div>
       </section>
@@ -135,6 +136,9 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>3D Printing and Design</h3>
               <div className={styles.divider} />
+              <p className={styles.serviceDesc}>
+                Learn digital design and 3D modeling to bring your creative ideas to life.
+              </p>
               <p className={styles.price}>$25</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
@@ -150,6 +154,9 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>Environmental Science</h3>
               <div className={styles.divider} />
+              <p className={styles.serviceDesc}>
+                Explore ecosystems, sustainability, and the science behind our changing world.
+              </p>
               <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
@@ -165,6 +172,9 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>Introduction to Artificial Intelligence</h3>
               <div className={styles.divider} />
+              <p className={styles.serviceDesc}>
+                Learn the basics of intelligent systems, pattern recognition, and problem solving.
+              </p>
               <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
@@ -180,6 +190,9 @@ export default function Home() {
             <div className={styles.serviceBody}>
               <h3>Research Methods & Discovery</h3>
               <div className={styles.divider} />
+              <p className={styles.serviceDesc}>
+                Build curiosity through inquiry, experimentation, and evidence-based discovery.
+              </p>
               <p className={styles.price}>&nbsp;</p>
               <Link to="/catalog" className={styles.bookBtn}>
                 Book Now
