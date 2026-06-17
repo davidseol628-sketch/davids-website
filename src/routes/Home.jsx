@@ -48,21 +48,13 @@ export default function Home() {
       </section>
 
       <section className={styles.section}>
-        <h2>Our Goals</h2>
-        <ul className={styles.goalsList}>
-          <li>
-            <strong>Make</strong> STEM education accessible to students from all backgrounds.
-          </li>
-          <li>
-            <strong>Help</strong> students bridge the gap between theory and practice through experimental learning.
-          </li>
-          <li>
-            <strong>Prepare</strong> students for the future by developing critical thinking, collaboration, and technical skills.
-          </li>
-          <li>
-            <strong>Empower</strong> learners to investigate environmental issues and develop innovative solutions.
-          </li>
-        </ul>
+        <h2>Who We Are</h2>
+        <p className={styles.lead}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac
+          felis sit amet eros vulputate faucibus. Duis et lorem sit amet velit
+          tincidunt vehicula. Phasellus sed urna sit amet neque varius
+          pellentesque.
+        </p>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>

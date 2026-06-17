@@ -11,6 +11,7 @@ export default function CatalogPage() {
   const [error, setError] = useState('')
 
   const displayTitles = [
+    '3D Printing and Design',
     'Environmental Science',
     'Introduction to Artificial Intelligence',
     'Research Methods & Discovery',
@@ -39,6 +40,9 @@ export default function CatalogPage() {
 
   function getClassDescription(title) {
     const normalized = title?.trim().toLowerCase()
+    if (normalized.includes('3d printing') || normalized.includes('3d')) {
+      return 'Learn digital design and 3D modeling to bring your creative ideas to life.'
+    }
     if (normalized.includes('environmental science')) {
       return 'Explore ecosystems, sustainability, and the science behind our changing world.'
     }
