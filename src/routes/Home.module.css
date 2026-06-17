@@ -171,6 +171,12 @@
   font-size: 20px;
 }
 
+.serviceDesc {
+  color: var(--text);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
 .divider {
   height: 1px;
   background: var(--border);

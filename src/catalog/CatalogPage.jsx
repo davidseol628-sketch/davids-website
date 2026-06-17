@@ -11,7 +11,6 @@ export default function CatalogPage() {
   const [error, setError] = useState('')
 
   const displayTitles = [
-    '3D Printing and Design',
     'Environmental Science',
     'Introduction to Artificial Intelligence',
     'Research Methods & Discovery',
