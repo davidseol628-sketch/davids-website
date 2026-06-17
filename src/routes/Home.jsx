@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
+import missionPhoto from '../assets/skec/IMG_0651-preview.JPG'
 import tutorPhoto from '../assets/85.jpeg'
 import smartKids from '../assets/skec/smart-kids.jpg'
 import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
@@ -49,6 +50,11 @@ export default function Home() {
           courses, we help young students build confidence, curiosity, and a
           passion for discovery.
         </p>
+        <img
+          className={styles.missionImg}
+          src={missionPhoto}
+          alt="Praxis Enrichment Center mission"
+        />
       </section>
 
       <section className={styles.section}>
@@ -122,8 +128,8 @@ export default function Home() {
           </div>
           <img
             className={styles.splitImg}
-            src={require('../assets/istockphoto-1498506722-612x612.jpg')}
-            alt="Explore the lab"
+            src={tutorPhoto}
+            alt="Personalized tutoring"
           />
         </div>
       </section>
