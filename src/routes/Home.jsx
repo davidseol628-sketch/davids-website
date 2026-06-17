@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
+import tutorPhoto from '../assets/85.jpeg'
 import smartKids from '../assets/skec/smart-kids.jpg'
 import softPlay from '../assets/skec/soft-play.jpg'
 import preschoolTour from '../assets/skec/preschool-tour.jpg'
 import extendedDay from '../assets/skec/extended-day.jpg'
 import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
+import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
+import mentoringProfDev from '../assets/mentoringprofdevresources.png'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 
@@ -80,8 +83,8 @@ export default function Home() {
             </div>
             <img
               className={styles.programImg}
-              src={artLessons}
-              alt="Children drawing with markers"
+              src={tutoringBanner}
+              alt="Tutoring banner"
             />
             <p className={styles.programCaption}>
               Hands-on creative projects that nurture imagination and fine motor
@@ -94,8 +97,8 @@ export default function Home() {
             </div>
             <img
               className={styles.programImg}
-              src={imaginativePlay}
-              alt="Children blowing bubbles"
+              src={mentoringProfDev}
+              alt="Career mentoring"
             />
             <p className={styles.programCaption}>
               Guided, open-ended play that grows curiosity and problem-solving.
@@ -117,8 +120,8 @@ export default function Home() {
           </div>
           <img
             className={styles.splitImg}
-            src={heroCountry}
-            alt="A teacher reading to children at Smart Kids Enrichment Center"
+            src={tutorPhoto}
+            alt="Personalized tutoring"
           />
         </div>
       </section>
