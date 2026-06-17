@@ -3,6 +3,7 @@ import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
 import missionPhoto from '../assets/skec/IMG_0651-preview.JPG'
 import tutorPhoto from '../assets/85.jpeg'
+import istockphotoLab from '../assets/istockphoto-1498506722-612x612.jpg'
 import smartKids from '../assets/skec/smart-kids.jpg'
 import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
 import adminAjax from '../assets/admin-ajax.jpg'
@@ -212,8 +213,8 @@ export default function Home() {
         <div className={`${styles.split} ${styles.splitReverse}`}>
           <img
             className={styles.splitImg}
-            src={smartKids}
-            alt="Smart Kids Enrichment Center"
+            src={istockphotoLab}
+            alt="Explore the lab"
           />
           <div className={styles.splitText}>
             <h2>Explore the Lab</h2>
