@@ -3,12 +3,13 @@ import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
 import tutorPhoto from '../assets/85.jpeg'
 import smartKids from '../assets/skec/smart-kids.jpg'
-import softPlay from '../assets/skec/soft-play.jpg'
-import preschoolTour from '../assets/skec/preschool-tour.jpg'
-import extendedDay from '../assets/skec/extended-day.jpg'
+import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
+import adminAjax from '../assets/admin-ajax.jpg'
+import extendedDay from '../assets/210722-D-IM742-1234.JPG.avif'
 import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
 import mentoringProfDev from '../assets/mentoringprofdevresources.png'
+import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 
@@ -130,7 +131,7 @@ export default function Home() {
         <h2>Our Classes</h2>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={softPlay} alt="3D printing lab" />
+            <img className={styles.serviceImg} src={tomLauerman} alt="Tom Lauerman 3D printing" />
             <div className={styles.serviceBody}>
               <h3>3D Printing and Design</h3>
               <div className={styles.divider} />
@@ -143,7 +144,7 @@ export default function Home() {
           <div className={styles.serviceCard}>
             <img
               className={styles.serviceImg}
-              src={preschoolTour}
+              src={adminAjax}
               alt="Environmental science"
             />
             <div className={styles.serviceBody}>
@@ -173,8 +174,8 @@ export default function Home() {
           <div className={styles.serviceCard}>
             <img
               className={styles.serviceImg}
-              src={artLessons}
-              alt="Research methods and discovery"
+              src={researcherAtWork}
+              alt="Researcher at work"
             />
             <div className={styles.serviceBody}>
               <h3>Research Methods & Discovery</h3>
