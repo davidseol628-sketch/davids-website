@@ -5,7 +5,7 @@ import smartKids from '../assets/skec/smart-kids.jpg'
 import softPlay from '../assets/skec/soft-play.jpg'
 import preschoolTour from '../assets/skec/preschool-tour.jpg'
 import extendedDay from '../assets/skec/extended-day.jpg'
-import outdoorPlay from '../assets/skec/outdoor-play.jpg'
+import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 
