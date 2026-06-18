@@ -39,7 +39,45 @@ export default function Home() {
             Log In/Sign Up
           </Link>
           <Link to="/catalog" className={styles.secondaryBtn}>
-            Browse classes
+            Enroll Now
+          </Link>
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h2>You're Invited to Our STEM Open House!</h2>
+        <p className={styles.lead}>
+          Join us for a free, family-friendly Open House and discover how
+          learning comes alive at Praxis Enrichment Center! Meet our instructors,
+          explore our classrooms, and participate in exciting hands-on STEM
+          demonstrations designed for curious minds of all ages.
+        </p>
+        <div className={styles.offerList}>
+          <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
+          <ul>
+            <li>Robotics & Coding — watch robots come to life and learn how students program them.</li>
+            <li>3D Printing — see a 3D printer in action and take home a sample print.</li>
+            <li>Artificial Intelligence — experience beginner-friendly AI activities and interactive demos.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h1 className={styles.heroTitle}>
+          Discover Praxis Enrichment Center
+        </h1>
+        <p className={styles.heroTagline}>
+          Hands-On STEM Classes That Kids Actually Love
+        </p>
+        <p className={styles.heroSub}>
+          <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
+        </p>
+        <div className={styles.heroActions}>
+          <Link to="/signup" className={styles.primaryBtn}>
+            Log In/Sign Up
+          </Link>
+          <Link to="/catalog" className={styles.secondaryBtn}>
+            Enroll Now
           </Link>
         </div>
       </section>

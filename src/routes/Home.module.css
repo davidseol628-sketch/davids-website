@@ -79,11 +79,22 @@
 
 .goalsList,
 .offerList {
-  list-style: disc inside;
+  list-style: none;
   padding: 0 16px;
   margin: 12px auto 0;
   max-width: 720px;
   text-align: left;
+}
+
+.offerList p {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.offerList ul {
+  list-style: disc inside;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .goalsList li,
