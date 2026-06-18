@@ -60,6 +60,11 @@ export default function Home() {
             <li>Artificial Intelligence — experience beginner-friendly AI activities and interactive demos.</li>
           </ul>
         </div>
+        <div className={styles.heroActions}>
+          <Link to="/catalog" className={styles.primaryBtn}>
+            Sign Up Now!
+          </Link>
+        </div>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
