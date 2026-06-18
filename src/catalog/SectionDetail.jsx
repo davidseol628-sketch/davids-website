@@ -6,6 +6,15 @@ import { rpcErrorMessage } from '../lib/rpcErrors'
 import { displaySectionTitle } from './sectionUtils'
 import shared from '../components/shared.module.css'
 
+const OPEN_HOUSE_ID = 'static-open-house'
+const openHouseSection = {
+  id: OPEN_HOUSE_ID,
+  title: 'OPEN HOUSE- June 27th',
+  description: 'Register your child for our free Open House event. 11:00am - 3:00pm · Free Snacks Provided!',
+  capacity: 20,
+  student_ids: [],
+}
+
 /**
  * Section detail + enroll flow. A logged-in parent picks which child to enroll
  * and the enroll_student RPC appends them (with a server-side capacity check).
@@ -24,6 +33,7 @@ export default function SectionDetail() {
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
   const [enrolling, setEnrolling] = useState(false)
+  const [openHouseRegistering, setOpenHouseRegistering] = useState(false)
 
   const load = useCallback(async () => {
     if (!supabase || !id) return
@@ -36,7 +46,7 @@ export default function SectionDetail() {
         .eq('id', id)
         .maybeSingle()
       if (secErr) throw secErr
-      setSection(sec)
+      setSection(sec || (id === OPEN_HOUSE_ID ? openHouseSection : null))
 
       if (sec?.tutor_id) {
         const { data: tutor } = await supabase
@@ -105,6 +115,44 @@ export default function SectionDetail() {
     }
   }
 
+  async function registerOpenHouse() {
+    if (!user) {
+      navigate('/signup', { state: { from: { pathname: `/sections/${id}` } } })
+      return
+    }
+    if (role !== 'parent') {
+      setError('Only parent accounts can register children.')
+      return
+    }
+    if (children.length === 0) {
+      setError('Add a child to your account first.')
+      return
+    }
+    if (!childId) {
+      setError('Please pick a child to register.')
+      return
+    }
+
+    setOpenHouseRegistering(true)
+    setError('')
+    setNotice('')
+    try {
+      const { error: rpcErr } = await supabase.rpc('enroll_student', {
+        section_id: id,
+        student_id: childId,
+      })
+      if (rpcErr) {
+        setError(rpcErrorMessage(rpcErr, 'Could not register.'))
+        return
+      }
+      setNotice('Registered for Open House! Redirecting to My sessions...')
+      await load()
+      navigate('/dashboard')
+    } finally {
+      setOpenHouseRegistering(false)
+    }
+  }
+
   if (loading) {
     return (
       <div className={shared.page}>
@@ -127,6 +175,7 @@ export default function SectionDetail() {
   const enrolled = (section.student_ids || []).length
   const seatsLeft = Math.max(0, (section.capacity || 0) - enrolled)
   const full = seatsLeft === 0
+  const isOpenHouse = section.id === OPEN_HOUSE_ID || section.title.toLowerCase().includes('open house')
 
   return (
     <div className={`${shared.page} ${shared.narrow}`}>
@@ -147,37 +196,76 @@ export default function SectionDetail() {
       {error && <p className={shared.error} role="alert">{error}</p>}
       {notice && <p className={shared.success}>{notice}</p>}
 
-      {role === 'parent' && children.length > 1 && (
-        <div style={{ marginBottom: 12 }}>
-          <label htmlFor="childPick" className={shared.muted}>Enroll which child?</label>
-          <select
-            id="childPick"
-            className={shared.select}
-            value={childId}
-            onChange={(e) => setChildId(e.target.value)}
-            style={{ marginTop: 6 }}
+      {isOpenHouse ? (
+        <>
+          {role === 'parent' && children.length > 1 && (
+            <div style={{ marginBottom: 12 }}>
+              <label htmlFor="childPick" className={shared.muted}>Register which child?</label>
+              <select
+                id="childPick"
+                className={shared.select}
+                value={childId}
+                onChange={(e) => setChildId(e.target.value)}
+                style={{ marginTop: 6 }}
+              >
+                <option value="">Select a child…</option>
+                {children.map((c) => (
+                  <option key={c.id} value={c.id}>{c.full_name}</option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          <button
+            type="button"
+            className={shared.btn}
+            onClick={registerOpenHouse}
+            disabled={openHouseRegistering || full}
           >
-            <option value="">Select a child…</option>
-            {children.map((c) => (
-              <option key={c.id} value={c.id}>{c.full_name}</option>
-            ))}
-          </select>
-        </div>
-      )}
+            {full ? 'Open House full' : openHouseRegistering ? 'Registering…' : 'Register for Open House'}
+          </button>
 
-      <button
-        type="button"
-        className={shared.btn}
-        onClick={enroll}
-        disabled={enrolling || full}
-      >
-        {full ? 'Section full' : enrolling ? 'Enrolling…' : 'Enroll'}
-      </button>
+          {!user && (
+            <p className={shared.muted} style={{ marginTop: 12 }}>
+              You'll be asked to sign up or log in first.
+            </p>
+          )}
+        </>
+      ) : (
+        <>
+          {role === 'parent' && children.length > 1 && (
+            <div style={{ marginBottom: 12 }}>
+              <label htmlFor="childPick" className={shared.muted}>Enroll which child?</label>
+              <select
+                id="childPick"
+                className={shared.select}
+                value={childId}
+                onChange={(e) => setChildId(e.target.value)}
+                style={{ marginTop: 6 }}
+              >
+                <option value="">Select a child…</option>
+                {children.map((c) => (
+                  <option key={c.id} value={c.id}>{c.full_name}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
-      {!user && (
-        <p className={shared.muted} style={{ marginTop: 12 }}>
-          You'll be asked to sign up or log in first.
-        </p>
+          <button
+            type="button"
+            className={shared.btn}
+            onClick={enroll}
+            disabled={enrolling || full}
+          >
+            {full ? 'Section full' : enrolling ? 'Enrolling…' : 'Enroll'}
+          </button>
+
+          {!user && (
+            <p className={shared.muted} style={{ marginTop: 12 }}>
+              You'll be asked to sign up or log in first.
+            </p>
+          )}
+        </>
       )}
     </div>
   )
