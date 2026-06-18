@@ -98,7 +98,9 @@ export default function CatalogPage() {
           {displaySections.map((s) => {
             const title = displaySectionTitle(s.title)
             const isOpenHouse = title.toLowerCase().includes('open house')
-            const full = !isOpenHouse
+            const enrolled = (s.student_ids || []).length
+            const seatsLeft = Math.max(0, (s.capacity || 0) - enrolled)
+            const full = seatsLeft === 0 && !isOpenHouse
             return (
               <div key={s.id} className={shared.card}>
                 <div className={shared.spread}>
@@ -109,7 +111,9 @@ export default function CatalogPage() {
                   {getClassDescription(title)}
                 </p>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
-                  {full ? 'No seats available' : 'Open House enrollment available'}
+                  {full
+                    ? 'No seats available'
+                    : `${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
                 </p>
                 <div style={{ marginTop: 12 }}>
                   {isOpenHouse ? (

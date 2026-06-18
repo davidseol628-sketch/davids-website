@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import CatalogPage from './CatalogPage'
 
@@ -50,7 +50,7 @@ describe('CatalogPage', () => {
     expect(order).toHaveBeenCalledWith('created_at', { ascending: false })
   })
 
-  it('renders a card per section with seats-left text and an enroll link', async () => {
+  it('renders a card per section with real seat counts and only Open House enroll enabled', async () => {
     sectionsResult = {
       data: [
         {
@@ -69,15 +69,15 @@ describe('CatalogPage', () => {
     expect(await screen.findByText('Algebra I')).toBeInTheDocument()
     expect(screen.queryByText('Math')).not.toBeInTheDocument()
     expect(screen.queryByText('Grades: 6-8')).not.toBeInTheDocument()
-    // capacity 5 - 2 enrolled = 3 seats left
     expect(screen.getByText('3 seats left')).toBeInTheDocument()
 
-    // Multiple "View & enroll" links now exist (Research card + Algebra I), so check all
+    const algebraCard = within(screen.getByText('Algebra I').closest('div').parentElement)
+    expect(algebraCard.queryByText('Full')).not.toBeInTheDocument()
+    expect(algebraCard.getByRole('button', { name: /View & enroll/i })).toBeDisabled()
+
     const links = screen.getAllByRole('link', { name: /View & enroll/i })
-    expect(links.length).toBeGreaterThanOrEqual(2) // Algebra I + Research
-    expect(links.some((link) => link.getAttribute('href') === '/sections/sec-1')).toBe(true)
-    // not full -> no Full badge
-    expect(screen.queryByText('Full')).not.toBeInTheDocument()
+    expect(links.length).toBe(1)
+    expect(links[0].getAttribute('href')).toBe('/sections/static-home-3')
   })
 
   it('renames Geometry Lab to 3-D Printing and hides subject/grade details', async () => {
@@ -102,7 +102,7 @@ describe('CatalogPage', () => {
     expect(screen.queryByText('Grades: 6-8')).not.toBeInTheDocument()
   })
 
-  it('marks a section Full and singularizes the seat label', async () => {
+  it('marks full sections and shows seats left for non-full sections', async () => {
     sectionsResult = {
       data: [
         { id: 'full-1', title: 'Full Class', capacity: 2, student_ids: ['a', 'b'] },
@@ -113,9 +113,8 @@ describe('CatalogPage', () => {
     renderPage()
 
     await screen.findByText('Full Class')
-    expect(screen.getByText('Full')).toBeInTheDocument()
+    expect(screen.getAllByText('Full').length).toBeGreaterThanOrEqual(1)
     expect(screen.getByText('No seats available')).toBeInTheDocument()
-    // capacity 3 - 2 = 1 -> singular "seat"
     expect(screen.getByText('1 seat left')).toBeInTheDocument()
   })
 
