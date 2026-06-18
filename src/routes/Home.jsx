@@ -59,16 +59,6 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles.section}>
-        <h2>Who We Are</h2>
-        <p className={styles.lead}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac
-          felis sit amet eros vulputate faucibus. Duis et lorem sit amet velit
-          tincidunt vehicula. Phasellus sed urna sit amet neque varius
-          pellentesque.
-        </p>
-      </section>
-
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2>Educational Offerings</h2>
         <div className={styles.cards}>
