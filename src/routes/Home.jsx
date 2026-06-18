@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2>You're Invited to Our STEM Open House!</h2>
+        <h2 className={styles.openHouseHeader}>FREE STEM OPEN HOUSE • Saturday, June 27th • Live Demonstrations • Hands-On Activities • Register Today!</h2>
         <p className={styles.lead}>
           Join us for a free, family-friendly Open House and discover how
           learning comes alive at Praxis Enrichment Center! Meet our instructors,

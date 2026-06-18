@@ -263,6 +263,17 @@
   font-size: 15px;
 }
 
+.openHouseHeader {
+  color: var(--ink);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding: 0 10px;
+}
+
 /* ---------- Contact ---------- */
 .contact p {
   margin-bottom: 6px;
