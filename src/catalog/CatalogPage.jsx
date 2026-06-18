@@ -96,35 +96,25 @@ export default function CatalogPage() {
       ) : (
         <div className={shared.grid}>
           {displaySections.map((s) => {
-            const title = displaySectionTitle(s.title)
+            const title = s.title
             const isOpenHouse = title.toLowerCase().includes('open house')
             const enrolled = (s.student_ids || []).length
             const seatsLeft = Math.max(0, (s.capacity || 0) - enrolled)
-            const full = seatsLeft === 0 && !isOpenHouse
             return (
               <div key={s.id} className={shared.card}>
                 <div className={shared.spread}>
                   <h2 className={shared.cardTitle}>{title}</h2>
-                  {full && <span className={shared.badge}>Full</span>}
                 </div>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
                   {getClassDescription(title)}
                 </p>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
-                  {full
-                    ? 'No seats available'
-                    : `${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
+                  {`${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
                 </p>
                 <div style={{ marginTop: 12 }}>
-                  {isOpenHouse ? (
-                    <Link to={`/sections/${s.id}`} className={shared.btn}>
-                      View &amp; enroll
-                    </Link>
-                  ) : (
-                    <button type="button" className={shared.btn} disabled>
-                      View &amp; enroll
-                    </button>
-                  )}
+                  <Link to={`/sections/${s.id}`} className={shared.btn}>
+                    View &amp; enroll
+                  </Link>
                 </div>
               </div>
             )

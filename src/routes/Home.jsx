@@ -163,10 +163,6 @@ export default function Home() {
               <p className={styles.serviceDesc}>
                 Learn digital design and 3D modeling to bring your creative ideas to life.
               </p>
-              <p className={styles.price}>$25</p>
-              <Link to="/catalog" className={styles.bookBtn}>
-                Book Now
-              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>
@@ -182,9 +178,6 @@ export default function Home() {
                 Explore ecosystems, sustainability, and the science behind our changing world.
               </p>
               <p className={styles.price}>&nbsp;</p>
-              <Link to="/catalog" className={styles.bookBtn}>
-                Book Now
-              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>
@@ -200,9 +193,6 @@ export default function Home() {
                 Learn the basics of intelligent systems, pattern recognition, and problem solving.
               </p>
               <p className={styles.price}>&nbsp;</p>
-              <Link to="/catalog" className={styles.bookBtn}>
-                Book Now
-              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>
@@ -218,9 +208,6 @@ export default function Home() {
                 Build curiosity through inquiry, experimentation, and evidence-based discovery.
               </p>
               <p className={styles.price}>&nbsp;</p>
-              <Link to="/catalog" className={styles.bookBtn}>
-                Book Now
-              </Link>
             </div>
           </div>
         </div>
