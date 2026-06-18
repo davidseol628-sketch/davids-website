@@ -8,6 +8,7 @@ import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
 import adminAjax from '../assets/admin-ajax.jpg'
 import extendedDay from '../assets/210722-D-IM742-1234.JPG.avif'
 import classroomPhoto from '../assets/skec/NRG2025-1.JPG'
+import elevatingLearning from '../assets/skec/elevating_learning_stem_projects_for_high_school_students.webp.jpeg'
 import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
 import mentoringProfDev from '../assets/mentoringprofdevresources.png'
@@ -27,6 +28,9 @@ export default function Home() {
         <h1 className={styles.heroTitle}>
           Discover Praxis Enrichment Center
         </h1>
+        <p className={styles.heroTagline}>
+          Hands-On STEM Classes That Kids Actually Love
+        </p>
         <p className={styles.heroSub}>
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
@@ -67,8 +71,8 @@ export default function Home() {
             </div>
             <img
               className={styles.programImg}
-              src={classroomPhoto}
-              alt="Classroom"
+              src={elevatingLearning}
+              alt="Elevating learning"
             />
             <p className={styles.programCaption}>
               Instructors guide a classroom full of students to enable them to
