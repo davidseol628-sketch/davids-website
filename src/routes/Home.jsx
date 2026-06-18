@@ -39,7 +39,7 @@ export default function Home() {
             Log In/Sign Up
           </Link>
           <Link to="/catalog" className={styles.secondaryBtn}>
-            Registration
+            See All Available Classes
           </Link>
         </div>
       </section>
