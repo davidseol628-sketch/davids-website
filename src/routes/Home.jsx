@@ -63,26 +63,6 @@ export default function Home() {
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h1 className={styles.heroTitle}>
-          Discover Praxis Enrichment Center
-        </h1>
-        <p className={styles.heroTagline}>
-          Hands-On STEM Classes That Kids Actually Love
-        </p>
-        <p className={styles.heroSub}>
-          <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
-        </p>
-        <div className={styles.heroActions}>
-          <Link to="/signup" className={styles.primaryBtn}>
-            Log In/Sign Up
-          </Link>
-          <Link to="/catalog" className={styles.secondaryBtn}>
-            Enroll Now
-          </Link>
-        </div>
-      </section>
-
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2>Our Mission</h2>
         <p className={styles.lead}>
           At Praxis Enrichment Center, we believe that knowledge and learning
