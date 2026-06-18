@@ -231,8 +231,8 @@
 .missionImg {
   width: 100%;
   max-width: 720px;
-  max-height: 280px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 2px;
   margin: 24px auto 0;
   display: block;
