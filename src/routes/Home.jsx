@@ -39,7 +39,7 @@ export default function Home() {
             Log In/Sign Up
           </Link>
           <Link to="/catalog" className={styles.secondaryBtn}>
-            Enroll Now
+            Registration
           </Link>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <div className={styles.heroActions}>
           <Link to="/catalog" className={styles.primaryBtn}>
-            Sign Up Now!
+            Registration
           </Link>
         </div>
       </section>
