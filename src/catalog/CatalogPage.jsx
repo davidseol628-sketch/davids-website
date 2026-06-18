@@ -32,7 +32,7 @@ export default function CatalogPage() {
           .map((title, index) => ({
             id: `static-home-${index}`,
             title,
-            capacity: 10,
+            capacity: 20,
             student_ids: [],
           })),
       ]
