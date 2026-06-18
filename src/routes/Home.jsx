@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
-import missionPhoto from '../assets/skec/IMG_0651-preview.JPG'
 import tutorPhoto from '../assets/85.jpeg'
 import istockphotoLab from '../assets/istockphoto-1498506722-612x612.jpg'
 import smartKids from '../assets/skec/smart-kids.jpg'
@@ -54,7 +53,7 @@ export default function Home() {
         </p>
         <img
           className={styles.missionImg}
-          src={missionPhoto}
+          src={classroomPhoto}
           alt="Praxis Enrichment Center mission"
         />
       </section>
