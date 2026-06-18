@@ -55,9 +55,9 @@ export default function Home() {
         <div className={styles.offerList}>
           <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
           <ul>
-            <li>Robotics & Coding — watch robots come to life and learn how students program them.</li>
-            <li>3D Printing — see a 3D printer in action and take home a sample print.</li>
-            <li>Artificial Intelligence — experience beginner-friendly AI activities and interactive demos.</li>
+            <li><strong>Robotics & Coding</strong> — watch robots come to life and learn how students program them.</li>
+            <li><strong>3D Printing</strong> — see a 3D printer in action and take home a sample print.</li>
+            <li><strong>Artificial Intelligence</strong> — experience beginner-friendly AI activities and interactive demos.</li>
           </ul>
         </div>
         <div className={styles.heroActions}>
