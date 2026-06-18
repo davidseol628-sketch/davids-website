@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <div className={styles.heroActions}>
           <Link to="/catalog" className={styles.primaryBtn}>
-            Registration
+            Register Now!
           </Link>
         </div>
       </section>

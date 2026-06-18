@@ -23,7 +23,7 @@ export default function CatalogPage() {
 
   return (
     <div className={shared.page}>
-      <h1>Class catalog</h1>
+      <h1>Registration</h1>
       <p className={shared.lead}>Browse our published classes and enroll your child.</p>
 
       <div className={shared.grid}>

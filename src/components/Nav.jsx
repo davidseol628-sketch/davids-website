@@ -17,21 +17,21 @@ import styles from './Nav.module.css'
 // exact-match active styling (used for index-style routes like /admin).
 const LINKS_BY_ROLE = {
   guest: [
-    ['/catalog', 'Catalog'],
+    ['/catalog', 'Registration'],
     ['/tutors', 'Tutors'],
   ],
   parent: [
-    ['/catalog', 'Catalog'],
+    ['/catalog', 'Registration'],
     ['/tutors', 'Tutors'],
     ['/dashboard', 'My Dashboard'],
   ],
   tutor: [
-    ['/catalog', 'Catalog'],
+    ['/catalog', 'Registration'],
     ['/tutors', 'Tutors'],
     ['/tutor', 'My Sessions'],
   ],
   admin: [
-    ['/catalog', 'Catalog'],
+    ['/catalog', 'Registration'],
     ['/tutors', 'Tutors'],
     ['/admin', 'Admin', true],
     ['/admin/sections', 'Sections'],
