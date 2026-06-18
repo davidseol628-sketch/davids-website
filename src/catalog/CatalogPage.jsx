@@ -14,6 +14,7 @@ export default function CatalogPage() {
     'Environmental Science',
     'Introduction to Artificial Intelligence',
     'Research Methods & Discovery',
+    'OPEN HOUSE- June 27th',
   ]
 
   const displaySections = sections.length > 0
@@ -50,6 +51,9 @@ export default function CatalogPage() {
     }
     if (normalized.includes('research methods') || normalized.includes('research')) {
       return 'Build curiosity through inquiry, experimentation, and evidence-based discovery.'
+    }
+    if (normalized.includes('open house')) {
+      return '11:00am - 3:00pm · Free Snacks Provided!'
     }
     return 'A hands-on class designed to inspire curiosity and practical learning.'
   }
@@ -92,25 +96,31 @@ export default function CatalogPage() {
       ) : (
         <div className={shared.grid}>
           {displaySections.map((s) => {
-            const enrolled = (s.student_ids || []).length
-            const seatsLeft = Math.max(0, (s.capacity || 0) - enrolled)
-            const full = seatsLeft === 0
+            const title = displaySectionTitle(s.title)
+            const isOpenHouse = title.toLowerCase().includes('open house')
+            const full = !isOpenHouse
             return (
               <div key={s.id} className={shared.card}>
                 <div className={shared.spread}>
-                  <h2 className={shared.cardTitle}>{displaySectionTitle(s.title)}</h2>
+                  <h2 className={shared.cardTitle}>{title}</h2>
                   {full && <span className={shared.badge}>Full</span>}
                 </div>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
-                  {getClassDescription(displaySectionTitle(s.title))}
+                  {getClassDescription(title)}
                 </p>
                 <p className={shared.muted} style={{ marginTop: 8 }}>
-                  {full ? 'No seats available' : `${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
+                  {full ? 'No seats available' : 'Open House enrollment available'}
                 </p>
                 <div style={{ marginTop: 12 }}>
-                  <Link to={`/sections/${s.id}`} className={shared.btn}>
-                    View &amp; enroll
-                  </Link>
+                  {isOpenHouse ? (
+                    <Link to={`/sections/${s.id}`} className={shared.btn}>
+                      View &amp; enroll
+                    </Link>
+                  ) : (
+                    <button type="button" className={shared.btn} disabled>
+                      View &amp; enroll
+                    </button>
+                  )}
                 </div>
               </div>
             )
