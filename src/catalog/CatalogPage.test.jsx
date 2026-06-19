@@ -3,31 +3,37 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 
-const navigateMock = vi.fn()
-const fromMock = vi.fn()
-const rpcMock = vi.fn()
-let authValue = { user: null, role: null }
-
 vi.mock('react-router-dom', async (importOriginal) => {
   const actual = await importOriginal()
+  const navigateMock = vi.fn()
   return {
     ...actual,
     useNavigate: () => navigateMock,
+    __navigateMock: navigateMock,
   }
 })
 
-vi.mock('../lib/supabase', () => ({
-  supabase: {
-    from: fromMock,
-    rpc: rpcMock,
-  },
-}))
+vi.mock('../lib/supabase', () => {
+  const fromMock = vi.fn()
+  const rpcMock = vi.fn()
+  return {
+    supabase: { from: fromMock, rpc: rpcMock },
+    __fromMock: fromMock,
+    __rpcMock: rpcMock,
+  }
+})
 
-vi.mock('../lib/auth', () => ({
-  useAuth: () => authValue,
-}))
+vi.mock('../lib/auth', () => {
+  const authState = { user: null, role: null }
+  return {
+    useAuth: () => authState,
+    __authState: authState,
+  }
+})
 
-import { supabase } from '../lib/supabase'
+import { __fromMock as fromMock, __rpcMock as rpcMock } from '../lib/supabase'
+import { __navigateMock as navigateMock } from 'react-router-dom'
+import { __authState as authValue } from '../lib/auth'
 import CatalogPage from './CatalogPage'
 
 function renderPage() {
@@ -40,9 +46,11 @@ function renderPage() {
 
 beforeEach(() => {
   vi.clearAllMocks()
-  authValue = { user: null, role: null }
   fromMock.mockReset()
   rpcMock.mockReset()
+  navigateMock.mockReset()
+  authValue.user = null
+  authValue.role = null
 })
 
 describe('CatalogPage', () => {
@@ -71,7 +79,7 @@ describe('CatalogPage', () => {
   })
 
   it('shows a notice after successful Open House registration for parents', async () => {
-    authValue = { user: { id: 'p1' }, role: 'parent' }
+    Object.assign(authValue, { user: { id: 'p1' }, role: 'parent' })
     fromMock.mockImplementation(() => ({
       select: vi.fn().mockReturnThis(),
       eq: vi.fn().mockReturnThis(),
