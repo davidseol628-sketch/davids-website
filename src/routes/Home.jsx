@@ -52,6 +52,15 @@ export default function Home() {
           explore our classrooms, and participate in exciting hands-on STEM
           demonstrations designed for curious minds of all ages.
         </p>
+        <p className={styles.lead}>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfzicZLAZmYWDzNV3xT2LMu953BJbDErN50_rL9Nov6I0aKoQ/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Click here to register for the Open House.
+          </a>
+        </p>
         <div className={styles.offerList}>
           <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
           <ul>
