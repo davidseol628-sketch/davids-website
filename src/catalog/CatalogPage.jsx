@@ -42,12 +42,16 @@ export default function CatalogPage() {
             </a>
           </p>
           <p className={shared.muted} style={{ marginTop: 8 }}>
+            You can also register by contacting us at{' '}
+            <a href="mailto:praxiscenteredu@gmail.com">praxiscenteredu@gmail.com</a>.
+          </p>
+          <p className={shared.muted} style={{ marginTop: 8 }}>
             {`${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
           </p>
           <div style={{ marginTop: 12 }}>
-            <Link to="/sections/static-open-house" className={shared.btn}>
+            <button type="button" className={shared.btn} disabled>
               View details
-            </Link>
+            </button>
           </div>
         </div>
       </div>

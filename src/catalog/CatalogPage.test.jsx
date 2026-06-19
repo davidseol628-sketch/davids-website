@@ -27,6 +27,13 @@ describe('CatalogPage', () => {
     expect(screen.queryByRole('button', { name: /Register for Open House/i })).not.toBeInTheDocument()
   })
 
+  it('renders a disabled View details button', () => {
+    renderPage()
+
+    const button = screen.getByRole('button', { name: /View details/i })
+    expect(button).toBeDisabled()
+  })
+
   it('does not render any other section titles', () => {
     renderPage()
 
