@@ -18,20 +18,24 @@ import styles from './Nav.module.css'
 const LINKS_BY_ROLE = {
   guest: [
     ['/catalog', 'Registration'],
+    ['/classes', 'Classes'],
     ['/tutors', 'Tutors'],
   ],
   parent: [
     ['/catalog', 'Registration'],
+    ['/classes', 'Classes'],
     ['/tutors', 'Tutors'],
     ['/dashboard', 'My Dashboard'],
   ],
   tutor: [
     ['/catalog', 'Registration'],
+    ['/classes', 'Classes'],
     ['/tutors', 'Tutors'],
     ['/tutor', 'My Sessions'],
   ],
   admin: [
     ['/catalog', 'Registration'],
+    ['/classes', 'Classes'],
     ['/tutors', 'Tutors'],
     ['/admin', 'Admin', true],
     ['/admin/sections', 'Sections'],

@@ -39,6 +39,14 @@
   font-size: 18px;
 }
 
+.missionImg {
+  display: block;
+  width: min(100%, 520px);
+  margin: 24px auto 0;
+  height: auto;
+  border-radius: 2px;
+}
+
 .heroActions {
   display: flex;
   gap: 12px;

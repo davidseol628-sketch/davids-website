@@ -4,15 +4,11 @@ import heroCountry from '../assets/skec/hero-country.jpg'
 import tutorPhoto from '../assets/85.jpeg'
 import istockphotoLab from '../assets/istockphoto-1498506722-612x612.jpg'
 import smartKids from '../assets/skec/smart-kids.jpg'
-import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
-import adminAjax from '../assets/admin-ajax.jpg'
-import extendedDay from '../assets/210722-D-IM742-1234.JPG.avif'
 import classroomPhoto from '../assets/skec/NRG2025-1.JPG'
 import elevatingLearning from '../assets/skec/elevating_learning_stem_projects_for_high_school_students.webp.jpeg'
 import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
 import mentoringProfDev from '../assets/mentoringprofdevresources.png'
-import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 
@@ -34,6 +30,11 @@ export default function Home() {
         <p className={styles.heroSub}>
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
+        <img
+          className={styles.missionImg}
+          src={classroomPhoto}
+          alt="Praxis Enrichment Center mission"
+        />
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
@@ -47,11 +48,6 @@ export default function Home() {
           courses, we help young students build confidence, curiosity, and a
           passion for discovery.
         </p>
-        <img
-          className={styles.missionImg}
-          src={classroomPhoto}
-          alt="Praxis Enrichment Center mission"
-        />
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
@@ -149,66 +145,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <h2>Our Classes</h2>
-        <div className={styles.cards}>
-          <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={tomLauerman} alt="Tom Lauerman 3D printing" />
-            <div className={styles.serviceBody}>
-              <h3>3D Printing and Design</h3>
-              <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Learn digital design and 3D modeling to bring your creative ideas to life.
-              </p>
-            </div>
-          </div>
-          <div className={styles.serviceCard}>
-            <img
-              className={styles.serviceImg}
-              src={adminAjax}
-              alt="Environmental science"
-            />
-            <div className={styles.serviceBody}>
-              <h3>Environmental Science</h3>
-              <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Explore ecosystems, sustainability, and the science behind our changing world.
-              </p>
-              <p className={styles.price}>&nbsp;</p>
-            </div>
-          </div>
-          <div className={styles.serviceCard}>
-            <img
-              className={styles.serviceImg}
-              src={extendedDay}
-              alt="Artificial intelligence"
-            />
-            <div className={styles.serviceBody}>
-              <h3>Introduction to Artificial Intelligence</h3>
-              <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Learn the basics of intelligent systems, pattern recognition, and problem solving.
-              </p>
-              <p className={styles.price}>&nbsp;</p>
-            </div>
-          </div>
-          <div className={styles.serviceCard}>
-            <img
-              className={styles.serviceImg}
-              src={researcherAtWork}
-              alt="Researcher at work"
-            />
-            <div className={styles.serviceBody}>
-              <h3>Research Methods & Discovery</h3>
-              <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Build curiosity through inquiry, experimentation, and evidence-based discovery.
-              </p>
-              <p className={styles.price}>&nbsp;</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={`${styles.split} ${styles.splitReverse}`}>
