@@ -291,6 +291,12 @@
   overflow: hidden;
 }
 
+/* Center call-to-action buttons inside program cards */
+.programCard .bookBtn {
+  display: inline-block;
+  margin: 16px auto 0;
+}
+
 .programHeader {
   background: var(--panel);
   text-align: center;
