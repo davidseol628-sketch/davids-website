@@ -14,10 +14,45 @@ export default function DigitalElectronics() {
           <div className={styles.serviceCard}>
             <div className={styles.serviceBody}>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Want to learn how to design and build circuits? We live surrounded by smart gadgets, but few people know how they’re made. Stay away from the screens and get your hands on real hardware! In this hands-on class, you’ll learn the basics of digital electronics from simple gates to Ohm’s Law. Let's build mini circuits that reflect real-world technology! No prior programming or electronics experience required. Just bring your curiosity, and get ready to code it, wire it, and watch it come alive!
-              </p>
+              <div className={styles.divider} />
               <h2>Schedule</h2>
+              <div className={styles.scheduleSection}>
+                <h3>(15 min) What is Digital Electronics?</h3>
+                <ul>
+                  <li>Show off some circuits</li>
+                  <li>Ohm's Law</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(1 hr) The Basics</h3>
+                <ul>
+                  <li>Binary w/ Conversion</li>
+                  <li>Gates w/ Truth Tables - on Whiteboard
+                    <ul>
+                      <li>AND, OR, NOT, NAND, NOR, XOR, XAND</li>
+                    </ul>
+                  </li>
+                  <li>Series, Parallel</li>
+                  <li>Small demo with breadboards - maybe up/down counter</li>
+                  <li>Might introduce them to TinkerCad for digital breadboard design</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(15 min) BREAK</h3>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(1.5 hr) Student Design Activity - Need to Figure This One Out</h3>
+                <ul>
+                  <li>Activity - Students pair up and choose to do one of the following:
+                    <ul>
+                      <li>Noise-activated lights</li>
+                      <li>Traffic light</li>
+                      <li>Blinking light</li>
+                      <li>Up/Down Counter</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
