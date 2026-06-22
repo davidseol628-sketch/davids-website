@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import microscopeLab from '../assets/microscope-lab-hero.jpg'
-import adminAjax from '../assets/admin-ajax.jpg'
-import extendedDay from '../assets/210722-D-IM742-1234.JPG.avif'
+import brushBot from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
+import scratchDashboard from '../assets/scratch-dashboard.png'
+import mycgMy from '../assets/MyvgMY57Z7DNYqQctU6cKMETCvSPVUWriLULyKKz.jpeg'
+import jpegImage from '../assets/jpeg.jpeg'
 import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
 
 export default function Classes() {
@@ -28,7 +30,7 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={adminAjax} alt="Computer aided design and 3D printing" />
+            <img className={styles.serviceImg} src={brushBot} alt="3D-printed brush bot" />
             <div className={styles.serviceBody}>
               <h3>Intro to Computer Aided Design + 3D Printing for Engineering Applications</h3>
               <div className={styles.divider} />
@@ -44,7 +46,7 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={extendedDay} alt="Scratch programming" />
+            <img className={styles.serviceImg} src={scratchDashboard} alt="Scratch dashboard" />
             <div className={styles.serviceBody}>
               <h3>Intro to Scratch Programming</h3>
               <div className={styles.divider} />
@@ -60,7 +62,7 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={researcherAtWork} alt="Lab scientist" />
+            <img className={styles.serviceImg} src={jpegImage} alt="Outbreak class" />
             <div className={styles.serviceBody}>
               <h3>Introduction to Epidemiology/Disease Outbreak and Laboratory Techniques</h3>
               <div className={styles.divider} />
@@ -76,7 +78,7 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={researcherAtWork} alt="Researcher at work" />
+            <img className={styles.serviceImg} src={mycgMy} alt="MycgMY Arduino" />
             <div className={styles.serviceBody}>
               <h3>Intro to Digital Electronics with Arduinos</h3>
               <div className={styles.divider} />
