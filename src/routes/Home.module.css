@@ -376,6 +376,13 @@
   margin: 0;
 }
 
+.scheduleSection ul ul {
+  list-style: circle inside;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 40px;
+}
+
 .scheduleSection li {
   color: var(--text);
   margin-bottom: 10px;

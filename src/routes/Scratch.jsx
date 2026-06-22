@@ -14,10 +14,38 @@ export default function Scratch() {
           <div className={styles.serviceCard}>
             <div className={styles.serviceBody}>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}>
-                Ready to turn your imagination into code? This hands-on workshop invites kids of all ages to step into the developer’s shoes and dive into the colorful world of game design! Scratch is an amazing way for beginners to be introduced to coding, letting you learn by snapping blocks together like digital puzzle pieces to bring your own game to life. Students will be able to learn, create, and showcase the games they make, using skills learned in class.
-              </p>
+              <div className={styles.divider} />
               <h2>Schedule</h2>
+              <div className={styles.scheduleSection}>
+                <h3>(15 min) Scratch Overview: What is Coding? And Why Start with Scratch?</h3>
+                <ul>
+                  <li>Scratch demo</li>
+                  <li>Applications of programming</li>
+                  <li>Show example student-made games</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(1 hr) Scratch Walkthrough</h3>
+                <ul>
+                  <li>Set up student laptops</li>
+                  <li>Wi-Fi</li>
+                  <li>Scratch basics</li>
+                  <li>Core Concepts (if, else, while, interactives, sprites, etc.)</li>
+                  <li>Guided activity - code along as a class</li>
+                  <li>Mini Project (prolly combined with guided activity)</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(15 min) BREAK</h3>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(1.5 hr) Student Design Activity - Creative Liberty</h3>
+                <ul>
+                  <li>Students get to design their own game, either based on a class example or start from scratch</li>
+                  <li>Ask 3 before me</li>
+                  <li>Near the end of class, students will be able to have a showcase</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
