@@ -97,9 +97,9 @@
 
 .openHouseLink {
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  padding: 14px 22px;
+  padding: 10px 16px;
   background: var(--ink);
   color: #fff;
   text-decoration: none;
@@ -239,6 +239,10 @@
   font-size: 20px;
 }
 
+.divider {
+  margin-bottom: 20px;
+}
+
 .serviceDesc {
   color: var(--text);
   margin: 0 0 16px;
@@ -308,7 +312,7 @@
 
 .missionImg {
   width: 100%;
-  max-width: 720px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
   border-radius: 2px;

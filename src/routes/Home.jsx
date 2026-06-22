@@ -94,6 +94,9 @@ export default function Home() {
               Instructors guide a classroom full of students to enable them to
               apply STEM knowledge beyond academics.
             </p>
+            <Link className={styles.bookBtn} to="/classes">
+              View Classes
+            </Link>
           </div>
           <div className={styles.programCard}>
             <div className={styles.programHeader}>
@@ -108,6 +111,9 @@ export default function Home() {
               Personalized tutoring sessions designed to support learning goals,
               improve confidence, and build academic skills one student at a time.
             </p>
+            <Link className={styles.bookBtn} to="/tutors">
+              Meet Our Tutors
+            </Link>
           </div>
           <div className={styles.programCard}>
             <div className={styles.programHeader}>

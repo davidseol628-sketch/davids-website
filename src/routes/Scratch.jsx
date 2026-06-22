@@ -6,7 +6,7 @@ export default function Scratch() {
       <section className={styles.section}>
         <h1>Intro to Scratch Programming</h1>
         <div className={styles.articleIntro}>
-          <p><strong>Duration:</strong> one 3-hour session</p>
+          <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> Middle Schoolers (ages 11-14)</p>
           <p><strong>Class description:</strong></p>
         </div>
