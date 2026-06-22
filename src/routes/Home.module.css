@@ -77,6 +77,23 @@
   margin: -4px 0 24px;
 }
 
+.openHouseLink {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 22px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+}
+
+.openHouseLink:hover,
+.openHouseLink:focus {
+  background: #111;
+}
+
 .goalsList,
 .offerList {
   list-style: none;

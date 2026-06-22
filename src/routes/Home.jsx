@@ -34,38 +34,6 @@ export default function Home() {
         <p className={styles.heroSub}>
           <strong>pra·xis</strong> <em>(noun)</em> — the process of putting a theory, lesson, or abstract idea into practical action
         </p>
-        <div className={styles.heroActions}>
-          <Link to="/catalog" className={styles.secondaryBtn}>
-            See All Available Classes
-          </Link>
-        </div>
-      </section>
-
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2 className={styles.openHouseHeader}>FREE STEM OPEN HOUSE • Saturday, June 27th • Live Demonstrations • Hands-On Activities • Register Today!</h2>
-        <p className={styles.lead}>
-          Join us for a free, family-friendly Open House and discover how
-          learning comes alive at Praxis Enrichment Center! Meet our instructors,
-          explore our classrooms, and participate in exciting hands-on STEM
-          demonstrations designed for curious minds of all ages.
-        </p>
-        <p className={styles.lead}>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfzicZLAZmYWDzNV3xT2LMu953BJbDErN50_rL9Nov6I0aKoQ/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Click here to register for the Open House.
-          </a>
-        </p>
-        <div className={styles.offerList}>
-          <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
-          <ul>
-            <li><strong>Robotics & Coding</strong> — watch robots come to life and learn how students program them.</li>
-            <li><strong>3D Printing</strong> — see a 3D printer in action and take home a sample print.</li>
-            <li><strong>Artificial Intelligence</strong> — experience beginner-friendly AI activities and interactive demos.</li>
-          </ul>
-        </div>
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
@@ -124,13 +92,41 @@ export default function Home() {
             <img
               className={styles.programImg}
               src={mentoringProfDev}
-              alt="Career mentoring"
+              alt="Mentoring and professional development"
             />
             <p className={styles.programCaption}>
-              Career mentoring paired with a tutor to help students explore
-              meaningful career paths and build long-term goals.
+              Mentoring and professional development for students ready to
+              explore careers in STEM and build real-world readiness.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h2 className={styles.openHouseHeader}>FREE STEM OPEN HOUSE • Saturday, June 27th • Live Demonstrations • Hands-On Activities • Register Today!</h2>
+        <p className={styles.lead}>
+          Join us for a free, family-friendly Open House and discover how
+          learning comes alive at Praxis Enrichment Center! Meet our instructors,
+          explore our classrooms, and participate in exciting hands-on STEM
+          demonstrations designed for curious minds of all ages.
+        </p>
+        <p className={styles.lead}>
+          <a
+            className={styles.openHouseLink}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfzicZLAZmYWDzNV3xT2LMu953BJbDErN50_rL9Nov6I0aKoQ/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Click here to register for the Open House.
+          </a>
+        </p>
+        <div className={styles.offerList}>
+          <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
+          <ul>
+            <li><strong>Robotics & Coding</strong> — watch robots come to life and learn how students program them.</li>
+            <li><strong>3D Printing</strong> — see a 3D printer in action and take home a sample print.</li>
+            <li><strong>Artificial Intelligence</strong> — experience beginner-friendly AI activities and interactive demos.</li>
+          </ul>
         </div>
       </section>
 
