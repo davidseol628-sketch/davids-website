@@ -119,6 +119,7 @@ function FormsMenu({ forms }) {
 
 export default function Nav() {
   const { user, role, signOut } = useAuth()
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const effectiveRole = user ? role || 'guest' : 'guest'
   const links = LINKS_BY_ROLE[effectiveRole]
@@ -132,10 +133,20 @@ export default function Nav() {
       <Link to="/" className={styles.brand}>
         Praxis Enrichment Center
       </Link>
+      <button
+        type="button"
+        className={styles.hamburger}
+        aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={mobileOpen}
+        aria-controls="primary-nav"
+        onClick={() => setMobileOpen((s) => !s)}
+      >
+        <span aria-hidden>☰</span>
+      </button>
 
-      <div className={styles.links}>
+      <div id="primary-nav" className={styles.links} data-open={mobileOpen}>
         {links.map(([to, label, end]) => (
-          <NavLink key={to} to={to} end={end} className={linkClass}>
+          <NavLink key={to} to={to} end={end} className={linkClass} onClick={() => setMobileOpen(false)}>
             {label}
           </NavLink>
         ))}
@@ -143,15 +154,15 @@ export default function Nav() {
         {forms && <FormsMenu forms={forms} />}
 
         {user ? (
-          <button type="button" className={styles.signout} onClick={signOut}>
+          <button type="button" className={styles.signout} onClick={() => { setMobileOpen(false); signOut(); }}>
             Sign out
           </button>
         ) : (
           <>
-            <NavLink to="/login" className={linkClass}>
+            <NavLink to="/login" className={linkClass} onClick={() => setMobileOpen(false)}>
               Log in
             </NavLink>
-            <Link to="/signup" className={styles.signup}>
+            <Link to="/signup" className={styles.signup} onClick={() => setMobileOpen(false)}>
               Sign up
             </Link>
           </>

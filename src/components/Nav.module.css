@@ -143,3 +143,45 @@
     min-width: 160px;
   }
 }
+
+/* Hamburger button - hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .hamburger {
+    display: inline-block;
+  }
+
+  /* Hide the normal links row by default on mobile; show when data-open="true" */
+  .links {
+    display: none;
+  }
+
+  .links[data-open="true"] {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: var(--bg, #fff);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    z-index: 50;
+    min-width: 160px;
+  }
+
+  .links a,
+  .links button {
+    white-space: nowrap;
+  }
+}
