@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
-import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
+import microscopeLab from '../assets/microscope-lab-hero.jpg'
 import adminAjax from '../assets/admin-ajax.jpg'
 import extendedDay from '../assets/210722-D-IM742-1234.JPG.avif'
 import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
@@ -12,7 +12,7 @@ export default function Classes() {
         <h1>Our Classes</h1>
         <div className={styles.serviceCards}>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={tomLauerman} alt="Microscopy workshop" />
+            <img className={styles.serviceImg} src={microscopeLab} alt="Microscopy workshop" />
             <div className={styles.serviceBody}>
               <h3>Introduction to Microscopy Class</h3>
               <div className={styles.divider} />
@@ -38,25 +38,29 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={extendedDay} alt="Artificial intelligence" />
+            <img className={styles.serviceImg} src={extendedDay} alt="Scratch programming" />
             <div className={styles.serviceBody}>
-              <h3>Introduction to Artificial Intelligence</h3>
+              <h3>Intro to Scratch Programming</h3>
               <div className={styles.divider} />
               <p className={styles.serviceDesc}>
-                Learn the basics of intelligent systems, pattern recognition, and problem solving.
+                Ready to turn your imagination into code? This hands-on workshop invites kids of all ages to step into the developer’s shoes and dive into the colorful world of game design! Scratch is an amazing way for beginners to be introduced to coding, letting you learn by snapping blocks together like digital puzzle pieces to bring your own game to life. Students will be able to learn, create, and showcase the games they make, using skills learned in class.
               </p>
-              <p className={styles.price}>&nbsp;</p>
+              <Link className={styles.bookBtn} to="/classes/scratch">
+                Explore
+              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={researcherAtWork} alt="Researcher at work" />
             <div className={styles.serviceBody}>
-              <h3>Research Methods & Discovery</h3>
+              <h3>Intro to Digital Electronics w/ Arduinos</h3>
               <div className={styles.divider} />
               <p className={styles.serviceDesc}>
-                Build curiosity through inquiry, experimentation, and evidence-based discovery.
+                Want to learn how to design and build circuits? We live surrounded by smart gadgets, but few people know how they’re made. Stay away from the screens and get your hands on real hardware! In this hands-on class, you’ll learn the basics of digital electronics from simple gates to Ohm’s Law. Let's build mini circuits that reflect real-world technology! No prior programming or electronics experience required. Just bring your curiosity, and get ready to code it, wire it, and watch it come alive!
               </p>
-              <p className={styles.price}>&nbsp;</p>
+              <Link className={styles.bookBtn} to="/classes/digital-electronics">
+                Explore
+              </Link>
             </div>
           </div>
         </div>

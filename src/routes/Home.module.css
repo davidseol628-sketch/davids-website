@@ -212,6 +212,13 @@
   flex: 1;
 }
 
+.serviceCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
 .serviceBody h3 {
   margin: 0 0 12px;
   color: var(--text-h);
@@ -236,7 +243,7 @@
 }
 
 .bookBtn {
-  align-self: flex-start;
+  align-self: center;
   margin-top: auto;
   padding: 9px 18px;
   background: var(--ink);
