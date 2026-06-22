@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import tomLauerman from '../assets/Tom-Lauerman-2-color-clay-printer-in-use.jpg'
 import adminAjax from '../assets/admin-ajax.jpg'
@@ -11,13 +12,16 @@ export default function Classes() {
         <h1>Our Classes</h1>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={tomLauerman} alt="Tom Lauerman 3D printing" />
+            <img className={styles.serviceImg} src={tomLauerman} alt="Microscopy workshop" />
             <div className={styles.serviceBody}>
-              <h3>3D Printing and Design</h3>
+              <h3>Introduction to Microscopy Class</h3>
               <div className={styles.divider} />
               <p className={styles.serviceDesc}>
-                Learn digital design and 3D modeling to bring your creative ideas to life.
+                Recommended Age Range: Grades 6-8 / Ages 11-14. Duration: one 3 hour session. Recommended age range: Middle schoolers (ages 11-14). This hands-on workshop introduces middle school students to microscopy through activities that relate to real world application. Students will learn the parts of a microscope, how to use a microscope, and how to identify organisms from their own local freshwater ponds. No prior experience is needed. However, students will be asked to bring a small sample from their own local freshwater ponds that includes sediment, water, and aquatic plant life.
               </p>
+              <Link className={styles.bookBtn} to="/classes/microscopy">
+                Explore
+              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>
