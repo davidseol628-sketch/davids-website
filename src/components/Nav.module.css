@@ -112,3 +112,34 @@
   background: var(--border);
   color: var(--text-h);
 }
+
+/* Responsive tweaks for small screens to reduce header/tab sizing */
+@media (max-width: 640px) {
+  .nav {
+    padding: 10px 12px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .links {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .link {
+    font-size: 13px;
+  }
+  .signup {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .signout {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .dropdown .link {
+    font-size: 13px;
+  }
+  .menu {
+    min-width: 160px;
+  }
+}
