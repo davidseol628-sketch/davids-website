@@ -146,42 +146,6 @@ export default function Home() {
       </section>
 
 
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className={`${styles.split} ${styles.splitReverse}`}>
-          <img
-            className={styles.splitImg}
-            src={istockphotoLab}
-            alt="Explore the lab"
-          />
-          <div className={styles.splitText}>
-            <h2>Explore the Lab</h2>
-            <p>
-              Our learning lab is equipped with modern technology designed to make
-              every lesson interactive and exploratory.
-            </p>
-            <ul className={styles.offerList}>
-              <li>
-                <strong>Touchscreen Smart Board</strong> — a dynamic display for
-                collaborative lessons, digital drawing, and real-time problem
-                solving.
-              </li>
-              <li>
-                <strong>Interactive Whiteboard</strong> — a hands-on surface where
-                students can write, annotate, and engage directly with lesson
-                content.
-              </li>
-              <li>
-                <strong>3-D Printer</strong> — a creative maker tool for turning
-                student ideas into tangible models and engineering prototypes.
-              </li>
-            </ul>
-            <Link to="/signup" className={styles.secondaryBtn}>
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Mission and Goals moved to hero area */}
 
       <section className={`${styles.section} ${styles.contact}`}>
