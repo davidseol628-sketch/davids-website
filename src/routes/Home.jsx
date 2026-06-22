@@ -147,7 +147,7 @@ export default function Home() {
         <h2>Get In Touch</h2>
         <p>9066 Baltimore Ave Unit A, College Park, MD 20740, USA</p>
         <p>Phone: (478) 241-0365</p>
-        <p>Email: skagrovers@gmail.com</p>
+        <p>Email: praxiscenteredu@gmail.com</p>
         <p>Opening Hours: Mon–Fri 9am–6pm · Sat 10am–2pm · Sun Closed</p>
       </section>
     </div>
