@@ -32,6 +32,17 @@
   gap: 16px;
 }
 
+/* Two-column grid utility for wider tutor card layouts */
+.twoColGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 860px) {
+  .twoColGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .input,
 .textarea,
 .select {

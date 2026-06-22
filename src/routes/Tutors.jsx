@@ -23,7 +23,7 @@ export default function Tutors() {
         Browse our tutor network and connect with skilled educators across a
         range of subjects and specialties.
       </p>
-      <div className={shared.grid} style={{ gridTemplateColumns: '1fr', gap: '24px' }}>
+      <div className={`${shared.grid} ${shared.twoColGrid}`} style={{ gap: '24px' }}>
         {[
           {
             name: 'Brandon Le',
