@@ -209,12 +209,12 @@
 
 .serviceImg {
   width: 100%;
-  height: 260px;
+  height: 220px;
   object-fit: cover;
 }
 
 .serviceBody {
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -223,13 +223,31 @@
 .serviceCards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-  margin-top: 32px;
+  gap: 20px;
+  margin-top: 24px;
 }
 
 @media (max-width: 860px) {
   .serviceCards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 28px 0;
+  }
+
+  .serviceImg {
+    height: 180px;
+  }
+
+  .serviceBody {
+    padding: 12px;
+  }
+
+  .programImg {
+    height: 140px;
   }
 }
 

@@ -104,6 +104,26 @@
   font-size: 14px;
 }
 
+/* Global mobile tidy-up */
+@media (max-width: 640px) {
+  .page {
+    padding: 18px 12px 28px;
+  }
+
+  .card {
+    padding: 12px 14px;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+}
+
 .error {
   color: #d92d20;
   font-size: 14px;
@@ -177,14 +197,14 @@
 
 /* Smaller description text for compact card content (e.g., Tutors list) */
 .cardDesc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text);
   margin-top: 8px;
 }
 
 @media (max-width: 600px) {
   .cardDesc {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
