@@ -19,10 +19,6 @@ export default function Tutors() {
       </section>
 
       <h1>Tutors</h1>
-      <p className={shared.lead}>
-        Browse our tutor network and connect with skilled educators across a
-        range of subjects and specialties.
-      </p>
       <div className={`${shared.grid} ${shared.twoColGrid}`} style={{ gap: '24px' }}>
         {[
           {
@@ -35,7 +31,7 @@ export default function Tutors() {
             name: 'David Seol',
             subject: 'STEM Classroom Instructor',
             description:
-              'David helps students reach their academic goals through personalized learning strategies, confidence-building support, and practical study skills.',
+              'David is a Microbiology student at the University of Maryland, currently pursuing Dentistry. He has worked on a research team in an endodontics lab at the University of Maryland School of Dentistry and shadowed under Dr. Jun Park at Jun Park Dentistry for two years. For tutoring, David has experience teaching SAT prep and advising students on college readiness and applications.',
           },
           {
             name: 'Tien Tran',
