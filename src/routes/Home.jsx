@@ -37,18 +37,7 @@ export default function Home() {
         />
       </section>
 
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2>Our Mission</h2>
-        <p className={styles.lead}>
-          At Praxis Enrichment Center, we believe that knowledge and learning
-          should be accessible to everyone. Our mission is to empower students
-          through hands-on, engaging educational experiences that transform
-          ideas into real-world skills outside of the classroom. By combining
-          creativity, innovation, and practical application through our
-          courses, we help young students build confidence, curiosity, and a
-          passion for discovery.
-        </p>
-      </section>
+      {/* Our Mission moved to Tutors page */}
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2 className={styles.openHouseHeader}>FREE STEM OPEN HOUSE • Saturday, June 27th • Live Demonstrations • Hands-On Activities • Register Today!</h2>

@@ -1,9 +1,23 @@
 import { Link } from 'react-router-dom'
 import shared from '../components/shared.module.css'
+import homeStyles from './Home.module.css'
 
 export default function Tutors() {
   return (
     <div className={shared.page}>
+      <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
+        <h2>Our Mission</h2>
+        <p className={homeStyles.lead}>
+          At Praxis Enrichment Center, we believe that knowledge and learning
+          should be accessible to everyone. Our mission is to empower students
+          through hands-on, engaging educational experiences that transform
+          ideas into real-world skills outside of the classroom. By combining
+          creativity, innovation, and practical application through our
+          courses, we help young students build confidence, curiosity, and a
+          passion for discovery.
+        </p>
+      </section>
+
       <h1>Tutors</h1>
       <p className={shared.lead}>
         Browse our tutor network and connect with skilled educators across a
