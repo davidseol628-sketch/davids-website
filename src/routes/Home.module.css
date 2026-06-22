@@ -222,9 +222,15 @@
 
 .serviceCards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   margin-top: 32px;
+}
+
+@media (max-width: 860px) {
+  .serviceCards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .serviceBody h3 {
