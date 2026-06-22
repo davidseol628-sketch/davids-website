@@ -5,6 +5,11 @@ export default function Epidemiology() {
     <div className={styles.page}>
       <section className={styles.section}>
         <h1>Introduction to Epidemiology/Disease Outbreak and Laboratory Techniques</h1>
+        <div className={styles.articleIntro}>
+          <p><strong>Duration:</strong> one 3-hour session</p>
+          <p><strong>Recommended age range:</strong> Middle School & Early High School (Ages 12–16)</p>
+          <p><strong>Class description:</strong></p>
+        </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
             <div className={styles.serviceBody}>

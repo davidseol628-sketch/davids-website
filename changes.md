@@ -105,7 +105,7 @@ shared module classes, so changing tokens cascades everywhere automatically.
    - **(a) Theme only** — swap tokens + button/card styling. App *feels* like
      SKEC but keeps current page structure. _(lower risk, fast)_
    - **(b) Theme + restructure Home** — also rebuild the landing page to mirror
-     SKEC's sections (hero w/ logo, Our Services cards, Our Network image block,
+     SKEC's sections (hero with logo, Our Services cards, Our Network image block,
      contact form). _(more work, closer match)_
 
 2. **Logo**

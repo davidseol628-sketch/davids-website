@@ -231,11 +231,20 @@
   line-height: 1.5;
 }
 
-.divider {
-  height: 1px;
-  background: var(--border);
-  margin: 0 0 12px;
-}
+  .articleIntro {
+    max-width: 720px;
+    margin: 0 auto 24px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .articleIntro p {
+    margin: 0 0 10px;
+  }
+
+  .articleIntro strong {
+    color: var(--ink);
+  }
 
 .price {
   color: var(--text);

@@ -4,7 +4,12 @@ export default function DigitalElectronics() {
   return (
     <div className={styles.page}>
       <section className={styles.section}>
-        <h1>Intro to Digital Electronics w/ Arduinos</h1>
+        <h1>Intro to Digital Electronics with Arduinos</h1>
+        <div className={styles.articleIntro}>
+          <p><strong>Duration:</strong> one 3-hour session</p>
+          <p><strong>Recommended age range:</strong> High Schoolers (ages 14-17)</p>
+          <p><strong>Class description:</strong></p>
+        </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
             <div className={styles.serviceBody}>

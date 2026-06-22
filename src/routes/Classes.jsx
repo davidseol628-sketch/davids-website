@@ -66,7 +66,7 @@ export default function Classes() {
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={researcherAtWork} alt="Researcher at work" />
             <div className={styles.serviceBody}>
-              <h3>Intro to Digital Electronics w/ Arduinos</h3>
+              <h3>Intro to Digital Electronics with Arduinos</h3>
               <div className={styles.divider} />
               <p className={styles.serviceDesc}>
                 Want to learn how to design and build circuits? We live surrounded by smart gadgets, but few people know how they’re made. Stay away from the screens and get your hands on real hardware! In this hands-on class, you’ll learn the basics of digital electronics from simple gates to Ohm’s Law. Let's build mini circuits that reflect real-world technology! No prior programming or electronics experience required. Just bring your curiosity, and get ready to code it, wire it, and watch it come alive!
