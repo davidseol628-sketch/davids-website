@@ -6,7 +6,7 @@ export default function Cad() {
       <section className={styles.section}>
         <h1>Intro to CAD + 3D Printing for Engineering Applications</h1>
         <div className={styles.articleIntro}>
-          <p><strong>Duration:</strong> one 3 hour session</p>
+          <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> High schoolers (ages 14-18)</p>
           <p><strong>Class description:</strong></p>
         </div>

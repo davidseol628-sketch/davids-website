@@ -6,7 +6,7 @@ export default function Microscopy() {
       <section className={styles.section}>
         <h1>Introduction to Microscopy Class</h1>
         <div className={styles.articleIntro}>
-          <p><strong>Duration:</strong> one 3-hour session</p>
+          <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> Grades 6-8 / Ages 11-14</p>
           <p><strong>Class description:</strong></p>
         </div>

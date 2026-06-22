@@ -6,7 +6,7 @@ export default function DigitalElectronics() {
       <section className={styles.section}>
         <h1>Intro to Digital Electronics with Arduinos</h1>
         <div className={styles.articleIntro}>
-          <p><strong>Duration:</strong> one 3-hour session</p>
+          <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> High Schoolers (ages 14-17)</p>
           <p><strong>Class description:</strong></p>
         </div>

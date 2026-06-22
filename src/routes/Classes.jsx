@@ -18,7 +18,7 @@ export default function Classes() {
             <div className={styles.serviceBody}>
               <h3>Introduction to Microscopy Class</h3>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}><strong>Duration:</strong> one 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> Grades 6-8 / Ages 11-14</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
@@ -34,7 +34,7 @@ export default function Classes() {
             <div className={styles.serviceBody}>
               <h3>Intro to Computer Aided Design + 3D Printing for Engineering Applications</h3>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}><strong>Duration:</strong> one 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> High schoolers (ages 14-18)</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
@@ -50,7 +50,7 @@ export default function Classes() {
             <div className={styles.serviceBody}>
               <h3>Intro to Scratch Programming</h3>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}><strong>Duration:</strong> one 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> Middle Schoolers (ages 11-14)</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
@@ -66,7 +66,7 @@ export default function Classes() {
             <div className={styles.serviceBody}>
               <h3>Introduction to Epidemiology/Disease Outbreak and Laboratory Techniques</h3>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}><strong>Duration:</strong> one 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> Middle School & Early High School (Ages 12–16)</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
@@ -82,7 +82,7 @@ export default function Classes() {
             <div className={styles.serviceBody}>
               <h3>Intro to Digital Electronics with Arduinos</h3>
               <div className={styles.divider} />
-              <p className={styles.serviceDesc}><strong>Duration:</strong> one 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> High Schoolers (ages 14-17)</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
