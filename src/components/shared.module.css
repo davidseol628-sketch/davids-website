@@ -177,9 +177,15 @@
 
 /* Smaller description text for compact card content (e.g., Tutors list) */
 .cardDesc {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text);
   margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .cardDesc {
+    font-size: 12px;
+  }
 }
 
 /* Readable key/value list — used to render form submission responses
