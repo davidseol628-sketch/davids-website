@@ -364,7 +364,7 @@
 }
 
 .scheduleSection h3 {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-h);
   margin-bottom: 12px;
@@ -391,4 +391,5 @@
   color: var(--text);
   margin-bottom: 10px;
   line-height: 1.5;
+  font-size: 0.9rem;
 }

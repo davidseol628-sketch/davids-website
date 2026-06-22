@@ -41,7 +41,7 @@ export default function DigitalElectronics() {
                 <h3>(15 min) BREAK</h3>
               </div>
               <div className={styles.scheduleSection}>
-                <h3>(1.5 hr) Student Design Activity - Need to Figure This One Out</h3>
+                <h3>(1.5 hr) Student Design Activity</h3>
                 <ul>
                   <li>Activity - Students pair up and choose to do one of the following:
                     <ul>
