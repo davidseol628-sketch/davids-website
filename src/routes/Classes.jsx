@@ -10,7 +10,7 @@ export default function Classes() {
     <div className={styles.page}>
       <section className={styles.section}>
         <h1>Our Classes</h1>
-        <div className={styles.cards}>
+        <div className={styles.serviceCards}>
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={tomLauerman} alt="Microscopy workshop" />
             <div className={styles.serviceBody}>
@@ -25,14 +25,16 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
-            <img className={styles.serviceImg} src={adminAjax} alt="Environmental science" />
+            <img className={styles.serviceImg} src={adminAjax} alt="Computer aided design and 3D printing" />
             <div className={styles.serviceBody}>
-              <h3>Environmental Science</h3>
+              <h3>Intro to Computer Aided Design + 3D Printing for Engineering Applications</h3>
               <div className={styles.divider} />
               <p className={styles.serviceDesc}>
-                Explore ecosystems, sustainability, and the science behind our changing world.
+                This hands‑on workshop introduces high school students to the world of Computer‑Aided Design (CAD) through fun, challenge‑based modeling activities. Students learn how engineers turn ideas into 3D digital models and practice creative problem‑solving skills such as testing and iteration. By the end of the session, each student will have designed a simple functional model and have their own 3D-printed creation ready to take home. No prior experience needed. Students will be asked to bring their own laptop.
               </p>
-              <p className={styles.price}>&nbsp;</p>
+              <Link className={styles.bookBtn} to="/classes/cad">
+                Explore
+              </Link>
             </div>
           </div>
           <div className={styles.serviceCard}>

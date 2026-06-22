@@ -22,6 +22,7 @@ import SectionDetail from './catalog/SectionDetail'
 import Tutors from './routes/Tutors'
 import Classes from './routes/Classes'
 import Microscopy from './routes/Microscopy'
+import Cad from './routes/Cad'
 
 // Dashboards
 import ParentDashboard from './dashboard/ParentDashboard'
@@ -66,6 +67,7 @@ export default function App() {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/classes" element={<Classes />} />
         <Route path="/classes/microscopy" element={<Microscopy />} />
+        <Route path="/classes/cad" element={<Cad />} />
         <Route path="/tutors" element={<Tutors />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
 
