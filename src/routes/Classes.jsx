@@ -51,6 +51,19 @@ export default function Classes() {
             </div>
           </div>
           <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={researcherAtWork} alt="Lab scientist" />
+            <div className={styles.serviceBody}>
+              <h3>Introduction to Epidemiology/Disease Outbreak and Laboratory Techniques</h3>
+              <div className={styles.divider} />
+              <p className={styles.serviceDesc}>
+                Students become medical laboratory scientists investigating a mysterious disease outbreak. Through hands-on activities, students learn how doctors and scientists use dilution techniques, diagnostic testing, and data analysis to identify illnesses. Students will perform serial dilutions, create mock diagnostic tests, analyze patient samples, and determine the source of an outbreak. No prior biology or chemistry experience required.
+              </p>
+              <Link className={styles.bookBtn} to="/classes/epidemiology">
+                Explore
+              </Link>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={researcherAtWork} alt="Researcher at work" />
             <div className={styles.serviceBody}>
               <h3>Intro to Digital Electronics w/ Arduinos</h3>

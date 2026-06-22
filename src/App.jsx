@@ -25,6 +25,7 @@ import Microscopy from './routes/Microscopy'
 import Cad from './routes/Cad'
 import Scratch from './routes/Scratch'
 import DigitalElectronics from './routes/DigitalElectronics'
+import Epidemiology from './routes/Epidemiology'
 
 // Dashboards
 import ParentDashboard from './dashboard/ParentDashboard'
@@ -72,6 +73,7 @@ export default function App() {
         <Route path="/classes/cad" element={<Cad />} />
         <Route path="/classes/scratch" element={<Scratch />} />
         <Route path="/classes/digital-electronics" element={<DigitalElectronics />} />
+        <Route path="/classes/epidemiology" element={<Epidemiology />} />
         <Route path="/tutors" element={<Tutors />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
 
