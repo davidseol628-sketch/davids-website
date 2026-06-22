@@ -175,6 +175,13 @@
   font-weight: 600;
 }
 
+/* Smaller description text for compact card content (e.g., Tutors list) */
+.cardDesc {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 8px;
+}
+
 /* Readable key/value list — used to render form submission responses
    instead of a raw JSON dump. */
 .kv {

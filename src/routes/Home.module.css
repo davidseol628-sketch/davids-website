@@ -297,6 +297,16 @@
   margin: 16px auto 0;
 }
 
+@media (max-width: 600px) {
+  .programCard .bookBtn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .programHeader {
   background: var(--panel);
   text-align: center;
