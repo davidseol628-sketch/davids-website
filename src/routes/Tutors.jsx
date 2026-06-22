@@ -62,8 +62,8 @@ export default function Tutors() {
           <div key={tutor.name} className={shared.card}>
             <h2 className={shared.cardTitle}>{tutor.name}</h2>
             <p className={shared.muted}>{tutor.subject}</p>
-            <div style={{ marginTop: '16px' }}>
-              <p>{tutor.description}</p>
+              <div style={{ marginTop: '16px' }}>
+              <p className={shared.cardDesc}>{tutor.description}</p>
               {tutor.specialties ? (
                 <p className={shared.smallText}>
                   <strong>Specialties:</strong> {tutor.specialties}
@@ -73,11 +73,7 @@ export default function Tutors() {
           </div>
         ))}
       </div>
-      <p style={{ marginTop: 18 }}>
-        <Link to="/catalog" className={shared.btn}>
-          Browse classes instead
-        </Link>
-      </p>
+      
     </div>
   )
 }
