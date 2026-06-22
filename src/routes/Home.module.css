@@ -357,3 +357,27 @@
 .offerList li {
   margin: 14px 0;
 }
+
+.scheduleSection {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.scheduleSection h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 12px;
+}
+
+.scheduleSection ul {
+  list-style: disc inside;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.scheduleSection li {
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
