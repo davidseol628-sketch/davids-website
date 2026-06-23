@@ -40,7 +40,9 @@ export default function Home() {
       {/* Our Mission moved to Tutors page */}
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <h2 className={styles.openHouseHeader}>FREE STEM OPEN HOUSE • Saturday, June 27th • Live Demonstrations • Hands-On Activities • Register Today!</h2>
+        <h2 className={styles.openHouseHeader}>
+          <span className={styles.openHouseTitle}>FREE STEM OPEN HOUSE • Saturday, June 27th</span>
+        </h2>
         <p className={styles.lead}>
           Join us for a free, family-friendly Open House and discover how
           learning comes alive at Praxis Enrichment Center! Meet our instructors,
