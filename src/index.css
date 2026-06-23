@@ -40,6 +40,10 @@ body {
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
   width: 100%;
   min-height: 100svh;
@@ -131,4 +135,33 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }

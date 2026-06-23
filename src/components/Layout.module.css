@@ -25,3 +25,10 @@
   font-size: 14px;
   color: var(--text);
 }
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 16px 12px;
+    font-size: 13px;
+  }
+}

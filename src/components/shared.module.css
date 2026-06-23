@@ -107,11 +107,11 @@
 /* Global mobile tidy-up */
 @media (max-width: 640px) {
   .page {
-    padding: 18px 12px 28px;
+    padding: 16px 12px 24px;
   }
 
   .card {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
 
   .grid {
@@ -121,6 +121,14 @@
   .btn {
     padding: 9px 14px;
     font-size: 14px;
+  }
+
+  .overlay {
+    padding: 12px;
+  }
+
+  .modal {
+    padding: 18px;
   }
 }
 
