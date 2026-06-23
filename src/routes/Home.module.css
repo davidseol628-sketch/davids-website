@@ -76,6 +76,13 @@
   font-weight: 600;
 }
 
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* ---------- Sections ---------- */
 .section {
   padding: 56px 0;
@@ -179,6 +186,10 @@
   }
   .splitImg {
     height: 240px;
+  }
+
+  .ctaRow {
+    justify-content: center;
   }
 }
 

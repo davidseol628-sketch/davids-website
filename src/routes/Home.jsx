@@ -128,9 +128,19 @@ export default function Home() {
             <p>
               Give your child the advantage of learning from a tutor who is actively studying at the <strong>University of Maryland</strong>, one of the nation's leading public research universities. More than just academic support, our tutors serve as relatable role models who can inspire confidence, curiosity, and a love of learning!
             </p>
-            <Link to="/tutors" className={styles.secondaryBtn}>
-              View Tutors
-            </Link>
+            <div className={styles.ctaRow}>
+              <Link to="/tutors" className={styles.secondaryBtn}>
+                View Tutors
+              </Link>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdQjHRNLuEqbR0tuOREmgmqoUmgLiMA_jdovmssCTHE2B8veQ/viewform?usp=publish-editor"
+                className={styles.primaryBtn}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Sign Up!
+              </a>
+            </div>
           </div>
           <img
             className={styles.splitImg}
