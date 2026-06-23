@@ -5,6 +5,7 @@ import { RequireAuth } from './lib/auth'
 
 // Public routes
 import Home from './routes/Home'
+import ContactUs from './routes/ContactUs'
 import Login from './routes/Login'
 import Signup from './routes/Signup'
 import NotFound from './routes/NotFound'
@@ -57,6 +58,7 @@ export default function App() {
       <Route element={<Layout />}>
         {/* Public */}
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
 
         {/* Signup flow. Signup renders an <Outlet/> for the nested routes. */}
