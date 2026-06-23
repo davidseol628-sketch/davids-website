@@ -119,14 +119,14 @@
     padding: 10px 12px;
   }
   .brand {
-    font-size: 18px;
+    font-size: 16px;
   }
   .links {
     gap: 8px;
     flex-wrap: wrap;
   }
   .link {
-    font-size: 13px;
+    font-size: 12px;
   }
   .signup {
     padding: 8px 12px;
@@ -141,6 +141,26 @@
   }
   .menu {
     min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 8px 10px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .signup,
+  .signout {
+    font-size: 12px;
+  }
+
+  .links[data-open="true"] {
+    right: 10px;
+    min-width: 140px;
   }
 }
 

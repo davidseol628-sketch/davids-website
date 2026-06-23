@@ -246,29 +246,29 @@
 
 @media (max-width: 640px) {
   .page {
-    padding: 0 12px;
+    padding: 0 10px;
   }
 
   .hero {
-    padding: 44px 0 32px;
+    padding: 36px 0 28px;
   }
 
   .heroTagline {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .heroSub {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 18px;
   }
 
   .section {
-    padding: 28px 0;
+    padding: 24px 0;
   }
 
   .section h1 {
-    font-size: 1.9rem;
-    margin-bottom: 24px;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
   }
 
   .serviceImg {
@@ -276,7 +276,7 @@
   }
 
   .serviceBody {
-    padding: 10px;
+    padding: 9px;
   }
 
   .programImg {
@@ -292,7 +292,7 @@
   }
 
   .openHouseHeader {
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.03em;
   }
 
@@ -302,11 +302,51 @@
   }
 
   .scheduleSection {
-    margin: 18px 0;
+    margin: 16px 0;
   }
 
   .scheduleSection h3 {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 0 24px;
+  }
+
+  .heroTagline {
+    font-size: 16px;
+  }
+
+  .heroSub {
+    font-size: 14px;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+  }
+
+  .sectionAlt {
+    padding: 40px 12px;
+    margin: 0 -10px;
+  }
+
+  .serviceImg {
+    height: 160px;
+  }
+
+  .programImg {
+    height: 120px;
+  }
+
+  .programCaption {
+    padding: 10px 12px;
+  }
+
+  .goalsList,
+  .offerList {
+    padding: 0 10px;
   }
 }
 

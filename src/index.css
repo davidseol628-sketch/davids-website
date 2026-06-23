@@ -139,20 +139,20 @@ code {
 
 @media (max-width: 640px) {
   :root {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   h1 {
-    font-size: 32px;
-    margin: 20px 0;
+    font-size: 28px;
+    margin: 18px 0;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   p {
@@ -163,5 +163,24 @@ code {
   select,
   textarea {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+    margin: 16px 0;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p {
+    line-height: 1.55;
   }
 }
