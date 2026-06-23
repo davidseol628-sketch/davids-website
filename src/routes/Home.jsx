@@ -158,7 +158,6 @@ export default function Home() {
       <section className={`${styles.section} ${styles.contact}`}>
         <h2>Get In Touch</h2>
         <p>9066 Baltimore Ave Unit A, College Park, MD 20740, USA</p>
-        <p>Phone: (478) 241-0365</p>
         <p>Email: praxiscenteredu@gmail.com</p>
         <p>Opening Hours: Mon-Sat 12pm to 8 pm · Sun Closed (closed on July 4th)</p>
       </section>
