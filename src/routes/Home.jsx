@@ -55,7 +55,7 @@ export default function Home() {
           throughout the afternoon.
         </p>
         <p className={styles.lead}>
-          <strong>20 seats left</strong> • <strong>12 people signed up</strong> • Free snacks provided • <strong>11:00 AM to 4:00 PM</strong>
+          <strong>12 people signed up</strong> • <strong>11:00 AM to 4:00 PM</strong>
         </p>
         <p className={styles.lead}>
           <a
@@ -69,7 +69,7 @@ export default function Home() {
         </p>
         <div className={styles.openHouseHighlights}>
           <div className={styles.openHouseHighlight}>
-            <h3>Why parents will like it</h3>
+            <h3>Why should I attend?</h3>
             <p>
               It is a low-pressure way to meet the team, ask questions, and see
               how Praxis supports learning beyond the classroom.
@@ -85,7 +85,7 @@ export default function Home() {
           <div className={styles.openHouseHighlight}>
             <h3>Special offer</h3>
             <p>
-              Guests will receive 50% off their first class, making it easy to
+              You will receive 50% off your first class, making it easy to
               try out a program after the event.
             </p>
           </div>
