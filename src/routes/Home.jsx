@@ -86,30 +86,30 @@ export default function Home() {
         </div>
 
         <div className={styles.scheduleSection}>
-          <h3>Live demonstrations every hour</h3>
+          <h3>Live demonstrations every hour!</h3>
           <p className={styles.programCaption}>
             Each demonstration is about 15 minutes long, so families can sample
             multiple classes during the day.
           </p>
           <div className={styles.openHouseSchedule}>
             <div className={styles.openHouseSlot}>
-              <strong>11:00!</strong>
+              <strong>11:00</strong>
               <span>Scratch</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>12:00!</strong>
+              <strong>12:00</strong>
               <span>Microscopy</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>1:00!</strong>
+              <strong>1:00</strong>
               <span>3D Printing</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>2:00!</strong>
+              <strong>2:00</strong>
               <span>Epidemiology</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>3:00!</strong>
+              <strong>3:00</strong>
               <span>Arduino</span>
             </div>
           </div>

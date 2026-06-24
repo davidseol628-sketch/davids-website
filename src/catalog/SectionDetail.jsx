@@ -10,7 +10,7 @@ const OPEN_HOUSE_ID = 'static-open-house'
 const openHouseSection = {
   id: OPEN_HOUSE_ID,
   title: 'OPEN HOUSE- June 27th',
-  description: 'Register your child for our free Open House event. 11:00am - 4:00pm.',
+  description: 'Register your child for our free Open House event. 11:00am - 4:00pm. 12 people are already attending!',
   capacity: 20,
   student_ids: [],
 }

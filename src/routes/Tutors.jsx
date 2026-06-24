@@ -3,6 +3,7 @@ import shared from '../components/shared.module.css'
 import homeStyles from './Home.module.css'
 import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
 import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
+import thanh from '../assets/skec/IMG_0152.jpg'
 import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
 
 export default function Tutors() {
@@ -33,12 +34,6 @@ export default function Tutors() {
               'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
           },
           {
-            name: 'David Seol',
-            subject: 'STEM Classroom Instructor',
-            description:
-              'David is a Microbiology student at the University of Maryland, currently pursuing Dentistry. He has worked on a research team in an endodontics lab at the University of Maryland School of Dentistry and shadowed under Dr. Jun Park at Jun Park Dentistry for two years. For tutoring, David has experience teaching SAT prep and advising students on college readiness and applications.',
-          },
-          {
             name: 'Tien Tran',
             subject: 'STEM Classroom Instructor',
             photo: tienPhoto,
@@ -49,6 +44,7 @@ export default function Tutors() {
           {
             name: 'Thanh Luu',
             subject: 'STEM Classroom Instructor',
+            photo: thanh,
             description:
               'Thanh is a Computer Engineering student at the University of Maryland who loves helping students build confidence and succeed in STEM. With a strong background in leading robotics teams and mentoring peers in hands-on engineering projects, he makes math, science, and technology approachable, organized, and fun. Thanh enjoys snowboarding, volleyball, building Legos, and working out.',
             specialties: 'Math, Science, Technology',

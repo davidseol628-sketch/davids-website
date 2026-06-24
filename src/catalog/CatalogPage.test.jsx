@@ -16,7 +16,7 @@ describe('CatalogPage', () => {
     renderPage()
 
     expect(screen.getByText('OPEN HOUSE- June 27th')).toBeInTheDocument()
-    expect(screen.getByText('11:00am - 4:00pm')).toBeInTheDocument()
+    expect(screen.getByText('11:00am - 4:00pm • 12 people attending')).toBeInTheDocument()
     expect(screen.queryByText('20 seats left')).not.toBeInTheDocument()
     expect(screen.queryByText(/Free Snacks Provided!/i)).not.toBeInTheDocument()
   })

@@ -11,7 +11,7 @@ const openHouseItem = {
 function getClassDescription(title) {
   const normalized = title?.trim().toLowerCase()
   if (normalized.includes('open house')) {
-    return '11:00am - 4:00pm'
+    return '11:00am - 4:00pm • 12 people attending'
   }
   return 'A hands-on class designed to inspire curiosity and practical learning.'
 }
