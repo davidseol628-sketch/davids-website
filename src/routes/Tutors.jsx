@@ -61,7 +61,7 @@ export default function AboutUs() {
   return (
     <div className={shared.page}>
       <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
-        <h2>About Us</h2>
+        <h2>Our Mission Statement</h2>
         <p className={homeStyles.lead}>
           At Praxis Enrichment Center, we believe that knowledge and learning
           should be accessible to everyone. Our mission is to empower students
@@ -99,17 +99,6 @@ export default function AboutUs() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div style={{ marginTop: '28px', textAlign: 'center' }}>
-        <a
-          className={shared.btn}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdQjHRNLuEqbR0tuOREmgmqoUmgLiMA_jdovmssCTHE2B8veQ/viewform"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Sign Up!
-        </a>
       </div>
     </div>
   )

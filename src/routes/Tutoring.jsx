@@ -29,6 +29,33 @@ const subjectOfferings = [
   'Study Skills',
 ]
 
+const tutors = [
+  {
+    name: 'Brandon Le',
+    specialties: 'Engineering, Physics, Aerospace',
+  },
+  {
+    name: 'Tien Tran',
+    specialties: 'Math, Chemistry, Biology',
+  },
+  {
+    name: 'Thanh Luu',
+    specialties: 'Math, Science, Technology',
+  },
+  {
+    name: 'Vy Huynh',
+    specialties: 'Biology, Biotechnology, Research, English, Environmental Science',
+  },
+  {
+    name: 'David Seol',
+    specialties: 'SAT Prep, College Readiness, Microbiology',
+  },
+  {
+    name: 'Minh',
+    specialties: 'Mechanical Engineering, Biomedical Engineering, Project Design',
+  },
+]
+
 export default function Tutoring() {
   return (
     <div className={shared.page}>
@@ -80,6 +107,24 @@ export default function Tutoring() {
             >
               {subject}
             </span>
+          ))}
+        </div>
+      </section>
+
+      <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
+        <h2>Tutors & Specialties</h2>
+        <p className={homeStyles.lead}>
+          Our tutors bring strong academic backgrounds and a wide range of
+          specialties to support students in STEM and beyond.
+        </p>
+        <div className={`${shared.grid} ${shared.twoColGrid}`} style={{ gap: '24px', marginTop: '24px' }}>
+          {tutors.map((tutor) => (
+            <div key={tutor.name} className={shared.card}>
+              <h3 className={shared.cardTitle}>{tutor.name}</h3>
+              <p className={shared.smallText}>
+                <strong>Specialties:</strong> {tutor.specialties}
+              </p>
+            </div>
           ))}
         </div>
       </section>
