@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import shared from '../components/shared.module.css'
 import homeStyles from './Home.module.css'
+import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
+import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
+import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
 
 export default function Tutors() {
   return (
@@ -24,6 +27,7 @@ export default function Tutors() {
           {
             name: 'Brandon Le',
             subject: 'STEM Classroom Instructor',
+            photo: brandonPhoto,
             description:
               'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
           },
@@ -36,6 +40,7 @@ export default function Tutors() {
           {
             name: 'Tien Tran',
             subject: 'STEM Classroom Instructor',
+            photo: tienPhoto,
             description:
               'Tien graduated from the University of Maryland with a B.S. in Biological Sciences and is a current graduate student pursuing a Master’s degree in Biotechnology and Management with a strong interest in healthcare and medicine. As a pre-health student, she has gained clinical experience through patient care, volunteering, and healthcare outreach locally and internationally. Her background in clinical settings, research, and education helps her communicate complex concepts clearly, adapt to different learning styles, and build meaningful connections with students.',
             specialties: 'Math, Chemistry, Biology',
@@ -48,17 +53,19 @@ export default function Tutors() {
             specialties: 'Math, Science, Technology',
           },
           {
-            name: 'Vy',
+            name: 'Vy Huynh',
             subject: 'STEM Classroom Instructor',
+            photo: vyPhoto,
             description:
               'Vy is a pre-health and Public Health Science student at the University of Maryland dedicated to helping students thrive in math and science. With experience in university biochemistry labs and direct patient care, she focuses on turning intimidating STEM subjects into clear, manageable steps and creating an encouraging, structured learning environment.',
             specialties: 'Biology, Biotechnology, Research, English, Environmental Science',
           },
         ].map((tutor) => (
           <div key={tutor.name} className={shared.card}>
+            <img className={shared.cardImage} src={tutor.photo} alt={tutor.name} />
             <h2 className={shared.cardTitle}>{tutor.name}</h2>
             <p className={shared.muted}>{tutor.subject}</p>
-              <div style={{ marginTop: '16px' }}>
+            <div style={{ marginTop: '16px' }}>
               <p className={shared.cardDesc}>{tutor.description}</p>
               {tutor.specialties ? (
                 <p className={shared.smallText}>
