@@ -44,10 +44,18 @@ export default function Home() {
           <span className={styles.openHouseTitle}>FREE STEM OPEN HOUSE • Saturday, June 27th</span>
         </h2>
         <p className={styles.lead}>
-          Join us for a free, family-friendly Open House and discover how
-          learning comes alive at Praxis Enrichment Center! Meet our instructors,
-          explore our classrooms, and participate in exciting hands-on STEM
-          demonstrations designed for curious minds of all ages.
+          Join us for a free, family-friendly Open House designed to help
+          parents see exactly what makes Praxis Enrichment Center special.
+          Meet our instructors, explore the classrooms, and discover how each
+          class helps students build confidence, curiosity, and real skills.
+        </p>
+        <p className={styles.lead}>
+          Come and go at your own pace in a welcoming fair-style setup with
+          activity tables for each class, take-home materials, and live demos
+          throughout the afternoon.
+        </p>
+        <p className={styles.lead}>
+          <strong>20 seats left</strong> • <strong>12 people signed up</strong> • Free snacks provided • <strong>11:00 AM to 4:00 PM</strong>
         </p>
         <p className={styles.lead}>
           <a
@@ -59,13 +67,58 @@ export default function Home() {
             Click here to register for the Open House.
           </a>
         </p>
-        <div className={styles.offerList}>
-          <p className={styles.programCaption}><strong>Experience STEM in Action</strong></p>
-          <ul>
-            <li><strong>Robotics & Coding</strong> — watch robots come to life and learn how students program them.</li>
-            <li><strong>3D Printing</strong> — see a 3D printer in action and take home a sample print.</li>
-            <li><strong>Artificial Intelligence</strong> — experience beginner-friendly AI activities and interactive demos.</li>
-          </ul>
+        <div className={styles.openHouseHighlights}>
+          <div className={styles.openHouseHighlight}>
+            <h3>Why parents will like it</h3>
+            <p>
+              It is a low-pressure way to meet the team, ask questions, and see
+              how Praxis supports learning beyond the classroom.
+            </p>
+          </div>
+          <div className={styles.openHouseHighlight}>
+            <h3>What to expect</h3>
+            <p>
+              Tables will be arranged by class, with bingo sheets or pamphlets
+              for families to follow along and take home.
+            </p>
+          </div>
+          <div className={styles.openHouseHighlight}>
+            <h3>Special offer</h3>
+            <p>
+              Guests will receive 50% off their first class, making it easy to
+              try out a program after the event.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.scheduleSection}>
+          <h3>Live demonstrations every hour</h3>
+          <p className={styles.programCaption}>
+            Each demonstration is about 15 minutes long, so families can sample
+            multiple classes during the day.
+          </p>
+          <div className={styles.openHouseSchedule}>
+            <div className={styles.openHouseSlot}>
+              <strong>11:00</strong>
+              <span>Scratch</span>
+            </div>
+            <div className={styles.openHouseSlot}>
+              <strong>12:00</strong>
+              <span>Microscopy</span>
+            </div>
+            <div className={styles.openHouseSlot}>
+              <strong>1:00</strong>
+              <span>3D Printing</span>
+            </div>
+            <div className={styles.openHouseSlot}>
+              <strong>2:00</strong>
+              <span>Epidemiology</span>
+            </div>
+            <div className={styles.openHouseSlot}>
+              <strong>3:00</strong>
+              <span>Arduino</span>
+            </div>
+          </div>
         </div>
       </section>
 
