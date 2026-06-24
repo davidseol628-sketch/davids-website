@@ -406,6 +406,7 @@
   border-radius: 2px;
   background: var(--bg);
   overflow: hidden;
+  text-align: center;
 }
 
 /* Center call-to-action buttons inside program cards */
