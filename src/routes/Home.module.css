@@ -576,7 +576,7 @@
 
 .openHouseSlot span {
   color: var(--text-h);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media (max-width: 860px) {

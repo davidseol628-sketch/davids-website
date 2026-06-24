@@ -161,7 +161,7 @@ export default function Home() {
               Personalized tutoring sessions designed to support learning goals,
               improve confidence, and build academic skills one student at a time.
             </p>
-            <Link className={styles.bookBtn} to="/tutoring">
+            <Link className={styles.bookBtn} to="/tutors">
               Meet Our Tutors
             </Link>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
               Give your child the advantage of learning from a tutor who is actively studying at the <strong>University of Maryland</strong>, one of the nation's leading public research universities. More than just academic support, our tutors serve as relatable role models who can inspire confidence, curiosity, and a love of learning!
             </p>
             <div className={styles.ctaRow}>
-              <Link to="/tutoring" className={styles.secondaryBtn}>
+              <Link to="/tutors" className={styles.secondaryBtn}>
                 View Tutors
               </Link>
               <a

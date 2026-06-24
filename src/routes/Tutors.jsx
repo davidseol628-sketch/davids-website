@@ -6,34 +6,6 @@ import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
 import thanh from '../assets/skec/IMG_0152.jpg'
 import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
 
-const tutoringStructure = [
-  {
-    title: 'One-on-One Support',
-    description:
-      'Students work directly with a tutor who can slow down, review concepts, and build confidence at their own pace.',
-  },
-  {
-    title: 'Flexible Scheduling',
-    description:
-      'Tutoring sessions are planned around each family\'s needs so students can get consistent support when they need it most.',
-  },
-  {
-    title: 'Goal-Focused Learning',
-    description:
-      'Every session is guided by the student\'s schoolwork, goals, and areas where they want to grow.',
-  },
-]
-
-const subjectOfferings = [
-  'Math',
-  'Science',
-  'Engineering',
-  'Robotics',
-  'SAT Prep',
-  'College Readiness',
-  'Study Skills',
-]
-
 const tutors = [
   {
     name: 'Brandon Le',
@@ -42,7 +14,7 @@ const tutors = [
     fullPhoto: true,
     description:
       'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
-    specialties: 'Engineering, Physics, Robotics',
+    specialties: 'Engineering, Physics, Aerospace',
   },
   {
     name: 'Tien Tran',
@@ -85,66 +57,23 @@ const tutors = [
   },
 ]
 
-export default function Tutoring() {
+export default function AboutUs() {
   return (
     <div className={shared.page}>
       <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
-        <h2>Tutoring</h2>
+        <h2>About Us</h2>
         <p className={homeStyles.lead}>
-          Tutoring at Praxis is built around individual students, with support
-          that helps them strengthen understanding, build confidence, and
-          explore STEM subjects in a way that fits their goals.
+          At Praxis Enrichment Center, we believe that knowledge and learning
+          should be accessible to everyone. Our mission is to empower students
+          through hands-on, engaging educational experiences that transform
+          ideas into real-world skills outside of the classroom. By combining
+          creativity, innovation, and practical application through our
+          courses, we help young students build confidence, curiosity, and a
+          passion for discovery.
         </p>
-        <div className={shared.grid} style={{ gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '16px', marginTop: '24px' }}>
-          {tutoringStructure.map((item) => (
-            <div key={item.title} className={shared.card}>
-              <h3 className={shared.cardTitle}>{item.title}</h3>
-              <p className={shared.cardDesc}>{item.description}</p>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '24px', textAlign: 'center' }}>
-          <a
-            className={shared.btn}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdQjHRNLuEqbR0tuOREmgmqoUmgLiMA_jdovmssCTHE2B8veQ/viewform"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Sign Up!
-          </a>
-        </div>
-      </section>
-
-      <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
-        <h2>Subject Offerings</h2>
         <p className={homeStyles.lead}>
-          We support a wide range of subjects so families can find the right
-          fit for academic help and enrichment.
-        </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginTop: '20px' }}>
-          {subjectOfferings.map((subject) => (
-            <span
-              key={subject}
-              style={{
-                border: '1px solid var(--border)',
-                background: 'var(--panel)',
-                padding: '10px 14px',
-                borderRadius: '999px',
-                fontWeight: 600,
-                color: 'var(--text-h)',
-              }}
-            >
-              {subject}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className={`${homeStyles.section} ${homeStyles.sectionAlt}`}>
-        <h2>Meet the Tutors</h2>
-        <p className={homeStyles.lead}>
-          Our tutors combine subject knowledge with practical mentoring so
-          students can learn from relatable role models.
+          Meet the team behind Praxis and learn about the people who help our
+          students grow in STEM.
         </p>
       </section>
 
@@ -172,6 +101,16 @@ export default function Tutoring() {
         ))}
       </div>
 
+      <div style={{ marginTop: '28px', textAlign: 'center' }}>
+        <a
+          className={shared.btn}
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQjHRNLuEqbR0tuOREmgmqoUmgLiMA_jdovmssCTHE2B8veQ/viewform"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Sign Up!
+        </a>
+      </div>
     </div>
   )
 }

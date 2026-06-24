@@ -19,12 +19,14 @@ const LINKS_BY_ROLE = {
   guest: [
     ['/catalog', 'Registration'],
     ['/classes', 'Classes'],
+    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
     ['/contact', 'Contact Us'],
   ],
   parent: [
     ['/catalog', 'Registration'],
     ['/classes', 'Classes'],
+    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
     ['/contact', 'Contact Us'],
     ['/dashboard', 'My Dashboard'],
@@ -32,6 +34,7 @@ const LINKS_BY_ROLE = {
   tutor: [
     ['/catalog', 'Registration'],
     ['/classes', 'Classes'],
+    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
     ['/contact', 'Contact Us'],
     ['/tutor', 'My Sessions'],
@@ -39,6 +42,7 @@ const LINKS_BY_ROLE = {
   admin: [
     ['/catalog', 'Registration'],
     ['/classes', 'Classes'],
+    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
     ['/contact', 'Contact Us'],
     ['/admin', 'Admin', true],
