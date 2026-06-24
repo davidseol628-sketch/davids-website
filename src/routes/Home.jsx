@@ -46,8 +46,10 @@ export default function Home() {
         <p className={styles.lead}>
           Come and go at your own pace in a welcoming fair-style setup with
           activity tables for each class, take-home materials, and live demos
-          throughout the afternoon at 9066 Baltimore Ave Unit A, College Park,
-          MD 20740!
+          throughout the afternoon!
+        </p>
+        <p className={styles.lead}>
+          Where? - 9066 Baltimore Ave Unit A, College Park, MD 20740
         </p>
         <p className={styles.lead}>
           <strong>12 people signed up</strong> • <strong>11:00 AM to 4:00 PM</strong>
