@@ -535,6 +535,7 @@
   font-weight: 700;
   color: var(--text-h);
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .serviceCard h2 {

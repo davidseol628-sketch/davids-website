@@ -44,15 +44,9 @@ export default function Home() {
           <span className={styles.openHouseTitle}>FREE STEM OPEN HOUSE • Saturday, June 27th</span>
         </h2>
         <p className={styles.lead}>
-          Join us for a free, family-friendly Open House designed to help
-          parents see exactly what makes Praxis Enrichment Center special.
-          Meet our instructors, explore the classrooms, and discover how each
-          class helps students build confidence, curiosity, and real skills.
-        </p>
-        <p className={styles.lead}>
           Come and go at your own pace in a welcoming fair-style setup with
           activity tables for each class, take-home materials, and live demos
-          throughout the afternoon.
+          throughout the afternoon!
         </p>
         <p className={styles.lead}>
           <strong>12 people signed up</strong> • <strong>11:00 AM to 4:00 PM</strong>
@@ -83,7 +77,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.openHouseHighlight}>
-            <h3>Special offer</h3>
+            <h3>Special offer!</h3>
             <p>
               You will receive 50% off your first class, making it easy to
               try out a program after the event.
