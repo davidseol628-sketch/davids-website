@@ -22,7 +22,7 @@ export default function Tutors() {
         </p>
       </section>
 
-      <h1>Tutors</h1>
+      <h1>Meet the Team!</h1>
       <div className={`${shared.grid} ${shared.twoColGrid}`} style={{ gap: '24px' }}>
         {[
           {
@@ -56,6 +56,12 @@ export default function Tutors() {
             description:
               'Vy is a pre-health and Public Health Science student at the University of Maryland dedicated to helping students thrive in math and science. With experience in university biochemistry labs and direct patient care, she focuses on turning intimidating STEM subjects into clear, manageable steps and creating an encouraging, structured learning environment.',
             specialties: 'Biology, Biotechnology, Research, English, Environmental Science',
+          },
+          {
+            name: 'David Seol',
+            subject: 'STEM Classroom Instructor',
+            description:
+              'David is a Microbiology student at the University of Maryland, currently pursuing Dentistry. He has worked on a research team in an endodontics lab at the University of Maryland School of Dentistry and shadowed under Dr. Jun Park at Jun Park Dentistry for two years. For tutoring, David has experience teaching SAT prep and advising students on college readiness and applications.',
           },
         ].map((tutor) => (
           <div key={tutor.name} className={shared.card}>

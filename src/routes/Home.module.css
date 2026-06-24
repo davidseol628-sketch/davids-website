@@ -457,6 +457,7 @@
   padding: 16px 18px;
   color: var(--text);
   font-size: 15px;
+  text-align: center;
 }
 
 .openHouseHeader {
