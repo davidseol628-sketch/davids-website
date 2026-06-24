@@ -28,6 +28,7 @@ export default function Tutors() {
             name: 'Brandon Le',
             subject: 'STEM Classroom Instructor',
             photo: brandonPhoto,
+            fullPhoto: true,
             description:
               'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
           },
@@ -62,7 +63,13 @@ export default function Tutors() {
           },
         ].map((tutor) => (
           <div key={tutor.name} className={shared.card}>
-            <img className={shared.cardImage} src={tutor.photo} alt={tutor.name} />
+            {tutor.photo ? (
+              <img
+                className={`${shared.cardImage} ${tutor.fullPhoto ? shared.cardImageContain : ''}`.trim()}
+                src={tutor.photo}
+                alt={tutor.name}
+              />
+            ) : null}
             <h2 className={shared.cardTitle}>{tutor.name}</h2>
             <p className={shared.muted}>{tutor.subject}</p>
             <div style={{ marginTop: '16px' }}>
