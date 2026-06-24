@@ -11,14 +11,12 @@ const openHouseItem = {
 function getClassDescription(title) {
   const normalized = title?.trim().toLowerCase()
   if (normalized.includes('open house')) {
-    return '11:00am - 3:00pm · Free Snacks Provided!'
+    return '11:00am - 4:00pm'
   }
   return 'A hands-on class designed to inspire curiosity and practical learning.'
 }
 
 export default function CatalogPage() {
-  const seatsLeft = Math.max(0, (openHouseItem.capacity || 0) - (openHouseItem.student_ids || []).length)
-
   return (
     <div className={shared.page}>
       <h1>Registration</h1>
@@ -44,9 +42,6 @@ export default function CatalogPage() {
           <p className={shared.muted} style={{ marginTop: 8 }}>
             You can also register by contacting us at{' '}
             <a href="mailto:praxiscenteredu@gmail.com">praxiscenteredu@gmail.com</a>.
-          </p>
-          <p className={shared.muted} style={{ marginTop: 8 }}>
-            {`${seatsLeft} seat${seatsLeft === 1 ? '' : 's'} left`}
           </p>
           <div style={{ marginTop: 12 }}>
             <button type="button" className={shared.btn} disabled>

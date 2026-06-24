@@ -12,12 +12,13 @@ function renderPage() {
 }
 
 describe('CatalogPage', () => {
-  it('renders the Open House catalog item with description and seats left', () => {
+  it('renders the Open House catalog item with updated time details', () => {
     renderPage()
 
     expect(screen.getByText('OPEN HOUSE- June 27th')).toBeInTheDocument()
-    expect(screen.getByText('11:00am - 3:00pm · Free Snacks Provided!')).toBeInTheDocument()
-    expect(screen.getByText('20 seats left')).toBeInTheDocument()
+    expect(screen.getByText('11:00am - 4:00pm')).toBeInTheDocument()
+    expect(screen.queryByText('20 seats left')).not.toBeInTheDocument()
+    expect(screen.queryByText(/Free Snacks Provided!/i)).not.toBeInTheDocument()
   })
 
   it('renders an external Open House registration link and no internal register button', () => {
