@@ -94,23 +94,23 @@ export default function Home() {
           </p>
           <div className={styles.openHouseSchedule}>
             <div className={styles.openHouseSlot}>
-              <strong>11:00</strong>
+              <strong>11:30</strong>
               <span>Scratch</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>12:00</strong>
+              <strong>12:30</strong>
               <span>Microscopy</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>1:00</strong>
+              <strong>1:30</strong>
               <span>3D Printing</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>2:00</strong>
+              <strong>2:30</strong>
               <span>Epidemiology</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>3:00</strong>
+              <strong>3:30</strong>
               <span>Arduino</span>
             </div>
           </div>
