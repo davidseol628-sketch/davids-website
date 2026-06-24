@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-// Deployed to GitHub Pages at /davids-website/ ; dev stays at root.
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/davids-website/' : '/',
+export default defineConfig({
+  base: '/',
   plugins: [react()],
   test: {
     environment: 'jsdom',
@@ -12,4 +10,4 @@ export default defineConfig(({ command }) => ({
     setupFiles: './src/test/setup.js',
     css: true,
   },
-}))
+})
