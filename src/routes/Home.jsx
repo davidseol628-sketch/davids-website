@@ -37,7 +37,7 @@ export default function Home() {
         />
       </section>
 
-      {/* Our Mission moved to Tutors page */}
+      {/* Our Mission moved to Tutoring page */}
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2 className={styles.openHouseHeader}>
@@ -66,24 +66,26 @@ export default function Home() {
         </p>
         <div className={styles.openHouseHighlights}>
           <div className={styles.openHouseHighlight}>
-            <h3>Why should I attend?</h3>
+            <h3>Why Attend:</h3>
             <p>
-              It is a low-pressure way to meet the team, ask questions, and see
-              how Praxis supports learning beyond the classroom.
+              Tour the Praxis space, meet our team, and explore tutoring and
+              hands-on STEM enrichment designed for middle and high school
+              students.
             </p>
           </div>
           <div className={styles.openHouseHighlight}>
-            <h3>What to expect</h3>
+            <h3>What to Expect:</h3>
             <p>
-              Tables will be arranged by class, with bingo sheets or pamphlets
-              for families to follow along and take home.
+              The open house will be set up fair-style, with class and program
+              stations to explore at your own pace plus short featured
+              demonstrations throughout the day.
             </p>
           </div>
           <div className={styles.openHouseHighlight}>
-            <h3>Special offer!</h3>
+            <h3>Special Offer!</h3>
             <p>
-              You will receive 50% off your first class, making it easy to
-              try out a program after the event.
+              Students who visit every station and collect a stamp at each one
+              will receive 50% off their first Praxis class.
             </p>
           </div>
         </div>
@@ -96,26 +98,33 @@ export default function Home() {
           </p>
           <div className={styles.openHouseSchedule}>
             <div className={styles.openHouseSlot}>
-              <strong>11:30</strong>
-              <span>Scratch</span>
+              <strong>11:30 AM</strong>
+              <span>Scratch Programming - Create interactive projects and learn the basics of block-based coding</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>12:30</strong>
-              <span>Microscopy</span>
+              <strong>12:30 PM</strong>
+              <span>Microscopy - Investigate the microscopic world through guided observation</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>1:30</strong>
-              <span>3D Printing</span>
+              <strong>1:30 PM</strong>
+              <span>3D printing - See how digital designs become real physical objects</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>2:30</strong>
-              <span>Epidemiology</span>
+              <strong>2:30 PM</strong>
+              <span>Epidemiology - Explore how data and science are used to understand the spread of disease</span>
             </div>
             <div className={styles.openHouseSlot}>
-              <strong>3:30</strong>
-              <span>Arduino</span>
+              <strong>3:30 PM</strong>
+              <span>Arduino - Discover simple circuits, sensors, and programming through hands-on electronics</span>
             </div>
           </div>
+          <p className={styles.programCaption}>
+            Questions? Contact us at praxiscenteredu@gmail.com
+          </p>
+          <p className={styles.programCaption}>
+            Cant make it? Reach out to learn more about tutoring and upcoming
+            programs
+          </p>
         </div>
       </section>
 
@@ -152,7 +161,7 @@ export default function Home() {
               Personalized tutoring sessions designed to support learning goals,
               improve confidence, and build academic skills one student at a time.
             </p>
-            <Link className={styles.bookBtn} to="/tutors">
+            <Link className={styles.bookBtn} to="/tutoring">
               Meet Our Tutors
             </Link>
           </div>
@@ -181,7 +190,7 @@ export default function Home() {
               Give your child the advantage of learning from a tutor who is actively studying at the <strong>University of Maryland</strong>, one of the nation's leading public research universities. More than just academic support, our tutors serve as relatable role models who can inspire confidence, curiosity, and a love of learning!
             </p>
             <div className={styles.ctaRow}>
-              <Link to="/tutors" className={styles.secondaryBtn}>
+              <Link to="/tutoring" className={styles.secondaryBtn}>
                 View Tutors
               </Link>
               <a

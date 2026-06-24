@@ -19,8 +19,8 @@ import TutorSignupForm from './signup/TutorSignupForm'
 import CatalogPage from './catalog/CatalogPage'
 import SectionDetail from './catalog/SectionDetail'
 
-// Tutors
-import Tutors from './routes/Tutors'
+// Tutoring
+import Tutoring from './routes/Tutors'
 import Classes from './routes/Classes'
 import Microscopy from './routes/Microscopy'
 import Cad from './routes/Cad'
@@ -76,7 +76,8 @@ export default function App() {
         <Route path="/classes/scratch" element={<Scratch />} />
         <Route path="/classes/digital-electronics" element={<DigitalElectronics />} />
         <Route path="/classes/epidemiology" element={<Epidemiology />} />
-        <Route path="/tutors" element={<Tutors />} />
+        <Route path="/tutoring" element={<Tutoring />} />
+        <Route path="/tutors" element={<Tutoring />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
 
         {/* Parent area */}
