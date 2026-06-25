@@ -93,6 +93,22 @@ export default function Classes() {
               </Link>
             </div>
           </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={researcherAtWork} alt="Researcher at work in a laboratory" />
+            <div className={styles.serviceBody}>
+              <h3>The Science of Medicines: Build Your Own Drug Trial</h3>
+              <div className={styles.divider} />
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Recommended age range:</strong> Ages 13-18</p>
+              <p className={styles.serviceDesc}><strong>Class description:</strong></p>
+              <p className={styles.serviceDesc}>
+                Students act as pharmaceutical researchers to design a drug trial, analyze mock patient data, and decide whether a new medicine works.
+              </p>
+              <Link className={styles.bookBtn} to="/classes/science-of-medicines">
+                Explore
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
