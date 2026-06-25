@@ -23,38 +23,54 @@ export default function ScienceOfMedicines() {
               <div className={styles.divider} />
               <h2>Schedule</h2>
               <div className={styles.scheduleSection}>
-                <h3>(20 min) Medicine Research Introduction</h3>
+                <h3>(20 min) Why We Need Clinical Trials</h3>
                 <ul>
-                  <li>How new medicines are discovered and evaluated</li>
-                  <li>What makes a drug trial fair and reliable</li>
-                  <li>Safety, dosage, and effectiveness as key research goals</li>
+                  <li>Discuss anecdotal evidence vs. scientific evidence</li>
+                  <li>Use silly claims to ask how scientists test ideas fairly</li>
+                  <li>Introduce control groups, bias, confounding variables, and safety</li>
                 </ul>
               </div>
               <div className={styles.scheduleSection}>
                 <h3>(45 min) Design the Drug Trial</h3>
                 <ul>
-                  <li>Students choose variables, controls, and outcome measures</li>
-                  <li>Teams build a mock trial plan and predict results</li>
-                  <li>Practice identifying bias and evaluating experimental design</li>
+                  <li>Teams receive a sample drug or medical device with a claim to test</li>
+                  <li>Students decide how many patients to include and who gets included</li>
+                  <li>Choose the outcome to measure and define a fair comparison</li>
                 </ul>
               </div>
               <div className={styles.scheduleSection}>
                 <h3>(15 min) BREAK</h3>
               </div>
               <div className={styles.scheduleSection}>
-                <h3>(45 min) Analyze Patient Data</h3>
+                <h3>(15 min) Placebo Experiment</h3>
                 <ul>
-                  <li>Review mock patient outcomes and symptom tracking data</li>
-                  <li>Compare treatment and placebo groups</li>
-                  <li>Decide whether the drug is effective, ineffective, or inconclusive</li>
+                  <li>Students analyze mock patient data from drug and placebo groups</li>
+                  <li>Discuss why placebo patients may still feel better</li>
+                  <li>Practice interpreting blinded results without knowing which treatment was given</li>
                 </ul>
               </div>
               <div className={styles.scheduleSection}>
-                <h3>(30 min) Research Debrief</h3>
+                <h3>(60-70 min) Analyze a Clinical Trial</h3>
                 <ul>
-                  <li>Discuss ethics in medicine and clinical testing</li>
-                  <li>Connect the activity to real pharmaceutical research careers</li>
-                  <li>Reflect on how evidence guides medical decisions</li>
+                  <li>Use a larger dataset with patient age, gender, treatment group, and outcome</li>
+                  <li>Work in Excel to calculate average improvement and percent improvement</li>
+                  <li>Create bar graphs and compare mean vs. median</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(30 min) FDA Approval Meeting</h3>
+                <ul>
+                  <li>Act as an FDA review committee</li>
+                  <li>Evaluate benefits, side effects, and the strength of the evidence</li>
+                  <li>Debate whether to approve, approve with warning, require more studies, or reject</li>
+                </ul>
+              </div>
+              <div className={styles.scheduleSection}>
+                <h3>(15 min) Medical Ethics Discussion</h3>
+                <ul>
+                  <li>Discuss who should receive new treatments and when</li>
+                  <li>Explore questions about side effects, experimental care, and access for children</li>
+                  <li>Connect the activity to real decisions in medicine and research</li>
                 </ul>
               </div>
             </div>
