@@ -10,6 +10,9 @@ export default function ScienceOfMedicines() {
           <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> Ages 13-18</p>
           <p><strong>Class description:</strong></p>
+          <p>
+            Students step into the role of pharmaceutical researchers as they test a new medicine, compare placebo and treatment groups, and analyze patient data like a real clinical team. Along the way, they learn how scientists judge evidence, evaluate side effects, and make decisions about whether a drug should be approved.
+          </p>
         </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>

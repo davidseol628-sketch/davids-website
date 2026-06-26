@@ -102,7 +102,7 @@ export default function Classes() {
               <p className={styles.serviceDesc}><strong>Recommended age range:</strong> Ages 13-18</p>
               <p className={styles.serviceDesc}><strong>Class description:</strong></p>
               <p className={styles.serviceDesc}>
-                Students act as pharmaceutical researchers to design a drug trial, compare treatment and placebo groups, analyze mock patient data, and decide whether a new medicine is effective.
+                Students act as pharmaceutical researchers to design a real-world style drug trial, compare treatment and placebo groups, and analyze mock patient data. They learn how scientists decide whether a new medicine is effective, what side effects matter, and how evidence leads to approval decisions.
               </p>
               <Link className={styles.bookBtn} to="/classes/science-of-medicines">
                 Explore
