@@ -5,6 +5,7 @@ import minhPhoto from '../assets/skec/1000052134.JPG'
 import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
 import thanh from '../assets/skec/IMG_0152.jpg'
 import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
+import dillonPhoto from '../assets/skec/IMG-20250516-WA0003(1).jpg'
 
 const tutors = [
   {
@@ -15,6 +16,14 @@ const tutors = [
     description:
       'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
     specialties: 'Engineering, Physics, Aerospace',
+  },
+  {
+    name: 'Dillon',
+    subject: 'STEM Classroom Instructor',
+    photo: dillonPhoto,
+    description:
+      'Dillon is studying Civil Engineering at the University of Maryland and is currently a Field Engineer Intern at a marine construction company. He loves teaching and explaining engineering and physics fundamentals, with a particular focus on the thought process and reasoning behind solutions. His goal is to help students build a strong foundation in critical thinking and logical reasoning.',
+    specialties: 'Engineering, Physics, CAD Documentation',
   },
   {
     name: 'Tien Tran',

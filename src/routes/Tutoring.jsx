@@ -35,6 +35,10 @@ const tutors = [
     specialties: 'Engineering, Physics, Aerospace',
   },
   {
+    name: 'Dillon',
+    specialties: 'Engineering, Physics, CAD Documentation',
+  },
+  {
     name: 'Tien Tran',
     specialties: 'Math, Chemistry, Biology',
   },

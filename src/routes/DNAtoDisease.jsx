@@ -1,5 +1,9 @@
 import styles from './Home.module.css'
-import geneticsImage from '../assets/skec/ImageForNews_713424_16523280353336330.jpg.webp'
+import dnaImage from '../assets/skec/ImageForNews_713424_16523280353336330.jpg.webp'
+import proteinImage from '../assets/skec/1000052134.JPG'
+import bioinformaticsImage from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
+import geneticsChallengeImage from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
+import caseStudyImage from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
 
 export default function DNAtoDisease() {
   return (
@@ -17,9 +21,46 @@ export default function DNAtoDisease() {
         </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={dnaImage} alt="DNA structure lesson" />
+            <div className={styles.serviceBody}>
+              <h3>DNA Structure</h3>
+              <p className={styles.serviceDesc}>Building the blueprint of life with base pairing and mutations.</p>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={proteinImage} alt="Protein synthesis lesson" />
+            <div className={styles.serviceBody}>
+              <h3>Protein Synthesis</h3>
+              <p className={styles.serviceDesc}>Turning DNA instructions into protein through transcription and translation.</p>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={bioinformaticsImage} alt="Bioinformatics lesson" />
+            <div className={styles.serviceBody}>
+              <h3>Bioinformatics</h3>
+              <p className={styles.serviceDesc}>Comparing DNA sequences and spotting mutations with research tools.</p>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={geneticsChallengeImage} alt="Genetics challenge lesson" />
+            <div className={styles.serviceBody}>
+              <h3>Genetics Challenge</h3>
+              <p className={styles.serviceDesc}>Solving inheritance puzzles with Punnett squares, pedigrees, and probability.</p>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={caseStudyImage} alt="Medical genetics case study lesson" />
+            <div className={styles.serviceBody}>
+              <h3>Medical Case Study</h3>
+              <p className={styles.serviceDesc}>Acting as clinical geneticists to diagnose disease and discuss treatment.</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.cards}>
+          <div className={styles.serviceCard}>
             <img
               className={styles.serviceImg}
-              src={geneticsImage}
+              src={dnaImage}
               alt="Science classroom laboratory"
             />
             <div className={styles.serviceBody}>
