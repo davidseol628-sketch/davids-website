@@ -5,7 +5,8 @@ import brushBot from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import scratchDashboard from '../assets/scratch-dashboard.png'
 import mycgMy from '../assets/MyvgMY57Z7DNYqQctU6cKMETCvSPVUWriLULyKKz.jpeg'
 import jpegImage from '../assets/jpeg.jpeg'
-import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
+import researcherAtWork from '../assets/skec/AdobeStock_171882033.jpeg'
+import geneticsImage from '../assets/skec/ImageForNews_713424_16523280353336330.jpg.webp'
 
 export default function Classes() {
   return (
@@ -105,6 +106,22 @@ export default function Classes() {
                 Students act as pharmaceutical researchers to design a real-world style drug trial, compare treatment and placebo groups, and analyze mock patient data. They learn how scientists decide whether a new medicine is effective, what side effects matter, and how evidence leads to approval decisions.
               </p>
               <Link className={styles.bookBtn} to="/classes/science-of-medicines">
+                Explore
+              </Link>
+            </div>
+          </div>
+          <div className={styles.serviceCard}>
+            <img className={styles.serviceImg} src={geneticsImage} alt="Science classroom laboratory" />
+            <div className={styles.serviceBody}>
+              <h3>DNA to Disease: The Genetics Behind Human Health</h3>
+              <div className={styles.divider} />
+              <p className={styles.serviceDesc}><strong>Duration:</strong> 3-hour session</p>
+              <p className={styles.serviceDesc}><strong>Age Range:</strong> Middle School & High School (Ages 12-18)</p>
+              <p className={styles.serviceDesc}><strong>Class description:</strong></p>
+              <p className={styles.serviceDesc}>
+                Students explore how DNA holds the instructions for life and how changes in those instructions can lead to genetic disorders. Through modeling, role-play, and case studies, they learn how DNA is copied, translated into proteins, inherited through families, and used in modern medicine to diagnose disease.
+              </p>
+              <Link className={styles.bookBtn} to="/classes/dna-to-disease">
                 Explore
               </Link>
             </div>

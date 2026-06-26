@@ -29,6 +29,7 @@ import Scratch from './routes/Scratch'
 import DigitalElectronics from './routes/DigitalElectronics'
 import Epidemiology from './routes/Epidemiology'
 import ScienceOfMedicines from './routes/ScienceOfMedicines'
+import DNAtoDisease from './routes/DNAtoDisease'
 
 // Dashboards
 import ParentDashboard from './dashboard/ParentDashboard'
@@ -79,6 +80,7 @@ export default function App() {
         <Route path="/classes/digital-electronics" element={<DigitalElectronics />} />
         <Route path="/classes/epidemiology" element={<Epidemiology />} />
         <Route path="/classes/science-of-medicines" element={<ScienceOfMedicines />} />
+        <Route path="/classes/dna-to-disease" element={<DNAtoDisease />} />
         <Route path="/tutors" element={<AboutUs />} />
         <Route path="/tutoring" element={<Tutoring />} />
         <Route path="/sections/:id" element={<SectionDetail />} />

@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import researcherAtWork from '../assets/Researcher_at_work_in_her_laboratory.jpg'
+import researcherAtWork from '../assets/skec/AdobeStock_171882033.jpeg'
 
 export default function ScienceOfMedicines() {
   return (
