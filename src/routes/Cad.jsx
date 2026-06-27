@@ -8,7 +8,7 @@ export default function Cad() {
         <div className={styles.articleIntro}>
           <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> High schoolers (ages 14-18)</p>
-          <p><strong>Class description:</strong></p>
+          {/* class description removed */}
         </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>

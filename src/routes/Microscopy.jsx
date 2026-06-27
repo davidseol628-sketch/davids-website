@@ -8,7 +8,6 @@ export default function Microscopy() {
         <div className={styles.articleIntro}>
           <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> Grades 6-8 / Ages 11-14</p>
-          <p><strong>Class description:</strong></p>
         </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>

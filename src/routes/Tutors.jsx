@@ -1,18 +1,12 @@
 import shared from '../components/shared.module.css'
 import homeStyles from './Home.module.css'
-import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
-import minhPhoto from '../assets/skec/1000052134.JPG'
-import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
-import thanh from '../assets/skec/IMG_0152.jpg'
-import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
-import dillonPhoto from '../assets/skec/IMG-20250516-WA0003(1).jpg'
+// Tutor photos removed per request
 
 const tutors = [
   {
     name: 'Brandon Le',
     subject: 'STEM Classroom Instructor',
-    photo: brandonPhoto,
-    fullPhoto: true,
+    // photo removed
     description:
       'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
     specialties: 'Engineering, Physics, Aerospace',
@@ -20,7 +14,7 @@ const tutors = [
   {
     name: 'Dillon',
     subject: 'STEM Classroom Instructor',
-    photo: dillonPhoto,
+    // photo removed
     description:
       'Dillon is studying Civil Engineering at the University of Maryland and is currently a Field Engineer Intern at a marine construction company. He loves teaching and explaining engineering and physics fundamentals, with a particular focus on the thought process and reasoning behind solutions. His goal is to help students build a strong foundation in critical thinking and logical reasoning.',
     specialties: 'Engineering, Physics, CAD Documentation',
@@ -28,7 +22,7 @@ const tutors = [
   {
     name: 'Tien Tran',
     subject: 'STEM Classroom Instructor',
-    photo: tienPhoto,
+    // photo removed
     description:
       'Tien graduated from the University of Maryland with a B.S. in Biological Sciences and is a current graduate student pursuing a Master’s degree in Biotechnology and Management with a strong interest in healthcare and medicine. As a pre-health student, she has gained clinical experience through patient care, volunteering, and healthcare outreach locally and internationally. Her background in clinical settings, research, and education helps her communicate complex concepts clearly, adapt to different learning styles, and build meaningful connections with students.',
     specialties: 'Math, Chemistry, Biology',
@@ -36,7 +30,7 @@ const tutors = [
   {
     name: 'Thanh Luu',
     subject: 'STEM Classroom Instructor',
-    photo: thanh,
+    // photo removed
     description:
       'Thanh is a Computer Engineering student at the University of Maryland who loves helping students build confidence and succeed in STEM. With a strong background in leading robotics teams and mentoring peers in hands-on engineering projects, he makes math, science, and technology approachable, organized, and fun. Thanh enjoys snowboarding, volleyball, building Legos, and working out.',
     specialties: 'Math, Science, Technology',
@@ -44,7 +38,7 @@ const tutors = [
   {
     name: 'Vy Huynh',
     subject: 'STEM Classroom Instructor',
-    photo: vyPhoto,
+    // photo removed
     description:
       'Vy is a pre-health and Public Health Science student at the University of Maryland dedicated to helping students thrive in math and science. With experience in university biochemistry labs and direct patient care, she focuses on turning intimidating STEM subjects into clear, manageable steps and creating an encouraging, structured learning environment.',
     specialties: 'Biology, Biotechnology, Research, English, Environmental Science',
@@ -59,7 +53,7 @@ const tutors = [
   {
     name: 'Minh',
     subject: 'STEM Classroom Instructor',
-    photo: minhPhoto,
+    // photo removed
     description:
       'Minh is a Mechanical Engineering student at the University of Maryland and the Workshops Executive Chair for the UMD Engineers without Borders Chapter. He is also a Project Lead the Way Biomedical Program graduate. He is passionate about helping students learn and explore engineering and STEM subjects.',
     specialties: 'Mechanical Engineering, Biomedical Engineering, Project Design',

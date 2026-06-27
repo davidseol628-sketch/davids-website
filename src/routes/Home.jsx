@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import heroCountry from '../assets/skec/hero-country.jpg'
-import tutorPhoto from '../assets/85.jpeg'
 import istockphotoLab from '../assets/istockphoto-1498506722-612x612.jpg'
 import smartKids from '../assets/skec/smart-kids.jpg'
 import classroomPhoto from '../assets/skec/NRG2025-1.JPG'
@@ -203,11 +202,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <img
-            className={styles.splitImg}
-            src={tutorPhoto}
-            alt="Personalized tutoring"
-          />
+          {/* Tutor photo removed */}
         </div>
       </section>
 

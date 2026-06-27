@@ -8,7 +8,7 @@ export default function DigitalElectronics() {
         <div className={styles.articleIntro}>
           <p><strong>Duration:</strong> 3-hour session</p>
           <p><strong>Recommended age range:</strong> High Schoolers (ages 14-17)</p>
-          <p><strong>Class description:</strong></p>
+          {/* class description removed */}
         </div>
         <div className={styles.cards}>
           <div className={styles.serviceCard}>
