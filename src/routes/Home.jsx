@@ -209,6 +209,7 @@ export default function Home() {
             <h3>Friday, 7/3</h3>
             <ul>
               <li>Science of Medicines - 12:00 PM</li>
+              <li><em>Closes early</em></li>
             </ul>
           </div>
         </div>
