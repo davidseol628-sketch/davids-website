@@ -3,6 +3,7 @@ import homeStyles from './Home.module.css'
 import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
 import dillonPhoto from '../assets/skec/0D821F06-9901-4DF7-A325-8D5CED2FA258.jpeg'
 import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
+import thanhPhoto from '../assets/skec/IMG_0495.JPG'
 import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
 import minhPhoto from '../assets/skec/C8E321F0-9F69-47BC-8C83-50C35707EF13.jpeg'
 
@@ -34,7 +35,7 @@ const tutors = [
   {
     name: 'Thanh Luu',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: thanhPhoto,
     description:
       'Thanh is a Computer Engineering student at the University of Maryland who loves helping students build confidence and succeed in STEM. With a strong background in leading robotics teams and mentoring peers in hands-on engineering projects, he makes math, science, and technology approachable, organized, and fun. Thanh enjoys snowboarding, volleyball, building Legos, and working out.',
     specialties: 'Math, Science, Technology',
