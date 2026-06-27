@@ -10,6 +10,7 @@ import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
 import mentoringProfDev from '../assets/mentoringprofdevresources.png'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
+import umdPhoto from '../assets/85.jpeg'
 
 /**
  * Public landing page. The header (logo top-left, Log in / Sign up top-right)
@@ -237,7 +238,11 @@ export default function Home() {
               </a>
             </div>
           </div>
-          {/* Tutor photo removed */}
+          <img
+            className={styles.missionImg}
+            src={umdPhoto}
+            alt="University of Maryland"
+          />
         </div>
       </section>
 
