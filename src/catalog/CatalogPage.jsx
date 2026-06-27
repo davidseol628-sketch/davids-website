@@ -49,6 +49,23 @@ export default function CatalogPage() {
             </button>
           </div>
         </div>
+        <div className={shared.card}>
+          <div className={shared.spread}>
+            <h2 className={shared.cardTitle}>Register for Classes Here!</h2>
+          </div>
+          <p className={shared.muted} style={{ marginTop: 8 }}>
+            Click on this form to register: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2W7oZR381m2yMYk5QTfKyGmm0wWKougezfApOemPGVkIb0Q/viewform?usp=publish-editor" target="_blank" rel="noreferrer noopener">Register for Classes</a>
+          </p>
+          <p className={shared.muted} style={{ marginTop: 8 }}>
+            You can also register by contacting us at{' '}
+            <a href="mailto:praxiscenteredu@gmail.com">praxiscenteredu@gmail.com</a>.
+          </p>
+          <div style={{ marginTop: 12 }}>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2W7oZR381m2yMYk5QTfKyGmm0wWKougezfApOemPGVkIb0Q/viewform?usp=publish-editor" target="_blank" rel="noreferrer noopener" className={shared.btn} style={{ display: 'inline-block' }}>
+              Register Now
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   )
