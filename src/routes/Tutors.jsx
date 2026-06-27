@@ -8,7 +8,7 @@ const tutors = [
   {
     name: 'Brandon Le',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: brandonPhoto,
     description:
       'Brandon is an Aerospace Engineering student at the University of Maryland and a researcher in rotorcraft aerodynamics. He is passionate about helping students build strong STEM foundations through engaging and supportive instruction. He enjoys making challenging concepts approachable while helping students develop problem-solving skills that extend beyond the classroom.',
     specialties: 'Engineering, Physics, Aerospace',
@@ -24,7 +24,7 @@ const tutors = [
   {
     name: 'Tien Tran',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: tienPhoto,
     description:
       'Tien graduated from the University of Maryland with a B.S. in Biological Sciences and is a current graduate student pursuing a Master’s degree in Biotechnology and Management with a strong interest in healthcare and medicine. As a pre-health student, she has gained clinical experience through patient care, volunteering, and healthcare outreach locally and internationally. Her background in clinical settings, research, and education helps her communicate complex concepts clearly, adapt to different learning styles, and build meaningful connections with students.',
     specialties: 'Math, Chemistry, Biology',
@@ -40,7 +40,7 @@ const tutors = [
   {
     name: 'Vy Huynh',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: vyPhoto,
     description:
       'Vy is a pre-health and Public Health Science student at the University of Maryland dedicated to helping students thrive in math and science. With experience in university biochemistry labs and direct patient care, she focuses on turning intimidating STEM subjects into clear, manageable steps and creating an encouraging, structured learning environment.',
     specialties: 'Biology, Biotechnology, Research, English, Environmental Science',
