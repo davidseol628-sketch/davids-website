@@ -187,28 +187,28 @@ export default function Home() {
           <div className={styles.scheduleDay}>
             <h3>Tuesday, 6/30</h3>
             <ul>
-              <li>3D Printing + CAD</li>
-              <li>Scratch Programming</li>
+              <li>3D Printing + CAD - 12:00 PM</li>
+              <li>Scratch Programming - 4:00 PM</li>
             </ul>
           </div>
           <div className={styles.scheduleDay}>
             <h3>Wednesday, 7/1</h3>
             <ul>
-              <li>Microscopy</li>
-              <li>Epidemiology</li>
+              <li>Microscopy - 12:00 PM</li>
+              <li>Epidemiology - 4:00 PM</li>
             </ul>
           </div>
           <div className={styles.scheduleDay}>
             <h3>Thursday, 7/2</h3>
             <ul>
-              <li>3D Printing + CAD</li>
-              <li>Digital Electronics + Arduino</li>
+              <li>3D Printing + CAD - 12:00 PM</li>
+              <li>Digital Electronics + Arduino - 4:00 PM</li>
             </ul>
           </div>
           <div className={styles.scheduleDay}>
             <h3>Friday, 7/3</h3>
             <ul>
-              <li><em>Coming soon</em></li>
+              <li>Science of Medicines - 12:00 PM</li>
             </ul>
           </div>
         </div>
