@@ -182,6 +182,39 @@ export default function Home() {
       </section>
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <h2>Class Schedule</h2>
+        <div className={styles.scheduleGrid}>
+          <div className={styles.scheduleDay}>
+            <h3>Tuesday, 6/30</h3>
+            <ul>
+              <li>3D Printing + CAD</li>
+              <li>Scratch Programming</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Wednesday, 7/1</h3>
+            <ul>
+              <li>Microscopy</li>
+              <li>Epidemiology</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Thursday, 7/2</h3>
+            <ul>
+              <li>3D Printing + CAD</li>
+              <li>Digital Electronics + Arduino</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Friday, 7/3</h3>
+            <ul>
+              <li><em>Coming soon</em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.split}>
           <div className={styles.splitText}>
             <h2>Looking for a personalized tutor for your child?</h2>
