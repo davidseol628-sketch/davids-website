@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import styles from './Nav.module.css'
+import praxisLogo from '../assets/praxis-logo.png'
 
 /**
  * Top navigation bar. Brand on the left, role-aware page links + a Forms
@@ -139,7 +140,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.brand}>
-        Praxis Enrichment Center
+        <img src={praxisLogo} alt="Praxis Enrichment Center" style={{ height: '50px' }} />
       </Link>
       <button
         type="button"
