@@ -13,6 +13,42 @@ export default function Classes() {
     <div className={styles.page}>
       <section className={styles.section}>
         <h1>Our Classes</h1>
+        <h2 style={{ marginTop: '24px' }}>Class Schedule</h2>
+        <p className={styles.serviceDesc} style={{ textAlign: 'center', marginBottom: '16px' }}><strong>Cost:</strong> $60 per class (3-hour session)</p>
+        <div className={styles.scheduleGrid}>
+          <div className={styles.scheduleDay}>
+            <h3>Tuesday, 6/30</h3>
+            <ul>
+              <li>3D Printing + CAD - 12:00 PM</li>
+              <li>Scratch Programming - 4:00 PM</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Wednesday, 7/1</h3>
+            <ul>
+              <li>Microscopy - 12:00 PM</li>
+              <li>Epidemiology - 4:00 PM</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Thursday, 7/2</h3>
+            <ul>
+              <li>3D Printing + CAD - 12:00 PM</li>
+              <li>Digital Electronics + Arduino - 4:00 PM</li>
+            </ul>
+          </div>
+          <div className={styles.scheduleDay}>
+            <h3>Friday, 7/3</h3>
+            <ul>
+              <li>Science of Medicines - 12:00 PM</li>
+              <li><em>Closes early</em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Explore Our Classes</h2>
         <div className={styles.serviceCards}>
           <div className={styles.serviceCard}>
             <img className={styles.serviceImg} src={microscopeLab} alt="Microscopy workshop" />
