@@ -183,6 +183,7 @@ export default function Home() {
 
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <h2>Class Schedule</h2>
+        <p className={styles.programCaption}><strong>Cost:</strong> $60 per class (3-hour session)</p>
         <div className={styles.scheduleGrid}>
           <div className={styles.scheduleDay}>
             <h3>Tuesday, 6/30</h3>
