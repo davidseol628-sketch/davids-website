@@ -210,7 +210,7 @@ export default function Home() {
           <div className={styles.scheduleDay}>
             <h3>Friday, 7/3</h3>
             <ul>
-              <li>Science of Medicines - 12:00 PM</li>
+              <li>Intro to Epidemiology and Disease Outbreak - 12:00 PM</li>
               <li><em>Closes early</em></li>
             </ul>
           </div>
