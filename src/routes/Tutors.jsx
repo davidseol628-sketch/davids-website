@@ -1,8 +1,10 @@
 import shared from '../components/shared.module.css'
 import homeStyles from './Home.module.css'
 import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
+import dillonPhoto from '../assets/skec/0D821F06-9901-4DF7-A325-8D5CED2FA258.jpeg'
 import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
 import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
+import minhPhoto from '../assets/skec/C8E321F0-9F69-47BC-8C83-50C35707EF13.jpeg'
 
 const tutors = [
   {
@@ -16,7 +18,7 @@ const tutors = [
   {
     name: 'Dillon',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: dillonPhoto,
     description:
       'Dillon is studying Civil Engineering at the University of Maryland and is currently a Field Engineer Intern at a marine construction company. He loves teaching and explaining engineering and physics fundamentals, with a particular focus on the thought process and reasoning behind solutions. His goal is to help students build a strong foundation in critical thinking and logical reasoning.',
     specialties: 'Engineering, Physics, CAD Documentation',
@@ -55,7 +57,7 @@ const tutors = [
   {
     name: 'Minh',
     subject: 'STEM Classroom Instructor',
-    // photo removed
+    photo: minhPhoto,
     description:
       'Minh is a Mechanical Engineering student at the University of Maryland and the Workshops Executive Chair for the UMD Engineers without Borders Chapter. He is also a Project Lead the Way Biomedical Program graduate. He is passionate about helping students learn and explore engineering and STEM subjects.',
     specialties: 'Mechanical Engineering, Biomedical Engineering, Project Design',
