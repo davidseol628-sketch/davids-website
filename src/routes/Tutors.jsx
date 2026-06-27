@@ -1,6 +1,8 @@
 import shared from '../components/shared.module.css'
 import homeStyles from './Home.module.css'
-// Tutor photos removed per request
+import brandonPhoto from '../assets/skec/C9BE7B76-8CA7-4409-8A55-1676F738A23B.jpeg'
+import tienPhoto from '../assets/skec/9C2051D2-7839-4D98-814E-E7FBCA619633.jpeg'
+import vyPhoto from '../assets/skec/2AA70290-3048-4E9D-B2D8-90A70C03342D.jpeg'
 
 const tutors = [
   {
