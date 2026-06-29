@@ -59,6 +59,7 @@ const tutors = [
     name: 'Minh',
     subject: 'STEM Classroom Instructor',
     photo: minhPhoto,
+    fullPhoto: true,
     description:
       'Minh is a Mechanical Engineering student at the University of Maryland and the Workshops Executive Chair for the UMD Engineers without Borders Chapter. He is also a Project Lead the Way Biomedical Program graduate. He is passionate about helping students learn and explore engineering and STEM subjects.',
     specialties: 'Mechanical Engineering, Biomedical Engineering, Project Design',
