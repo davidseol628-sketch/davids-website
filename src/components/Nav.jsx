@@ -18,12 +18,14 @@ import praxisLogo from '../assets/praxis-logo.png'
 // exact-match active styling (used for index-style routes like /admin).
 const LINKS_BY_ROLE = {
   guest: [
+    ['/', 'Home'],
     ['/classes', 'Classes'],
     ['/tutoring', 'Tutoring'],
     ['/tutors', 'About Us'],
     ['/contact', 'Contact Us'],
   ],
   parent: [
+    ['/', 'Home'],
     ['/classes', 'Classes'],
     ['/tutoring', 'Tutoring'],
     ['/tutors', 'About Us'],
@@ -31,6 +33,7 @@ const LINKS_BY_ROLE = {
     ['/dashboard', 'My Dashboard'],
   ],
   tutor: [
+    ['/', 'Home'],
     ['/classes', 'Classes'],
     ['/tutoring', 'Tutoring'],
     ['/tutors', 'About Us'],
@@ -38,6 +41,7 @@ const LINKS_BY_ROLE = {
     ['/tutor', 'My Sessions'],
   ],
   admin: [
+    ['/', 'Home'],
     ['/classes', 'Classes'],
     ['/tutoring', 'Tutoring'],
     ['/tutors', 'About Us'],
