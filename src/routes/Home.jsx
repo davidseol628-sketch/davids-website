@@ -7,7 +7,6 @@ import classroomPhoto from '../assets/skec/NRG2025-1.JPG'
 import elevatingLearning from '../assets/skec/elevating_learning_stem_projects_for_high_school_students.webp.jpeg'
 import outdoorPlay from '../assets/3d-printed-brush-bots-MRRF-scaled.jpg.webp'
 import tutoringBanner from '../assets/tutoring-banner-1600x686.jpg'
-import mentoringProfDev from '../assets/mentoringprofdevresources.png'
 import artLessons from '../assets/skec/art-lessons.jpg'
 import imaginativePlay from '../assets/skec/imaginative-play.jpg'
 import umdPhoto from '../assets/85.jpeg'
@@ -75,20 +74,6 @@ export default function Home() {
             <Link className={styles.bookBtn} to="/tutors">
               Meet Our Tutors
             </Link>
-          </div>
-          <div className={styles.programCard}>
-            <div className={styles.programHeader}>
-              <h3>Career Mentoring</h3>
-            </div>
-            <img
-              className={styles.programImg}
-              src={mentoringProfDev}
-              alt="Mentoring and professional development"
-            />
-            <p className={styles.programCaption}>
-              Mentoring and professional development for students ready to
-              explore careers in STEM and build real-world readiness.
-            </p>
           </div>
         </div>
       </section>
