@@ -19,28 +19,28 @@ import praxisLogo from '../assets/praxis-logo.png'
 const LINKS_BY_ROLE = {
   guest: [
     ['/classes', 'Classes'],
-    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
+    ['/tutors', 'About Us'],
     ['/contact', 'Contact Us'],
   ],
   parent: [
     ['/classes', 'Classes'],
-    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
+    ['/tutors', 'About Us'],
     ['/contact', 'Contact Us'],
     ['/dashboard', 'My Dashboard'],
   ],
   tutor: [
     ['/classes', 'Classes'],
-    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
+    ['/tutors', 'About Us'],
     ['/contact', 'Contact Us'],
     ['/tutor', 'My Sessions'],
   ],
   admin: [
     ['/classes', 'Classes'],
-    ['/tutors', 'About Us'],
     ['/tutoring', 'Tutoring'],
+    ['/tutors', 'About Us'],
     ['/contact', 'Contact Us'],
     ['/admin', 'Admin', true],
     ['/admin/sections', 'Sections'],
