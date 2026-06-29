@@ -12,7 +12,12 @@ export default function Classes() {
   return (
     <div className={styles.page}>
       <section className={styles.section}>
-        <h1>Our Classes</h1>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+          <h1>Our Classes</h1>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2W7oZR381m2yMYk5QTfKyGmm0wWKougezfApOemPGVkIb0Q/viewform?usp=publish-editor" target="_blank" rel="noreferrer noopener" className={styles.bookBtn}>
+            Register for Classes
+          </a>
+        </div>
         <h2 style={{ marginTop: '24px' }}>Class Schedule</h2>
         <p className={styles.serviceDesc} style={{ textAlign: 'center', marginBottom: '16px' }}><strong>Cost:</strong> $60 per class (3-hour session)</p>
         <div className={styles.scheduleGrid}>
